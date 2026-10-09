@@ -1,0 +1,37 @@
+{
+  "id": "topic_type_conversion",
+  "title": "Explicit Type Conversion",
+  "description": "Converting between types using constructor functions. Understanding implicit vs explicit conversion and conversion failures.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Convert between int, float, str, bool using constructors",
+    "Predict conversion results and failures",
+    "Understand truthiness rules for bool conversion"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_data_types"
+  ],
+  "related_skills": [
+    "type_conversion",
+    "error_prediction"
+  ],
+  "lesson_refs": [
+    "lesson_day2_types"
+  ],
+  "practice_refs": [
+    "ex_day2_type_conversion",
+    "ex_day2_truthiness"
+  ],
+  "assessment_refs": [
+    "quiz_day2_types"
+  ],
+  "mastery_criteria": [
+    "Converts between all type pairs correctly",
+    "Predicts ValueError on invalid conversions",
+    "Explains why bool([]) is False"
+  ],
+  "revision_criteria": [
+    "Surprised by conversion results",
+    "Does not understand truthiness"
+  ]
+}

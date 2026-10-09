@@ -1,0 +1,38 @@
+{
+  "id": "topic_function_composition",
+  "title": "Function Composition",
+  "description": "Combining simple functions to build complex behavior. Pipeline pattern. Data transformation chains.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Compose functions: f(g(x))",
+    "Build data transformation pipelines",
+    "Pass data through function chains",
+    "Design composable functions"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_return_values"
+  ],
+  "related_skills": [
+    "composition",
+    "pipeline_design",
+    "functional_thinking"
+  ],
+  "lesson_refs": [
+    "lesson_day9_decomposition"
+  ],
+  "practice_refs": [
+    "ex_day9_compose_functions"
+  ],
+  "assessment_refs": [
+    "quiz_day9_decomposition"
+  ],
+  "mastery_criteria": [
+    "Composes functions for complex tasks",
+    "Designs functions for composability",
+    "Builds readable pipelines"
+  ],
+  "revision_criteria": [
+    "Monolithic functions instead of composition",
+    "Functions not reusable in chains"
+  ]
+}

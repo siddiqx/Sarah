@@ -1,0 +1,215 @@
+{
+  "id": "lesson_day2_types",
+  "day_number": 2,
+  "title": "Data Types and Type Conversion",
+  "phase_id": "a",
+  "estimated_minutes": 40,
+  "difficulty": "beginner",
+  "objectives": [
+    "Identify int, float, str, bool types",
+    "Use type() to check variable type",
+    "Convert between types with int(), float(), str(), bool()",
+    "Understand truthiness and falsiness"
+  ],
+  "prerequisites": ["lesson_day2_variables"],
+  "blocks": [
+    {
+      "type": "concept_explanation",
+      "order": 1,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Python's Core Data Types",
+        "explanation": "Every value in Python has a type. The four fundamental types are: int (integers), float (decimal numbers), str (text), and bool (True/False). The type determines what operations you can perform.",
+        "key_points": [
+          "int: whole numbers (..., -2, -1, 0, 1, 2, ...)",
+          "float: decimal numbers (3.14, -0.5, 2.0)",
+          "str: text in quotes ("hello", 'world')",
+          "bool: True or False (capitalization matters)"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 2,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Checking Types with type()",
+        "code": "print(type(42))          # <class 'int'>\nprint(type(3.14))        # <class 'float'>\nprint(type("hello"))    # <class 'str'>\nprint(type(True))        # <class 'bool'>\nprint(type(False))       # <class 'bool'>\n\nx = 10\nprint(type(x))           # <class 'int'>",
+        "language": "python",
+        "explanation": "type() returns the type object. Use it to inspect any value or variable."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 3,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Explicit Type Conversion",
+        "explanation": "Convert between types using constructor functions: int(), float(), str(), bool(). Conversion may fail (ValueError) if the value cannot be converted.",
+        "key_points": [
+          "int("42") -> 42, int(3.14) -> 3 (truncates)",
+          "float(42) -> 42.0, float("3.14") -> 3.14",
+          "str(42) -> "42", str(True) -> "True"",
+          "bool(0) -> False, bool(1) -> True, bool("") -> False, bool("hi") -> True"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 4,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Type Conversion Examples",
+        "code": "# String to number\nage_str = "25"\nage = int(age_str)\nprint(age + 5)  # 30\n\n# Number to string\nprice = 19.99\nlabel = "Price: " + str(price)\nprint(label)  # Price: 19.99\n\n# Truthiness\nprint(bool(0))      # False\nprint(bool(42))     # True\nprint(bool(""))    # False\nprint(bool("hi"))   # True",
+        "language": "python",
+        "explanation": "Conversion functions create new values of the target type. bool() follows truthiness rules: empty/zero is False, everything else is True."
+      }
+    },
+    {
+      "type": "output_prediction",
+      "order": 5,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Predict Conversion Results",
+        "code": "print(int(3.9))\nprint(float(4))\nprint(str(True))\nprint(bool([]))",
+        "question": "What does each line print?",
+        "options": [
+          "3, 4.0, True, False",
+          "3, 4.0, 'True', False",
+          "4, 4.0, True, True",
+          "Error on last line"
+        ],
+        "correct_answer": "3, 4.0, 'True', False",
+        "explanation": "int() truncates toward zero. float() adds .0. str() converts to string representation. Empty list is falsy."
+      }
+    },
+    {
+      "type": "debugging_exercise",
+      "order": 6,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Fix the Conversion Error",
+        "buggy_code": "age = input("Age: ")\nnext_year = age + 1\nprint(f"Next year you will be {next_year}")",
+        "error_message": "TypeError: can only concatenate str (not 'int') to str",
+        "task": "Fix the code so it adds 1 to the age",
+        "hint": "input() returns a string. Convert to int first.",
+        "solution": "age = int(input("Age: "))\nnext_year = age + 1\nprint(f"Next year you will be {next_year}")"
+      }
+    },
+    {
+      "type": "knowledge_check",
+      "order": 7,
+      "estimated_minutes": 3,
+      "content": {
+        "questions": [
+          {
+            "question": "What is bool(0)?",
+            "type": "multiple_choice",
+            "options": ["True", "False", "0", "Error"],
+            "correct_answer": "False"
+          },
+          {
+            "question": "What does int("hello") do?",
+            "type": "multiple_choice",
+            "options": ["Returns 0", "Returns ASCII code", "Raises ValueError", "Returns None"],
+            "correct_answer": "Raises ValueError"
+          },
+          {
+            "question": "Which is falsy in Python?",
+            "type": "multiple_choice",
+            "options": ["[]", "1", ""false"", "[0]"],
+            "correct_answer": "[]"
+          }
+        ]
+      }
+    },
+    {
+      "type": "summary",
+      "order": 8,
+      "estimated_minutes": 2,
+      "content": {
+        "title": "Key Takeaways",
+        "points": [
+          "Four core types: int, float, str, bool",
+          "Use type() to inspect type",
+          "Convert with int(), float(), str(), bool()",
+          "Empty/zero values are falsy; everything else is truthy"
+        ]
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_day2_type_identification",
+      "title": "Identify the Types",
+      "description": "For each value, predict its type. Then verify with type().",
+      "starter_code": "values = [42, 3.14, "hello", True, False, 0, 0.0, ""]\nfor v in values:\n    print(f"{repr(v):>10} -> {type(v).__name__}")\n",
+      "solution": "values = [42, 3.14, "hello", True, False, 0, 0.0, ""]\nfor v in values:\n    print(f"{repr(v):>10} -> {type(v).__name__}")",
+      "tests": [
+        "assert "int" in output",
+        "assert "float" in output",
+        "assert "str" in output",
+        "assert "bool" in output"
+      ],
+      "hints": ["Use type(v).__name__ to get type name as string"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day2_type_conversion",
+      "title": "Conversion Practice",
+      "description": "Convert the string "3.14" to float, then to int, then to string, then to bool. Print each step.",
+      "starter_code": "s = "3.14"\n# Convert step by step\n",
+      "solution": "s = "3.14"\nf = float(s)\ni = int(f)\ns2 = str(i)\nb = bool(s2)\nprint(f"float: {f}")\nprint(f"int: {i}")\nprint(f"str: {s2}")\nprint(f"bool: {b}")",
+      "tests": [
+        "assert "3.14" in output",
+        "assert "3" in output",
+        "assert "True" in output"
+      ],
+      "hints": ["Chain conversions: float -> int -> str -> bool"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day2_truthiness",
+      "title": "Truthiness Table",
+      "description": "Test the truthiness of various values: 0, 1, -1, "", "hi", [], [1], {}, {1:2}. Print each value and its bool().",
+      "starter_code": "test_values = [0, 1, -1, "", "hi", [], [1], {}, {1:2}]\n# Loop and print each with bool()\n",
+      "solution": "test_values = [0, 1, -1, "", "hi", [], [1], {}, {1:2}]\nfor v in test_values:\n    print(f"{repr(v):>10} -> {bool(v)}")",
+      "tests": [
+        "assert "False" in output",
+        "assert "True" in output"
+      ],
+      "hints": ["Empty containers (list, dict, string) are falsy"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the result of int(3.9)?",
+      "type": "multiple_choice",
+      "options": ["3", "4", "3.9", "Error"],
+      "correct_answer": "3",
+      "explanation": "int() truncates toward zero, it does not round.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of these is truthy?",
+      "type": "multiple_choice",
+      "options": ["0", "[]", """, "[0]"],
+      "correct_answer": "[0]",
+      "explanation": "A non-empty list is truthy, even if it contains 0.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does str(True) return?",
+      "type": "multiple_choice",
+      "options": ["true", "True", "1", ""True""],
+      "correct_answer": "True",
+      "explanation": "str() converts to the string representation 'True' (capital T).",
+      "difficulty": "easy"
+    }
+  ]
+}
+

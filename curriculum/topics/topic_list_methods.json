@@ -1,0 +1,38 @@
+{
+  "id": "topic_list_methods",
+  "title": "List Methods",
+  "description": "Core list methods: append, extend, insert, remove, pop, clear, index, count, sort, reverse. In-place vs returning new list.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Use append/extend/insert for adding",
+    "Use remove/pop/clear for removing",
+    "Use index/count for searching",
+    "Use sort/reverse for ordering (in-place)"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_list_mutability"
+  ],
+  "related_skills": [
+    "list_manipulation",
+    "in_place_operations",
+    "method_chaining"
+  ],
+  "lesson_refs": [
+    "lesson_day19_list_methods"
+  ],
+  "practice_refs": [
+    "ex_day19_list_methods"
+  ],
+  "assessment_refs": [
+    "quiz_day19_lists"
+  ],
+  "mastery_criteria": [
+    "Chooses correct method for task",
+    "Understands in-place vs new list",
+    "Chains methods appropriately"
+  ],
+  "revision_criteria": [
+    "Uses append when extend needed",
+    "Forgets sort() returns None"
+  ]
+}

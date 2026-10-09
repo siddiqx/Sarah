@@ -1,0 +1,30 @@
+{
+  "id": "functions",
+  "name": "Functions",
+  "description": "Function definition, parameters, scope, lambdas, and higher-order functions",
+  "phase": "phase-a",
+  "order": 5,
+  "subtopics": [
+    "Function Definition",
+    "Parameters & Arguments",
+    "Return Values",
+    "Scope (LEGB)",
+    "Lambda Expressions",
+    "Map/Filter/Sorted",
+    "Closures"
+  ],
+  "key_concepts": [
+    "First-class functions",
+    "Default argument traps",
+    "LEGB rule",
+    "Functional patterns"
+  ],
+  "estimated_hours": 6,
+  "prerequisites": [
+    "data-structures"
+  ],
+  "resources": [
+    "Python docs: Functions",
+    "Real Python: Defining Functions"
+  ]
+}

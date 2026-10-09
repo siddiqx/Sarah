@@ -1,0 +1,37 @@
+{
+  "id": "topic_counting",
+  "title": "Counting with Accumulators",
+  "description": "Counting occurrences, counting matches, counting with conditions. Increment pattern.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Count total iterations",
+    "Count elements matching condition",
+    "Use counter += 1 pattern",
+    "Distinguish count from sum"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_accumulator_pattern"
+  ],
+  "related_skills": [
+    "conditional_counting",
+    "frequency_analysis"
+  ],
+  "lesson_refs": [
+    "lesson_day12_accumulators"
+  ],
+  "practice_refs": [
+    "ex_day12_counting"
+  ],
+  "assessment_refs": [
+    "quiz_day12_accumulators"
+  ],
+  "mastery_criteria": [
+    "Counts with and without conditions",
+    "Initializes counter to 0",
+    "Increments correctly"
+  ],
+  "revision_criteria": [
+    "Initializes counter to 1",
+    "Confuses count with sum"
+  ]
+}

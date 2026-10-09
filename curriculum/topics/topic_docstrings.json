@@ -1,0 +1,37 @@
+{
+  "id": "topic_docstrings",
+  "title": "Function Documentation with Docstrings",
+  "description": "Writing clear docstrings. Google/NumPy style conventions. Accessing docstrings at runtime.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Write docstrings for functions",
+    "Follow Google/NumPy style format",
+    "Document parameters, returns, raises, examples",
+    "Access __doc__ attribute"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_function_definition"
+  ],
+  "related_skills": [
+    "documentation",
+    "api_design"
+  ],
+  "lesson_refs": [
+    "lesson_day7_advanced_functions"
+  ],
+  "practice_refs": [
+    "ex_day7_docstrings"
+  ],
+  "assessment_refs": [
+    "quiz_day7_advanced_functions"
+  ],
+  "mastery_criteria": [
+    "Writes complete docstrings consistently",
+    "Documents all parameters and return values",
+    "Includes usage examples"
+  ],
+  "revision_criteria": [
+    "Missing or minimal docstrings",
+    "Inconsistent style"
+  ]
+}

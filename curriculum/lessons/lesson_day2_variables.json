@@ -1,0 +1,151 @@
+{
+  "id": "lesson_day2_variables",
+  "day_number": 2,
+  "title": "Variables Deep Dive: Reassignment and Multiple Assignment",
+  "phase_id": "a",
+  "estimated_minutes": 35,
+  "difficulty": "beginner",
+  "objectives": [
+    "Reassign variables to new values",
+    "Use multiple assignment (a, b = 1, 2)",
+    "Swap variables without temporary variable",
+    "Understand variables as references to objects"
+  ],
+  "prerequisites": ["lesson_day1_variables"],
+  "blocks": [
+    {
+      "type": "concept_explanation",
+      "order": 1,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Variable Reassignment",
+        "explanation": "Variables can be reassigned to new values at any time. The old value is replaced (and garbage collected if no other references exist). This is different from mutation - reassignment changes what the variable points to.",
+        "key_points": [
+          "x = 5; x = 10  # x now holds 10, not 5",
+          "Reassignment binds the name to a new object",
+          "The old object may be cleaned up automatically"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 2,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Multiple Assignment",
+        "code": "# Assign multiple variables at once\nx, y, z = 1, 2, 3\nprint(x, y, z)  # 1 2 3\n\n# Swap variables\na, b = 10, 20\na, b = b, a\nprint(a, b)  # 20 10\n\n# Assign same value to multiple\nx = y = z = 0",
+        "language": "python",
+        "explanation": "Python evaluates the right side first, then assigns to left side. This makes swapping elegant without a temporary variable."
+      }
+    },
+    {
+      "type": "step_by_step_trace",
+      "order": 3,
+      "estimated_minutes": 10,
+      "content": {
+        "title": "Tracing Variable Reassignment",
+        "code": "x = 5\ny = x\nx = 10\nprint(x, y)",
+        "trace_table": [
+          {"step": 1, "code": "x = 5", "x": 5, "y": "undefined"},
+          {"step": 2, "code": "y = x", "x": 5, "y": 5},
+          {"step": 3, "code": "x = 10", "x": 10, "y": 5},
+          {"step": 4, "code": "print(x, y)", "x": 10, "y": 5}
+        ],
+        "explanation": "y gets the value of x at that moment (5). Later changing x does not affect y because integers are immutable."
+      }
+    },
+    {
+      "type": "fill_in_code",
+      "order": 4,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Swap Without Temp Variable",
+        "code": "a = 100\nb = 200\n# Swap a and b here\n_____\nprint(a, b)  # Should print: 200 100",
+        "blanks": [
+          {"placeholder": "_____", "answer": "a, b = b, a", "hint": "Tuple unpacking swap"}
+        ],
+        "solution": "a, b = b, a"
+      }
+    },
+    {
+      "type": "interactive_comparison",
+      "order": 5,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Reassignment vs Mutation",
+        "comparison": [
+          {"scenario": "x = [1, 2]; y = x; x = [3, 4]", "result": "y is still [1, 2] - reassignment"},
+          {"scenario": "x = [1, 2]; y = x; x.append(3)", "result": "y is [1, 2, 3] - mutation affects both"}
+        ],
+        "explanation": "Reassignment changes the variable binding. Mutation changes the object itself, affecting all references."
+      }
+    },
+    {
+      "type": "knowledge_check",
+      "order": 6,
+      "estimated_minutes": 3,
+      "content": {
+        "questions": [
+          {
+            "question": "After: a, b = 5, 10; a, b = b, a; what is a?",
+            "type": "multiple_choice",
+            "options": ["5", "10", "Error", "Undefined"],
+            "correct_answer": "10"
+          },
+          {
+            "question": "What does x = y = z = 0 do?",
+            "type": "multiple_choice",
+            "options": [
+              "Sets x to 0 only",
+              "Sets all three variables to 0",
+              "Syntax error",
+              "Sets x to y, y to z, z to 0"
+            ],
+            "correct_answer": "Sets all three variables to 0"
+          }
+        ]
+      }
+    },
+    {
+      "type": "summary",
+      "order": 7,
+      "estimated_minutes": 2,
+      "content": {
+        "title": "Key Takeaways",
+        "points": [
+          "Variables can be reassigned anytime",
+          "Multiple assignment: a, b = 1, 2",
+          "Elegant swap: a, b = b, a",
+          "Reassignment != mutation"
+        ]
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_day2_variable_assignment",
+      "title": "Variable Reassignment Practice",
+      "description": "Create a variable score = 0. Reassign it to 10, then 25, then 100. Print after each change.",
+      "starter_code": "score = 0\nprint(score)\n# Reassign and print three more times\n",
+      "solution": "score = 0\nprint(score)\nscore = 10\nprint(score)\nscore = 25\nprint(score)\nscore = 100\nprint(score)",
+      "tests": [
+        "assert output.count(chr(10)) >= 3",
+        "assert "100" in output"
+      ],
+      "hints": ["Just assign new values to the same variable name"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    }
+  ],
+  "quiz": [
+    {
+      "question": "After x = 5; y = x; x = 10; what is y?",
+      "type": "multiple_choice",
+      "options": ["5", "10", "Error", "Undefined"],
+      "correct_answer": "5",
+      "explanation": "y got the value 5 when assigned. Changing x later does not affect y.",
+      "difficulty": "easy"
+    }
+  ]
+}
+

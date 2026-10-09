@@ -1,0 +1,36 @@
+{
+  "id": "topic_string_creation",
+  "title": "String Literals and Creation",
+  "description": "Creating strings with single, double, triple quotes. Escaping characters and raw strings.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Create strings with different quote styles",
+    "Use escape sequences: \\n, \\t, \\\\, \\\"",
+    "Use raw strings for regex and paths"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_data_types"
+  ],
+  "related_skills": [
+    "string_literals",
+    "escaping"
+  ],
+  "lesson_refs": [
+    "lesson_day4_string_basics"
+  ],
+  "practice_refs": [
+    "ex_day4_string_creation"
+  ],
+  "assessment_refs": [
+    "quiz_day4_strings"
+  ],
+  "mastery_criteria": [
+    "Chooses appropriate quote style for content",
+    "Uses escapes correctly in strings",
+    "Uses raw strings for Windows paths"
+  ],
+  "revision_criteria": [
+    "Syntax errors from unescaped quotes",
+    "Confusion with backslashes in paths"
+  ]
+}

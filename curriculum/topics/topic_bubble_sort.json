@@ -1,0 +1,39 @@
+{
+  "id": "topic_bubble_sort",
+  "title": "Bubble Sort",
+  "description": "Simple sorting algorithm. Adjacent comparison and swap. Passes through list. O(n^2) complexity. Optimization: early exit if no swaps.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Implement bubble sort with nested loops",
+    "Add early exit optimization",
+    "Trace swaps for small lists",
+    "Analyze O(n^2) complexity"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_nested_loops",
+    "topic_list_mutability"
+  ],
+  "related_skills": [
+    "sorting_algorithms",
+    "swap_pattern",
+    "optimization"
+  ],
+  "lesson_refs": [
+    "lesson_day20_list_algorithms"
+  ],
+  "practice_refs": [
+    "ex_day20_bubble_sort"
+  ],
+  "assessment_refs": [
+    "quiz_day20_list_algorithms"
+  ],
+  "mastery_criteria": [
+    "Implements bubble sort correctly",
+    "Adds early exit optimization",
+    "Explains why O(n^2)"
+  ],
+  "revision_criteria": [
+    "Wrong loop bounds",
+    "Missing swap logic"
+  ]
+}

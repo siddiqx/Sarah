@@ -1,0 +1,38 @@
+{
+  "id": "topic_nested_conditionals",
+  "title": "Nested Conditionals",
+  "description": "Conditionals inside conditionals. Managing complexity. Alternatives: guard clauses, early returns.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Write nested if statements correctly",
+    "Trace execution through nested branches",
+    "Refactor deep nesting with guard clauses",
+    "Use early returns to flatten logic"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_elif_chains"
+  ],
+  "related_skills": [
+    "nesting_management",
+    "guard_clauses",
+    "early_return"
+  ],
+  "lesson_refs": [
+    "lesson_day5_conditionals_advanced"
+  ],
+  "practice_refs": [
+    "ex_day5_nested_conditionals"
+  ],
+  "assessment_refs": [
+    "quiz_day5_conditionals"
+  ],
+  "mastery_criteria": [
+    "Traces nested conditional logic accurately",
+    "Refactors deep nesting to flat structure",
+    "Uses guard clauses for validation"
+  ],
+  "revision_criteria": [
+    "Excessive nesting (>3 levels)",
+    "Difficulty tracing nested logic"
+  ]
+}

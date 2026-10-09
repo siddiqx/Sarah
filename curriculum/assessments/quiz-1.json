@@ -1,0 +1,49 @@
+{
+  "assessment_id": "quiz-1",
+  "title": "Variables & Types Quiz",
+  "description": "Test your understanding of variables and basic data types.",
+  "assessment_type": "micro",
+  "phase_id": 1,
+  "topic_ids": ["variables", "data-types", "type-conversion"],
+  "time_limit_minutes": 15,
+  "passing_score": 70.0,
+  "questions": [
+    {
+      "question_id": "q1",
+      "question_type": "multiple_choice",
+      "question_data": {
+        "prompt": "What is the output of 	ype(3.14)?",
+        "options": ["int", "float", "str", "bool"]
+      },
+      "correct_answer": {"answer": 1},
+      "explanation": "3.14 is a floating-point number, so type() returns float.",
+      "points": 1,
+      "order": 0
+    },
+    {
+      "question_id": "q2",
+      "question_type": "multiple_choice",
+      "question_data": {
+        "prompt": "Which is a valid variable name in Python?",
+        "options": ["2name", "_name", "name-variable", "class"]
+      },
+      "correct_answer": {"answer": 1},
+      "explanation": "Variable names can start with underscore or letter, not number. Hyphens and keywords not allowed.",
+      "points": 1,
+      "order": 1
+    },
+    {
+      "question_id": "q3",
+      "question_type": "output_prediction",
+      "question_data": {
+        "code": "x = "10"\ny = int(x)\nprint(type(y))",
+        "prompt": "What will be printed?"
+      },
+      "correct_answer": {"output": "<class 'int'>"},
+      "explanation": "int() converts the string "10" to integer 10.",
+      "points": 1,
+      "order": 2
+    }
+  ]
+}
+

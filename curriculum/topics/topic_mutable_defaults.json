@@ -1,0 +1,37 @@
+{
+  "id": "topic_mutable_defaults",
+  "title": "Mutable Default Argument Pitfall",
+  "description": "Deep dive into why mutable defaults cause bugs. The None sentinel pattern. When defaults are shared across calls.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Explain why mutable defaults are shared",
+    "Demonstrate the bug with a list default",
+    "Apply None sentinel pattern",
+    "Recognize the pattern in library code"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_default_arguments"
+  ],
+  "related_skills": [
+    "debugging",
+    "defensive_programming"
+  ],
+  "lesson_refs": [
+    "lesson_day7_advanced_functions"
+  ],
+  "practice_refs": [
+    "ex_day7_mutable_default_bug"
+  ],
+  "assessment_refs": [
+    "quiz_day7_advanced_functions"
+  ],
+  "mastery_criteria": [
+    "Identifies mutable default bug in code",
+    "Fixes it with None sentinel",
+    "Explains why it happens"
+  ],
+  "revision_criteria": [
+    "Uses mutable defaults in own code",
+    "Cannot explain the bug mechanism"
+  ]
+}

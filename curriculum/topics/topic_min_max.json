@@ -1,0 +1,38 @@
+{
+  "id": "topic_min_max",
+  "title": "Finding Minimum and Maximum",
+  "description": "Finding min/max in a single pass. Initialization with first element. Handling empty sequences. Built-in min()/max().",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Find min/max in one loop",
+    "Initialize with first element",
+    "Handle empty sequence case",
+    "Use key function for custom comparison"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_accumulator_pattern"
+  ],
+  "related_skills": [
+    "extremum_finding",
+    "single_pass",
+    "key_functions"
+  ],
+  "lesson_refs": [
+    "lesson_day13_search_filter"
+  ],
+  "practice_refs": [
+    "ex_day13_find_min_max"
+  ],
+  "assessment_refs": [
+    "quiz_day13_search_filter"
+  ],
+  "mastery_criteria": [
+    "Finds min/max in single pass",
+    "Handles empty sequence gracefully",
+    "Uses key= for objects"
+  ],
+  "revision_criteria": [
+    "Initializes to 0 (fails for negatives)",
+    "Two-pass approach"
+  ]
+}

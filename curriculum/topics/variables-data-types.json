@@ -1,0 +1,29 @@
+{
+  "id": "variables-data-types",
+  "name": "Variables & Data Types",
+  "description": "Variable assignment, built-in data types, type conversion, and string manipulation",
+  "phase": "phase-a",
+  "order": 2,
+  "subtopics": [
+    "Variable Declaration",
+    "Numeric Types (int, float)",
+    "String Type",
+    "Boolean Type",
+    "Type Conversion",
+    "String Methods & Formatting"
+  ],
+  "key_concepts": [
+    "Dynamic typing",
+    "Immutable vs mutable",
+    "f-string formatting",
+    "Type checking with type()"
+  ],
+  "estimated_hours": 6,
+  "prerequisites": [
+    "python-basics"
+  ],
+  "resources": [
+    "Python docs: Built-in Types",
+    "Real Python: Variables"
+  ]
+}

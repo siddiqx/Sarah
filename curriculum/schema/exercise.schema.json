@@ -1,0 +1,68 @@
+{
+  "": "http://json-schema.org/draft-07/schema#",
+  "title": "Exercise",
+  "type": "object",
+  "required": [
+    "exercise_id",
+    "topic_id",
+    "title",
+    "difficulty",
+    "question_type",
+    "question_data",
+    "correct_answer"
+  ],
+  "properties": {
+    "exercise_id": {
+      "type": "string"
+    },
+    "topic_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8
+    },
+    "question_type": {
+      "type": "string",
+      "enum": [
+        "multiple_choice",
+        "multiple_select",
+        "output_prediction",
+        "fill_code",
+        "ordering",
+        "matching",
+        "debugging",
+        "short_answer"
+      ]
+    },
+    "question_data": {
+      "type": "object"
+    },
+    "correct_answer": {
+      "type": "object"
+    },
+    "hints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "explanation": {
+      "type": "string"
+    },
+    "mistake_categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

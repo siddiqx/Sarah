@@ -1,0 +1,38 @@
+{
+  "id": "topic_frequency_analysis",
+  "title": "Character and Word Frequency Analysis",
+  "description": "Building frequency dictionaries. Counting occurrences of each character/word. Using dict.get() or defaultdict. Finding most common.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Build frequency dict with loop",
+    "Use dict.get(key, 0) pattern",
+    "Find max frequency item",
+    "Sort by frequency"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_word_counting"
+  ],
+  "related_skills": [
+    "dictionary_usage",
+    "frequency_counting",
+    "statistics"
+  ],
+  "lesson_refs": [
+    "lesson_day18_string_algorithms"
+  ],
+  "practice_refs": [
+    "ex_day18_char_frequency"
+  ],
+  "assessment_refs": [
+    "quiz_day18_string_algorithms"
+  ],
+  "mastery_criteria": [
+    "Builds frequency dictionary correctly",
+    "Finds most common element",
+    "Sorts by frequency descending"
+  ],
+  "revision_criteria": [
+    "KeyError on missing keys",
+    "Cannot find max frequency"
+  ]
+}

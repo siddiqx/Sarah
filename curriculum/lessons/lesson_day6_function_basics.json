@@ -1,0 +1,212 @@
+{
+  "id": "lesson_day6_function_basics",
+  "day_number": 6,
+  "title": "Functions: Definition and Basic Usage",
+  "phase_id": "a",
+  "estimated_minutes": 45,
+  "difficulty": "beginner",
+  "objectives": [
+    "Define functions using def with parameters",
+    "Call functions with arguments",
+    "Understand function definition vs call",
+    "Use functions to avoid code duplication"
+  ],
+  "prerequisites": ["lesson_day5_conditionals_advanced"],
+  "blocks": [
+    {
+      "type": "concept_explanation",
+      "order": 1,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "What is a Function?",
+        "explanation": "A function is a reusable block of code that performs a specific task. You define it once with def, then call it by name whenever needed. Functions help organize code, avoid repetition, and make programs easier to understand.",
+        "key_points": [
+          "def function_name(parameters):",
+          "    # body (indented)",
+          "    return value  # optional",
+          "Call with: function_name(arguments)"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 2,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Function Definition and Call",
+        "code": "def greet(name):\n    message = f"Hello, {name}!"\n    return message\n\n# Call the function\nresult = greet("Alice")\nprint(result)  # Hello, Alice!\n\n# Call again with different argument\nprint(greet("Bob"))  # Hello, Bob!",
+        "language": "python",
+        "explanation": "Definition creates the function. Call executes it. Parameters receive arguments."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 3,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Parameters vs Arguments",
+        "explanation": "Parameters are variables in the function definition. Arguments are the actual values passed when calling. They are matched by position by default.",
+        "key_points": [
+          "def func(param1, param2):  # parameters",
+          "func(arg1, arg2)  # arguments",
+          "Number and order must match",
+          "Inside function, parameters act like local variables"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 4,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Multiple Parameters",
+        "code": "def add(a, b):\n    return a + b\n\ndef greet(name, greeting="Hello"):\n    return f"{greeting}, {name}!"\n\nprint(add(3, 5))           # 8\nprint(add(10, 20))         # 30\nprint(greet("Alice"))       # Hello, Alice!\nprint(greet("Bob", "Hi"))   # Hi, Bob!",
+        "language": "python",
+        "explanation": "Functions can have multiple parameters. Default values make parameters optional."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 5,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Return Values",
+        "explanation": "The return statement sends a value back to the caller. Functions without return implicitly return None. Return exits the function immediately.",
+        "key_points": [
+          "return value - sends value back",
+          "return - returns None",
+          "No return - implicitly returns None",
+          "Return exits function immediately"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 6,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Return Examples",
+        "code": "def multiply(a, b):\n    return a * b\n\ndef greet(name):\n    print(f"Hello {name}")\n    # No return\n\ndef find_first_even(numbers):\n    for n in numbers:\n        if n % 2 == 0:\n            return n  # Early exit\n    return None\n\nresult = multiply(4, 5)\nprint(result)  # 20\nprint(greet("Alice"))  # Hello Alice\n                       # None (printed by print)",
+        "language": "python",
+        "explanation": "Return can be used for computed values or early exit from loops."
+      }
+    },
+    {
+      "type": "output_prediction",
+      "order": 7,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Predict the Output",
+        "code": "def mystery(x):\n    if x > 10:\n        return "big"\n    return "small"\n\nprint(mystery(5))\nprint(mystery(15))\nprint(mystery(10))",
+        "question": "What are the three outputs?",
+        "options": [
+          "small, big, small",
+          "small, big, big",
+          "big, small, small",
+          "Error on third"
+        ],
+        "correct_answer": "small, big, small",
+        "explanation": "5>10? No -> small. 15>10? Yes -> big. 10>10? No -> small."
+      }
+    },
+    {
+      "type": "fill_in_code",
+      "order": 8,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Complete the Function",
+        "code": "def is_even(n):\n    # Return True if n is even, False otherwise\n    _____",
+        "blanks": [
+          {"placeholder": "_____", "answer": "return n % 2 == 0", "hint": "Even numbers have remainder 0 when divided by 2"}
+        ],
+        "solution": "return n % 2 == 0"
+      }
+    },
+    {
+      "type": "knowledge_check",
+      "order": 9,
+      "estimated_minutes": 3,
+      "content": {
+        "questions": [
+          {
+            "question": "What does a function without return statement return?",
+            "type": "multiple_choice",
+            "options": ["0", "None", "Error", "Undefined"],
+            "correct_answer": "None"
+          },
+          {
+            "question": "In def add(a, b): return a+b, what are a and b?",
+            "type": "multiple_choice",
+            "options": ["Arguments", "Parameters", "Variables", "Values"],
+            "correct_answer": "Parameters"
+          },
+          {
+            "question": "Can a function have multiple return statements?",
+            "type": "multiple_choice",
+            "options": ["No, only one", "Yes, but only one executes", "Yes, all execute", "Only in loops"],
+            "correct_answer": "Yes, but only one executes"
+          }
+        ]
+      }
+    },
+    {
+      "type": "summary",
+      "order": 10,
+      "estimated_minutes": 2,
+      "content": {
+        "title": "Key Takeaways",
+        "points": [
+          "def name(params): defines a function",
+          "Call with name(args)",
+          "Parameters receive arguments",
+          "return sends value back (or None)",
+          "Functions avoid code duplication"
+        ]
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_day6_define_function",
+      "title": "Create a Function",
+      "description": "Write a function square(n) that returns n squared. Test it with 3, 5, 10.",
+      "starter_code": "# Define square function\n# Test with 3, 5, 10\n",
+      "solution": "def square(n):\n    return n * n\n\nprint(square(3))   # 9\nprint(square(5))   # 25\nprint(square(10))  # 100",
+      "tests": [
+        "assert "9" in output",
+        "assert "25" in output",
+        "assert "100" in output"
+      ],
+      "hints": ["Use n * n or n ** 2"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day6_parameters",
+      "title": "Multiple Parameters",
+      "description": "Write a function rectangle_area(width, height) that returns the area. Test with different values.",
+      "starter_code": "# Define rectangle_area\n# Test\n",
+      "solution": "def rectangle_area(width, height):\n    return width * height\n\nprint(rectangle_area(3, 4))   # 12\nprint(rectangle_area(5, 10))  # 50",
+      "tests": ["assert "12" in output", "assert "50" in output"],
+      "hints": ["Two parameters, multiply them"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the difference between a parameter and an argument?",
+      "type": "multiple_choice",
+      "options": [
+        "No difference",
+        "Parameter in definition, argument in call",
+        "Argument in definition, parameter in call",
+        "Parameter is required, argument is optional"
+      ],
+      "correct_answer": "Parameter in definition, argument in call",
+      "explanation": "Parameters are placeholders in the function definition. Arguments are actual values passed when calling.",
+      "difficulty": "easy"
+    }
+  ]
+}
+

@@ -1,0 +1,30 @@
+{
+  "id": "modules-packages",
+  "name": "Modules & Packages",
+  "description": "Import system, custom modules, packages, and dependency management",
+  "phase": "phase-a",
+  "order": 9,
+  "subtopics": [
+    "Import Statements",
+    "Standard Library Modules",
+    "Creating Modules",
+    "Package Structure",
+    "Virtual Environments",
+    "pip & requirements.txt",
+    "__main__ Guard"
+  ],
+  "key_concepts": [
+    "Module search path",
+    "Namespace packages",
+    "Dependency isolation",
+    "Semantic versioning"
+  ],
+  "estimated_hours": 6,
+  "prerequisites": [
+    "file-operations"
+  ],
+  "resources": [
+    "Python docs: Modules",
+    "Real Python: Python Modules"
+  ]
+}

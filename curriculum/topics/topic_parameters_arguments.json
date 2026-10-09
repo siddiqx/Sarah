@@ -1,0 +1,37 @@
+{
+  "id": "topic_parameters_arguments",
+  "title": "Parameters vs Arguments",
+  "description": "Formal parameters in definition vs actual arguments in call. Positional and keyword arguments.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Define functions with parameters",
+    "Call functions with positional arguments",
+    "Call functions with keyword arguments",
+    "Mix positional and keyword correctly"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_function_definition"
+  ],
+  "related_skills": [
+    "argument_passing",
+    "keyword_args"
+  ],
+  "lesson_refs": [
+    "lesson_day6_parameters_return"
+  ],
+  "practice_refs": [
+    "ex_day6_parameters"
+  ],
+  "assessment_refs": [
+    "quiz_day6_functions"
+  ],
+  "mastery_criteria": [
+    "Matches arguments to parameters correctly",
+    "Uses keyword args for clarity",
+    "Avoids positional-after-keyword error"
+  ],
+  "revision_criteria": [
+    "Confuses parameter names with values",
+    "Keyword argument ordering errors"
+  ]
+}

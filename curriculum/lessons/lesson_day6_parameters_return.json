@@ -1,0 +1,213 @@
+{
+  "id": "lesson_day6_parameters_return",
+  "day_number": 6,
+  "title": "Function Parameters, Return Values, and Scope",
+  "phase_id": "a",
+  "estimated_minutes": 45,
+  "difficulty": "beginner",
+  "objectives": [
+    "Use positional and keyword arguments",
+    "Return multiple values as tuples",
+    "Understand local vs global scope (LEGB)",
+    "Use global and nonlocal keywords"
+  ],
+  "prerequisites": ["lesson_day6_function_basics"],
+  "blocks": [
+    {
+      "type": "concept_explanation",
+      "order": 1,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Positional vs Keyword Arguments",
+        "explanation": "Arguments can be passed by position or by keyword name. Keyword arguments make code more readable and allow skipping optional parameters.",
+        "key_points": [
+          "Positional: func(1, 2) - matches by order",
+          "Keyword: func(a=1, b=2) - matches by name",
+          "Can mix: func(1, b=2) - positional first!",
+          "Keyword after positional required"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 2,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Argument Passing Examples",
+        "code": "def describe(name, age, city="Unknown"):\n    print(f"{name}, {age}, {city}")\n\ndescribe("Alice", 30)           # Positional\ndescribe("Bob", age=25)         # Keyword for age\ndescribe("Carol", 28, "NYC")   # All positional\ndescribe(name="Dave", city="LA", age=35)  # All keyword (any order)",
+        "language": "python",
+        "explanation": "Keyword arguments can be in any order. Default parameter city makes it optional."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 3,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Multiple Return Values",
+        "explanation": "Python functions can return multiple values by returning a tuple. The caller can unpack into multiple variables. This is idiomatic Python.",
+        "key_points": [
+          "return a, b, c  # Returns tuple (a, b, c)",
+          "x, y, z = func()  # Tuple unpacking",
+          "Use for related values (min, max), (quotient, remainder)"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 4,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Multiple Return Examples",
+        "code": "def min_max(numbers):\n    return min(numbers), max(numbers)\n\ndef divmod_custom(a, b):\n    return a // b, a % b\n\nlow, high = min_max([3, 1, 4, 1, 5])\nprint(low, high)  # 1 5\n\nq, r = divmod_custom(17, 5)\nprint(q, r)  # 3 2",
+        "language": "python",
+        "explanation": "Returning comma-separated values creates a tuple. Unpacking assigns each to a variable."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 5,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Variable Scope: LEGB Rule",
+        "explanation": "Python uses LEGB rule for variable lookup: Local -> Enclosing -> Global -> Built-in. Assignment creates local variable unless declared global/nonlocal.",
+        "key_points": [
+          "Local: inside current function",
+          "Enclosing: in outer function (nested)",
+          "Global: at module level",
+          "Built-in: Python builtins (len, print, etc.)",
+          "Assignment defaults to Local"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 6,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Scope Examples",
+        "code": "x = "global"\n\ndef outer():\n    x = "enclosing"\n    def inner():\n        x = "local"\n        print(x)  # local\n    inner()\n    print(x)  # enclosing\n\nouter()\nprint(x)  # global\n\n# Modifying global\ndef modify_global():\n    global x\n    x = "modified"\n\nmodify_global()\nprint(x)  # modified",
+        "language": "python",
+        "explanation": "Each function creates its own local scope. global declares module-level intent. nonlocal for enclosing scope."
+      }
+    },
+    {
+      "type": "output_prediction",
+      "order": 7,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Scope Prediction",
+        "code": "x = 10\ndef func():\n    x = 20\n    print(x)\n\nfunc()\nprint(x)",
+        "question": "What are the two outputs?",
+        "options": ["20, 20", "20, 10", "10, 20", "10, 10"],
+        "correct_answer": "20, 10",
+        "explanation": "func() creates local x=20, prints 20. Global x unchanged at 10."
+      }
+    },
+    {
+      "type": "debugging_exercise",
+      "order": 8,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Fix the Scope Bug",
+        "buggy_code": "count = 0\ndef increment():\n    count += 1\n\nincrement()\nprint(count)",
+        "error_message": "UnboundLocalError: local variable 'count' referenced before assignment",
+        "task": "Fix the function to modify the global count",
+        "hint": "Use global keyword to declare you mean the global variable",
+        "solution": "count = 0\ndef increment():\n    global count\n    count += 1\n\nincrement()\nprint(count)  # 1"
+      }
+    },
+    {
+      "type": "knowledge_check",
+      "order": 9,
+      "estimated_minutes": 3,
+      "content": {
+        "questions": [
+          {
+            "question": "What does func(a=1, b=2) use?",
+            "type": "multiple_choice",
+            "options": ["Positional arguments", "Keyword arguments", "Default arguments", "Variable arguments"],
+            "correct_answer": "Keyword arguments"
+          },
+          {
+            "question": "How do you return multiple values from a function?",
+            "type": "multiple_choice",
+            "options": [
+                "return [a, b]",
+                "return a, b",
+                "return {a, b}",
+                "Cannot return multiple"
+            ],
+            "correct_answer": "return a, b"
+          },
+          {
+            "question": "In LEGB, what does E stand for?",
+            "type": "multiple_choice",
+            "options": ["External", "Enclosing", "Environment", "Exception"],
+            "correct_answer": "Enclosing"
+          }
+        ]
+      }
+    },
+    {
+      "type": "summary",
+      "order": 10,
+      "estimated_minutes": 2,
+      "content": {
+        "title": "Key Takeaways",
+        "points": [
+          "Positional and keyword arguments",
+          "Multiple returns via tuple unpacking",
+          "LEGB: Local, Enclosing, Global, Built-in",
+          "global for module-level, nonlocal for enclosing",
+          "Assignment creates local by default"
+        ]
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_day6_return_values",
+      "title": "Multiple Returns",
+      "description": "Write a function stats(numbers) that returns (count, total, average) for a list of numbers.",
+      "starter_code": "def stats(numbers):\n    # Return count, sum, average\n",
+      "solution": "def stats(numbers):\n    count = len(numbers)\n    total = sum(numbers)\n    average = total / count if count > 0 else 0\n    return count, total, average\n\nc, t, a = stats([1, 2, 3, 4, 5])\nprint(c, t, a)  # 5 15 3.0",
+      "tests": [
+        "assert "5" in output",
+        "assert "15" in output",
+        "assert "3.0" in output"
+      ],
+      "hints": ["Use len(), sum(), return three values"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day6_scope",
+      "title": "Scope Practice",
+      "description": "Predict the output of this code, then run to verify:\nx = 1\ndef f():\n    x = 2\n    def g():\n        nonlocal x\n        x = 3\n    g()\n    print(x)\nf()\nprint(x)",
+      "starter_code": "# Predict, then run\n",
+      "solution": "x = 1\ndef f():\n    x = 2\n    def g():\n        nonlocal x\n        x = 3\n    g()\n    print(x)  # 3\nf()\nprint(x)  # 1",
+      "tests": [
+        "assert "3" in output",
+        "assert "1" in output"
+      ],
+      "hints": ["nonlocal modifies enclosing scope, not global"],
+      "difficulty": "medium",
+      "time_limit_seconds": 30
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What does nonlocal do?",
+      "type": "multiple_choice",
+      "options": [
+        "Makes variable global",
+        "Allows modification of enclosing scope variable",
+        "Creates new local variable",
+        "Deletes variable"
+      ],
+      "correct_answer": "Allows modification of enclosing scope variable"
+    }
+  ]
+}
+

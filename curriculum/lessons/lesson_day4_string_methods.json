@@ -1,0 +1,210 @@
+{
+  "id": "lesson_day4_string_methods",
+  "day_number": 4,
+  "title": "String Methods: Transformation and Analysis",
+  "phase_id": "a",
+  "estimated_minutes": 45,
+  "difficulty": "beginner",
+  "objectives": [
+    "Use case conversion methods: upper(), lower(), title(), capitalize()",
+    "Trim whitespace with strip(), lstrip(), rstrip()",
+    "Replace substrings with replace()",
+    "Split and join with split() and join()",
+    "Understand method chaining and immutability"
+  ],
+  "prerequisites": ["lesson_day4_string_basics"],
+  "blocks": [
+    {
+      "type": "concept_explanation",
+      "order": 1,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Case Conversion Methods",
+        "explanation": "Strings have methods to change letter case. These return NEW strings - the original is unchanged (immutability).",
+        "key_points": [
+          "upper() - all uppercase",
+          "lower() - all lowercase",
+          "title() - first letter of each word capitalized",
+          "capitalize() - only first character capitalized"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 2,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Case Conversion Examples",
+        "code": "text = "hello WORLD"\nprint(text.upper())      # HELLO WORLD\nprint(text.lower())      # hello world\nprint(text.title())      # Hello World\nprint(text.capitalize()) # Hello world\n\n# Original unchanged\nprint(text)              # hello WORLD",
+        "language": "python",
+        "explanation": "All methods return new strings. Original 'text' remains 'hello WORLD'."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 3,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Whitespace and Replacement",
+        "explanation": "strip() removes leading/trailing whitespace. replace() substitutes substrings. Both return new strings.",
+        "key_points": [
+          "strip() - both ends",
+          "lstrip() - left only",
+          "rstrip() - right only",
+          "replace(old, new) - all occurrences",
+          "replace(old, new, count) - limited replacements"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 4,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Whitespace and Replace Examples",
+        "code": "messy = "  hello world  "\nprint(repr(messy.strip()))    # 'hello world'\nprint(repr(messy.lstrip()))   # 'hello world  '\nprint(repr(messy.rstrip()))   # '  hello world'\n\ntext = "I like cats"\nprint(text.replace("cats", "dogs"))  # I like dogs\nprint(text.replace(" ", "-"))        # I-like-cats",
+        "language": "python",
+        "explanation": "repr() shows invisible whitespace. replace() without count replaces all occurrences."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 5,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Split and Join",
+        "explanation": "split() breaks a string into a list. join() combines a list into a string. They are inverses.",
+        "key_points": [
+          "split() - splits on whitespace by default",
+          "split(sep) - splits on specific separator",
+          "join(iterable) - joins with string as separator",
+          "" ".join(words) - space-separated",
+          "",".join(items) - comma-separated"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 6,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Split and Join Examples",
+        "code": "sentence = "The quick brown fox"\nwords = sentence.split()\nprint(words)              # ['The', 'quick', 'brown', 'fox']\nprint(" ".join(words))    # The quick brown fox\n\ncsv = "apple,banana,cherry"\nitems = csv.split(",")\nprint(items)              # ['apple', 'banana', 'cherry']\nprint("|".join(items))    # apple|banana|cherry",
+        "language": "python",
+        "explanation": "split() without args handles multiple spaces. join() requires all elements to be strings."
+      }
+    },
+    {
+      "type": "fill_in_code",
+      "order": 7,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Method Chaining",
+        "code": "raw = "  HELLO world  "\n# Chain methods: strip, lower, replace world with python\nclean = _____\nprint(repr(clean))  # 'hello python'",
+        "blanks": [
+          {"placeholder": "_____", "answer": "raw.strip().lower().replace("world", "python")", "hint": "Chain methods left to right"}
+        ],
+        "solution": "clean = raw.strip().lower().replace("world", "python")"
+      }
+    },
+    {
+      "type": "debugging_exercise",
+      "order": 8,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Why Did It Not Change?",
+        "buggy_code": "name = "alice"\nname.upper()\nprint(name)  # Still prints 'alice'",
+        "error_message": "Logical error - output is 'alice' not 'ALICE'",
+        "task": "Fix the code to actually change the variable",
+        "hint": "String methods return new strings. You must assign the result.",
+        "solution": "name = "alice"\nname = name.upper()\nprint(name)  # ALICE"
+      }
+    },
+    {
+      "type": "knowledge_check",
+      "order": 9,
+      "estimated_minutes": 3,
+      "content": {
+        "questions": [
+          {
+            "question": "What does "hello world".title() return?",
+            "type": "multiple_choice",
+            "options": ["Hello world", "Hello World", "HELLO WORLD", "hello World"],
+            "correct_answer": "Hello World"
+          },
+          {
+            "question": "What is the result of "a,b,c".split(",")?",
+            "type": "multiple_choice",
+            "options": ["['a', 'b', 'c']", "['a,b,c']", "'a,b,c'", "Error"],
+            "correct_answer": "['a', 'b', 'c']"
+          },
+          {
+            "question": "After: s = "hi"; s.replace("i", "o"); print(s), what prints?",
+            "type": "multiple_choice",
+            "options": ["ho", "hi", "Error", "None"],
+            "correct_answer": "hi"
+          }
+        ]
+      }
+    },
+    {
+      "type": "summary",
+      "order": 10,
+      "estimated_minutes": 2,
+      "content": {
+        "title": "Key Takeaways",
+        "points": [
+          "Case: upper(), lower(), title(), capitalize()",
+          "Whitespace: strip(), lstrip(), rstrip()",
+          "Replace: replace(old, new[, count])",
+          "Split/Join: split([sep]), sep.join(iterable)",
+          "All return NEW strings - assign to keep changes"
+        ]
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_day4_string_methods",
+      "title": "Text Cleanup",
+      "description": "Clean the messy string: "  \t  HeLLo, WORld!  \n" - strip whitespace, make title case, replace comma with semicolon.",
+      "starter_code": "messy = "  \\t  HeLLo, WORld!  \\n"\n# Clean it step by step\n",
+      "solution": "messy = "  \\t  HeLLo, WORld!  \\n"\nclean = messy.strip().title().replace(",", ";")\nprint(repr(clean))  # 'Hello; World!'",
+      "tests": [
+        "assert "Hello; World!" in output"
+      ],
+      "hints": ["Chain: strip() -> title() -> replace()"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day4_immutability",
+      "title": "Immutability Demo",
+      "description": "Demonstrate string immutability: create s = "hello", try to change s[0] = "H" (will error), show correct way.",
+      "starter_code": "s = "hello"\n# Try s[0] = "H" - what happens?\n# Show correct way\n",
+      "solution": "s = "hello"\ntry:\n    s[0] = "H"\nexcept TypeError as e:\n    print(f"Error: {e}")\n\n# Correct way\ns = s[0].upper() + s[1:]\nprint(s)  # Hello",
+      "tests": [
+        "assert "Error" in output",
+        "assert "Hello" in output"
+      ],
+      "hints": ["Strings cannot be modified in place. Create new string."],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What does "  hello  ".strip() return?",
+      "type": "multiple_choice",
+      "options": [""hello"", ""  hello  "", ""hello  "", ""  hello""],
+      "correct_answer": ""hello""
+    },
+    {
+      "question": "What is the output of: "a-b-c".split("-")?",
+      "type": "multiple_choice",
+      "options": ["['a', 'b', 'c']", "['a-b-c']", "'a', 'b', 'c'", "Error"],
+      "correct_answer": "['a', 'b', 'c']"
+    }
+  ]
+}
+

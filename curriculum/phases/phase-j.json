@@ -1,0 +1,17 @@
+{
+  "number": 10,
+  "title": "Production Projects and Capstone",
+  "description": "End-to-end ingestion, transformation, validation, scheduling, testing, deployment.",
+  "days": [
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250
+  ]
+}

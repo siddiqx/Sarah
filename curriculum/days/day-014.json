@@ -1,0 +1,32 @@
+{
+  "number": 14,
+  "phase": 1,
+  "title": "Day 14 Topic",
+  "summary": "Summary for day 14.",
+  "learning_objectives": [
+    "Objective 1",
+    "Objective 2"
+  ],
+  "prerequisites": [],
+  "topics": [
+    {
+      "topic_id": "day-014-topic",
+      "title": "Day 14 Topic",
+      "description": "Description for day 14 topic.",
+      "difficulty": "beginner",
+      "learning_objectives": [
+        "Learn concept"
+      ],
+      "prerequisite_topic_ids": [],
+      "lessons": [
+        "day-014-lesson"
+      ],
+      "exercises": [
+        "day-014-exercise"
+      ],
+      "assessments": []
+    }
+  ],
+  "estimated_study_time_minutes": 60,
+  "completion_criteria": "Complete lesson and exercise."
+}

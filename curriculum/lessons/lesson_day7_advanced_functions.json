@@ -1,0 +1,246 @@
+{
+  "id": "lesson_day7_advanced_functions",
+  "day_number": 7,
+  "title": "Advanced Functions: Defaults, *args, **kwargs, Docstrings",
+  "phase_id": "a",
+  "estimated_minutes": 60,
+  "difficulty": "intermediate",
+  "objectives": [
+    "Define functions with default parameter values",
+    "Use *args for variable positional arguments",
+    "Use **kwargs for variable keyword arguments",
+    "Write Google-style docstrings",
+    "Avoid mutable default argument bug"
+  ],
+  "prerequisites": ["lesson_day6_parameters_return"],
+  "blocks": [
+    {
+      "type": "concept_explanation",
+      "order": 1,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Default Parameter Values",
+        "explanation": "Parameters can have default values, making them optional. Defaults are evaluated once at function definition time, not at each call.",
+        "key_points": [
+          "def func(param=default):",
+          "Callable as func() or func(value)",
+          "Defaults evaluated at definition time",
+          "Required params must come before defaults"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 2,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Default Parameters",
+        "code": "def greet(name, greeting="Hello", punctuation="!"):\n    return f"{greeting}, {name}{punctuation}"\n\nprint(greet("Alice"))              # Hello, Alice!\nprint(greet("Bob", "Hi"))          # Hi, Bob!\nprint(greet("Carol", "Hey", "."))   # Hey, Carol.\nprint(greet("Dave", punctuation="?")) # Hello, Dave?",
+        "language": "python",
+        "explanation": "Defaults allow flexible calling. Keyword args let you skip middle defaults."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 3,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Mutable Default Argument Pitfall",
+        "explanation": "Mutable defaults (lists, dicts) are shared across all calls because they are evaluated once at definition. This causes unexpected behavior. Use None as sentinel instead.",
+        "key_points": [
+          "def func(items=[]):  # DANGEROUS!",
+          "All calls share the SAME list",
+          "Fix: def func(items=None):\n    if items is None:\n        items = []",
+          "None is immutable and safe as default"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 4,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Mutable Default Bug and Fix",
+        "code": "# BUGGY\ndef add_item_buggy(item, items=[]):\n    items.append(item)\n    return items\n\nprint(add_item_buggy("a"))  # ["a"]\nprint(add_item_buggy("b"))  # ["a", "b"] - SHARED!\n\n# FIXED\ndef add_item_fixed(item, items=None):\n    if items is None:\n        items = []\n    items.append(item)\n    return items\n\nprint(add_item_fixed("a"))  # ["a"]\nprint(add_item_fixed("b"))  # ["b"] - Separate lists",
+        "language": "python",
+        "explanation": "The buggy version accumulates across calls. The fixed version creates new list each call."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 5,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "*args and **kwargs",
+        "explanation": "*args collects extra positional arguments into a tuple. **kwargs collects extra keyword arguments into a dict. Enables flexible function signatures.",
+        "key_points": [
+          "def func(*args): args is tuple",
+          "def func(**kwargs): kwargs is dict",
+          "def func(a, b, *args, **kwargs): full signature",
+          "Call with func(1,2,3) or func(a=1,b=2)"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 6,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "*args and **kwargs Examples",
+        "code": "def sum_all(*args):\n    return sum(args)\n\ndef print_kwargs(**kwargs):\n    for k, v in kwargs.items():\n        print(f"{k}: {v}")\n\ndef flexible(a, b, *args, **kwargs):\n    print(f"a={a}, b={b}, args={args}, kwargs={kwargs}")\n\nprint(sum_all(1,2,3,4,5))  # 15\nprint_kwargs(name="Alice", age=30)\n# name: Alice\n# age: 30\nflexible(1, 2, 3, 4, x=10, y=20)\n# a=1, b=2, args=(3,4), kwargs={x:10, y:20}",
+        "language": "python",
+        "explanation": "*args packs positional, **kwargs packs keyword. Unpack with * and ** when calling."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 7,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Docstrings",
+        "explanation": "Docstrings document functions. Place as first statement in function. Access via __doc__ or help(). Use Google or NumPy style for consistency.",
+        "key_points": [
+          "def func():\n    """Summary line.\n\n    Args:\n        param: description\n    Returns:\n        description\n    """",
+          "Access: func.__doc__ or help(func)",
+          "Tools like Sphinx extract for documentation"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 8,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Google-Style Docstring",
+        "code": "def divide(dividend, divisor):\n    """Divide two numbers.\n\n    Args:\n        dividend (float): Number to be divided.\n        divisor (float): Number to divide by.\n\n    Returns:\n        float: Result of division.\n\n    Raises:\n        ZeroDivisionError: If divisor is zero.\n    """\n    if divisor == 0:\n        raise ZeroDivisionError("Cannot divide by zero")\n    return dividend / divisor\n\nprint(divide.__doc__)",
+        "language": "python",
+        "explanation": "Structured docstring with Args, Returns, Raises sections. Machine-readable."
+      }
+    },
+    {
+      "type": "fill_in_code",
+      "order": 9,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Fix Mutable Default",
+        "code": "# Fix this function\ndef collect(items=[]):\n    items.append("new")\n    return items",
+        "blanks": [
+          {"placeholder": "# Fix this function", "answer": "def collect(items=None):\n    if items is None:\n        items = []\n    items.append("new")\n    return items", "hint": "Use None sentinel pattern"}
+        ],
+        "solution": "def collect(items=None):\n    if items is None:\n        items = []\n    items.append("new")\n    return items"
+      }
+    },
+    {
+      "type": "knowledge_check",
+      "order": 10,
+      "estimated_minutes": 3,
+      "content": {
+        "questions": [
+          {
+            "question": "What is the output of: def f(x=[]): x.append(1); return x; print(f()); print(f())?",
+            "type": "multiple_choice",
+            "options": ["[1], [1]", "[1], [1, 1]", "[1], []", "Error"],
+            "correct_answer": "[1], [1, 1]"
+          },
+          {
+            "question": "In def func(a, *args, **kwargs), what does args contain when called as func(1,2,3,4)?",
+            "type": "multiple_choice",
+            "options": ["(1,2,3,4)", "(2,3,4)", "(3,4)", "()"],
+            "correct_answer": "(2,3,4)"
+          }
+        ]
+      }
+    },
+    {
+      "type": "summary",
+      "order": 11,
+      "estimated_minutes": 2,
+      "content": {
+        "title": "Key Takeaways",
+        "points": [
+          "Defaults evaluated once at definition",
+          "Mutable defaults cause bugs - use None sentinel",
+          "*args for variable positional, **kwargs for keyword",
+          "Docstrings: Google/NumPy style for machine readability",
+          "Parameter order: required, defaults, *args, **kwargs"
+        ]
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_day7_default_args",
+      "title": "Default Parameters",
+      "description": "Write a function power(base, exponent=2) that returns base^exponent. Test with and without exponent.",
+      "starter_code": "def power(base, exponent=2):\n    # Return base ** exponent\n",
+      "solution": "def power(base, exponent=2):\n    return base ** exponent\n\nprint(power(3))      # 9\nprint(power(3, 3))   # 27\nprint(power(2, 10))  # 1024",
+      "tests": ["assert "9" in output", "assert "27" in output", "assert "1024" in output"],
+      "hints": ["Use ** operator, default exponent=2"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day7_args",
+      "title": "*args Practice",
+      "description": "Write a function average(*numbers) that returns the average of all arguments. Handle empty case.",
+      "starter_code": "def average(*numbers):\n    # Return average\n",
+      "solution": "def average(*numbers):\n    if not numbers:\n        return 0\n    return sum(numbers) / len(numbers)\n\nprint(average(1, 2, 3))      # 2.0\nprint(average(10, 20, 30))   # 20.0\nprint(average())             # 0",
+      "tests": ["assert "2.0" in output", "assert "20.0" in output", "assert "0" in output"],
+      "hints": ["numbers is a tuple, use sum() and len()"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day7_kwargs",
+      "title": "**kwargs Practice",
+      "description": "Write a function create_profile(**details) that prints each key-value pair nicely formatted.",
+      "starter_code": "def create_profile(**details):\n    # Print each detail\n",
+      "solution": "def create_profile(**details):\n    for key, value in details.items():\n        print(f"{key.capitalize()}: {value}")\n\ncreate_profile(name="Alice", age=30, city="NYC")\n# Name: Alice\n# Age: 30\n# City: NYC",
+      "tests": ["assert "Name: Alice" in output", "assert "Age: 30" in output"],
+      "hints": ["kwargs is a dict, use .items()"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day7_docstrings",
+      "title": "Write a Docstring",
+      "description": "Add a Google-style docstring to this function:\ndef calculate_tax(amount, rate=0.1):\n    return amount * rate",
+      "starter_code": "def calculate_tax(amount, rate=0.1):\n    # Add docstring\n    return amount * rate",
+      "solution": "def calculate_tax(amount, rate=0.1):\n    """Calculate tax on an amount.\n\n    Args:\n        amount (float): The base amount.\n        rate (float): Tax rate (default 0.1).\n\n    Returns:\n        float: Tax amount.\n    """\n    return amount * rate",
+      "tests": ["assert "Args:" in code", "assert "Returns:" in code"],
+      "hints": ["Include Args, Returns sections"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day7_mutable_default_bug",
+      "title": "Mutable Default Bug",
+      "description": "Demonstrate the mutable default bug and fix it. Create a function that adds to a list, show the bug, then fix with None.",
+      "starter_code": "# Show bug, then fix\n",
+      "solution": "# Buggy\ndef add_buggy(x, lst=[]):\n    lst.append(x)\n    return lst\n\nprint(add_buggy(1))  # [1]\nprint(add_buggy(2))  # [1, 2] - BUG!\n\n# Fixed\ndef add_fixed(x, lst=None):\n    if lst is None:\n        lst = []\n    lst.append(x)\n    return lst\n\nprint(add_fixed(1))  # [1]\nprint(add_fixed(2))  # [2] - Fixed!",
+      "tests": [
+        "assert "[1, 2]" in output",
+        "assert "[2]" in output"
+      ],
+      "hints": ["Show bug first, then None sentinel fix"],
+      "difficulty": "medium",
+      "time_limit_seconds": 30
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Why is def func(items=[]) dangerous?",
+      "type": "multiple_choice",
+      "options": [
+        "Syntax error",
+        "All calls share the same list object",
+        "Items cannot be added",
+        "Performance issue"
+      ],
+      "correct_answer": "All calls share the same list object",
+      "explanation": "The default list is created once at definition time. All calls without argument share that same list.",
+      "difficulty": "medium"
+    }
+  ]
+}
+

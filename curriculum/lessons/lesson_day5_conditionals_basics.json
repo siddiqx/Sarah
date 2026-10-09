@@ -1,0 +1,211 @@
+{
+  "id": "lesson_day5_conditionals_basics",
+  "day_number": 5,
+  "title": "Conditional Statements: if, if-else, elif",
+  "phase_id": "a",
+  "estimated_minutes": 45,
+  "difficulty": "beginner",
+  "objectives": [
+    "Write if statements for single conditions",
+    "Use if-else for binary choices",
+    "Chain multiple conditions with elif",
+    "Understand truthy/falsy in conditions"
+  ],
+  "prerequisites": ["lesson_day4_string_methods"],
+  "blocks": [
+    {
+      "type": "concept_explanation",
+      "order": 1,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "The if Statement",
+        "explanation": "An if statement executes a block of code only if a condition is True. The condition can be any expression - Python evaluates its truthiness.",
+        "key_points": [
+          "Syntax: if condition: (colon required)",
+          "Indented block executes when True",
+          "Any value can be a condition (truthiness)",
+          "No curly braces - indentation defines blocks"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 2,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Simple if Examples",
+        "code": "age = 20\nif age >= 18:\n    print("Adult")\n\nscore = 85\nif score >= 90:\n    print("A grade")\n\nname = ""\nif name:\n    print(f"Hello {name}")\nelse:\n    print("No name provided")",
+        "language": "python",
+        "explanation": "The colon after condition is mandatory. Indentation (4 spaces) defines the block. Empty string is falsy."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 3,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "if-else: Two Branches",
+        "explanation": "if-else provides two mutually exclusive paths. Exactly one branch executes. The else branch runs when the if condition is False.",
+        "key_points": [
+          "if condition:\n    # runs if True\nelse:\n    # runs if False",
+          "No condition after else",
+          "Exactly one branch executes",
+          "Use for binary decisions"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 4,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "if-else Examples",
+        "code": "temperature = 75\nif temperature > 80:\n    print("Hot")\nelse:\n    print("Not hot")\n\n# Even/odd\nnumber = 7\nif number % 2 == 0:\n    print("Even")\nelse:\n    print("Odd")",
+        "language": "python",
+        "explanation": "The else catches everything that the if doesn't. No overlap, no gaps."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 5,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "elif: Multiple Conditions",
+        "explanation": "elif (else-if) chains multiple conditions. Python checks each in order and executes the first True block. The final else is optional catch-all.",
+        "key_points": [
+          "if condition1:\n    ...\nelif condition2:\n    ...\nelif condition3:\n    ...\nelse:\n    ...",
+          "Stops at first True condition",
+          "Order matters - most specific first",
+          "else is optional default"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 6,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "elif Chain Examples",
+        "code": "score = 85\nif score >= 90:\n    grade = "A"\nelif score >= 80:\n    grade = "B"\nelif score >= 70:\n    grade = "C"\nelif score >= 60:\n    grade = "D"\nelse:\n    grade = "F"\nprint(grade)  # B",
+        "language": "python",
+        "explanation": "Conditions checked top to bottom. First match wins. Order from highest to lowest threshold."
+      }
+    },
+    {
+      "type": "output_prediction",
+      "order": 7,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Predict the Grade",
+        "code": "score = 72\nif score > 90:\n    print("A")\nelif score > 80:\n    print("B")\nelif score > 70:\n    print("C")\nelse:\n    print("F")",
+        "question": "What prints?",
+        "options": ["A", "B", "C", "F"],
+        "correct_answer": "C",
+        "explanation": "72 > 90? No. 72 > 80? No. 72 > 70? Yes! Prints C."
+      }
+    },
+    {
+      "type": "fill_in_code",
+      "order": 8,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Complete the Classification",
+        "code": "x = 0\nif x > 0:\n    result = "positive"\nelif x < 0:\n    result = "negative"\nelse:\n    result = _____\nprint(result)",
+        "blanks": [
+          {"placeholder": "_____", "answer": ""zero"", "hint": "The only remaining case"}
+        ],
+        "solution": "result = "zero""
+      }
+    },
+    {
+      "type": "knowledge_check",
+      "order": 9,
+      "estimated_minutes": 3,
+      "content": {
+        "questions": [
+          {
+            "question": "What happens if no elif condition is True and there is no else?",
+            "type": "multiple_choice",
+            "options": ["Error", "Nothing executes", "Last elif executes", "First elif executes"],
+            "correct_answer": "Nothing executes"
+          },
+          {
+            "question": "In: if a: ... elif b: ... elif c: ... which runs?",
+            "type": "multiple_choice",
+            "options": ["All that are True", "First True only", "Last True only", "Random one"],
+            "correct_answer": "First True only"
+          }
+        ]
+      }
+    },
+    {
+      "type": "summary",
+      "order": 10,
+      "estimated_minutes": 2,
+      "content": {
+        "title": "Key Takeaways",
+        "points": [
+          "if: single condition",
+          "if-else: binary choice",
+          "elif: multiple ordered conditions",
+          "First True wins, then stops",
+          "else: optional catch-all"
+        ]
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_day5_simple_if",
+      "title": "Positive Check",
+      "description": "Write an if statement that prints "Positive" if a number is greater than 0.",
+      "starter_code": "number = 5\n# Write if statement\n",
+      "solution": "number = 5\nif number > 0:\n    print("Positive")",
+      "tests": ["assert "Positive" in output"],
+      "hints": ["Use if number > 0:"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day5_if_else",
+      "title": "Even or Odd",
+      "description": "Use if-else to print "Even" or "Odd" for a given number.",
+      "starter_code": "number = 7\n# Write if-else\n",
+      "solution": "number = 7\nif number % 2 == 0:\n    print("Even")\nelse:\n    print("Odd")",
+      "tests": ["assert "Odd" in output"],
+      "hints": ["Use modulo operator %"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day5_elif_chain",
+      "title": "Grade Calculator",
+      "description": "Write an elif chain to assign letter grades: A (90+), B (80-89), C (70-79), D (60-69), F (<60).",
+      "starter_code": "score = 85\n# Write elif chain\n",
+      "solution": "score = 85\nif score >= 90:\n    grade = "A"\nelif score >= 80:\n    grade = "B"\nelif score >= 70:\n    grade = "C"\nelif score >= 60:\n    grade = "D"\nelse:\n    grade = "F"\nprint(grade)",
+      "tests": ["assert "B" in output"],
+      "hints": ["Order from highest to lowest threshold"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What does this print? x = 0; if x: print("Yes") else: print("No")",
+      "type": "multiple_choice",
+      "options": ["Yes", "No", "Error", "Nothing"],
+      "correct_answer": "No",
+      "explanation": "0 is falsy, so the else branch executes.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the output? score = 95; if score >= 90: print("A"); elif score >= 80: print("B")",
+      "type": "multiple_choice",
+      "options": ["A", "B", "AB", "Nothing"],
+      "correct_answer": "A",
+      "explanation": "First condition (>=90) is True, so it prints A and stops. elif is not checked.",
+      "difficulty": "easy"
+    }
+  ]
+}
+

@@ -1,0 +1,78 @@
+{
+  "project_id": "cli-app",
+  "title": "Python CLI Application",
+  "description": "Build a command-line tool that processes user input and performs calculations.",
+  "phase": 1,
+  "prerequisites": [
+    "variables",
+    "conditions",
+    "loops",
+    "functions"
+  ],
+  "dataset_references": [],
+  "milestones": [
+    {
+      "milestone_id": "setup",
+      "title": "Project Setup",
+      "description": "Initialize repository and create basic structure",
+      "tasks": [
+        "Create Git repo",
+        "Set up virtual environment",
+        "Create main.py",
+        "Add argument parser"
+      ],
+      "validation": [
+        "Repo initialized",
+        "Virtual env works",
+        "Arguments parsed"
+      ]
+    },
+    {
+      "milestone_id": "core",
+      "title": "Core Functionality",
+      "description": "Implement the main calculation logic",
+      "tasks": [
+        "Implement calculator functions",
+        "Add input validation",
+        "Handle errors"
+      ],
+      "validation": [
+        "Functions work",
+        "Invalid input handled",
+        "Tests pass"
+      ]
+    },
+    {
+      "milestone_id": "polish",
+      "title": "Polish and Package",
+      "description": "Add documentation and make it installable",
+      "tasks": [
+        "Add README",
+        "Create setup.py",
+        "Add help text",
+        "Test install"
+      ],
+      "validation": [
+        "README complete",
+        "Package installs",
+        "Help works"
+      ]
+    }
+  ],
+  "validation_rules": [
+    "Code runs without errors",
+    "All tests pass",
+    "Help text displays"
+  ],
+  "evaluation_criteria": [
+    "Functionality",
+    "Code quality",
+    "Documentation"
+  ],
+  "hints": [
+    "Use argparse for CLI",
+    "Separate logic from I/O",
+    "Write tests first"
+  ],
+  "completion_criteria": "All milestones completed and validated"
+}

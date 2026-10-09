@@ -1,0 +1,36 @@
+{
+  "id": "topic_comparison_operators",
+  "title": "Comparison Operators",
+  "description": "Six comparison operators returning boolean results. Chaining comparisons.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Use ==, !=, <, >, <=, >=",
+    "Chain comparisons: a < b < c",
+    "Understand comparisons work on compatible types"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_data_types"
+  ],
+  "related_skills": [
+    "boolean_logic",
+    "condition_writing"
+  ],
+  "lesson_refs": [
+    "lesson_day3_comparison_logical"
+  ],
+  "practice_refs": [
+    "ex_day3_comparison"
+  ],
+  "assessment_refs": [
+    "quiz_day3_operators"
+  ],
+  "mastery_criteria": [
+    "Writes correct comparison expressions",
+    "Uses chained comparisons naturally",
+    "Understands type compatibility rules"
+  ],
+  "revision_criteria": [
+    "Writes invalid chained comparisons",
+    "Confuses = and =="
+  ]
+}

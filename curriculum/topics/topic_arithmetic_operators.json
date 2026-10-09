@@ -1,0 +1,37 @@
+{
+  "id": "topic_arithmetic_operators",
+  "title": "Arithmetic Operators",
+  "description": "Seven arithmetic operators: addition, subtraction, multiplication, division, floor division, modulo, exponentiation.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Use all seven arithmetic operators",
+    "Distinguish / (true division) from // (floor division)",
+    "Apply modulo for remainder and cycling",
+    "Use ** for exponentiation"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_data_types"
+  ],
+  "related_skills": [
+    "arithmetic",
+    "operator_selection"
+  ],
+  "lesson_refs": [
+    "lesson_day3_arithmetic"
+  ],
+  "practice_refs": [
+    "ex_day3_arithmetic"
+  ],
+  "assessment_refs": [
+    "quiz_day3_operators"
+  ],
+  "mastery_criteria": [
+    "Chooses correct division operator for context",
+    "Uses modulo for cyclic patterns",
+    "Computes powers with **"
+  ],
+  "revision_criteria": [
+    "Confuses / and //",
+    "Cannot explain modulo result"
+  ]
+}

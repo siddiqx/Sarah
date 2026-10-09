@@ -1,0 +1,38 @@
+{
+  "id": "topic_loop_complexity",
+  "title": "Loop Time Complexity",
+  "description": "Big O notation for loops. O(1), O(n), O(n^2). Nested loops multiply. Counting operations. Practical implications.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Classify loop complexity: O(1), O(n), O(n^2)",
+    "Analyze nested loop complexity",
+    "Estimate operations for input size",
+    "Choose algorithms by complexity"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_nested_loops"
+  ],
+  "related_skills": [
+    "complexity_analysis",
+    "algorithm_selection",
+    "performance_awareness"
+  ],
+  "lesson_refs": [
+    "lesson_day15_nested_loops"
+  ],
+  "practice_refs": [
+    "ex_day15_complexity_analysis"
+  ],
+  "assessment_refs": [
+    "quiz_day15_nested_loops"
+  ],
+  "mastery_criteria": [
+    "Classifies common loop patterns",
+    "Explains O(n^2) for nested loops",
+    "Chooses better algorithm when needed"
+  ],
+  "revision_criteria": [
+    "Cannot estimate complexity",
+    "Ignores performance for large n"
+  ]
+}

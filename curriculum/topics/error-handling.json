@@ -1,0 +1,29 @@
+{
+  "id": "error-handling",
+  "name": "Error Handling",
+  "description": "Exception handling, custom exceptions, and debugging strategies",
+  "phase": "phase-a",
+  "order": 7,
+  "subtopics": [
+    "Try/Except/Else/Finally",
+    "Exception Hierarchy",
+    "Custom Exceptions",
+    "Raising Exceptions",
+    "Exception Chaining",
+    "Best Practices"
+  ],
+  "key_concepts": [
+    "EAFP vs LBYL",
+    "Exception catching specificity",
+    "Custom exception design",
+    "Context managers"
+  ],
+  "estimated_hours": 3,
+  "prerequisites": [
+    "functions"
+  ],
+  "resources": [
+    "Python docs: Exceptions",
+    "Real Python: Exception Handling"
+  ]
+}

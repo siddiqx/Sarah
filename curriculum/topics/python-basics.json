@@ -1,0 +1,25 @@
+{
+  "id": "python-basics",
+  "name": "Python Basics",
+  "description": "Fundamental Python syntax, execution model, and development environment",
+  "phase": "phase-a",
+  "order": 1,
+  "subtopics": [
+    "Installation & Setup",
+    "REPL vs Scripts",
+    "Basic Syntax",
+    "Comments & Documentation"
+  ],
+  "key_concepts": [
+    "Python interpreter",
+    "Indentation rules",
+    "Statement vs Expression",
+    "Running Python files"
+  ],
+  "estimated_hours": 3,
+  "prerequisites": [],
+  "resources": [
+    "Python.org Tutorial",
+    "VS Code Python Guide"
+  ]
+}

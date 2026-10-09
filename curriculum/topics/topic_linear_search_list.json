@@ -1,0 +1,38 @@
+{
+  "id": "topic_linear_search_list",
+  "title": "Linear Search on Lists",
+  "description": "Searching unsorted lists. Return index or -1. Using enumerate(). Early exit. Comparison to linear search on other sequences.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Implement linear search on list",
+    "Use enumerate for index-value",
+    "Return index or -1",
+    "Analyze O(n) complexity"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_list_indexing",
+    "topic_linear_search"
+  ],
+  "related_skills": [
+    "search_algorithms",
+    "enumerate_usage"
+  ],
+  "lesson_refs": [
+    "lesson_day20_list_algorithms"
+  ],
+  "practice_refs": [
+    "ex_day20_linear_search"
+  ],
+  "assessment_refs": [
+    "quiz_day20_list_algorithms"
+  ],
+  "mastery_criteria": [
+    "Implements linear search on lists",
+    "Handles empty list",
+    "Returns correct index"
+  ],
+  "revision_criteria": [
+    "Returns None instead of -1",
+    "Uses range(len()) instead of enumerate"
+  ]
+}

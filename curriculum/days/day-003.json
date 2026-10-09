@@ -1,0 +1,30 @@
+{
+  "id": "day-003",
+  "phase": "phase-a",
+  "day_number": 3,
+  "title": "String Manipulation & Formatting",
+  "topics": [
+    "variables-data-types"
+  ],
+  "duration_hours": 3,
+  "objectives": [
+    "Master string methods (split, join, strip, replace)",
+    "Use f-strings, .format(), % formatting",
+    "Work with escape sequences",
+    "Understand string immutability"
+  ],
+  "activities": [
+    "String method lab",
+    "Formatting practice with user input",
+    "Parsing CSV-like data",
+    "String validation exercises"
+  ],
+  "deliverables": [
+    "string_utils.py",
+    "Formatting examples"
+  ],
+  "resources": [
+    "Python docs: String Methods",
+    "Real Python: String Formatting"
+  ]
+}

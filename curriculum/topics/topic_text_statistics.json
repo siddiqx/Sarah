@@ -1,0 +1,39 @@
+{
+  "id": "topic_text_statistics",
+  "title": "Text Statistics and Readability",
+  "description": "Computing average word length, sentence length, readability scores (Flesch-Kincaid). Statistical text analysis.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Compute average word length",
+    "Compute average sentence length",
+    "Calculate Flesch-Kincaid grade level",
+    "Interpret readability scores"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_word_counting",
+    "topic_arithmetic_operators"
+  ],
+  "related_skills": [
+    "statistics",
+    "readability",
+    "text_analysis"
+  ],
+  "lesson_refs": [
+    "lesson_day18_string_algorithms"
+  ],
+  "practice_refs": [
+    "ex_day18_text_stats"
+  ],
+  "assessment_refs": [
+    "quiz_day18_string_algorithms"
+  ],
+  "mastery_criteria": [
+    "Computes text statistics accurately",
+    "Applies readability formula",
+    "Interprets results meaningfully"
+  ],
+  "revision_criteria": [
+    "Division by zero on empty text",
+    "Formula implementation errors"
+  ]
+}

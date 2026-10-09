@@ -1,0 +1,38 @@
+{
+  "id": "topic_for_loop",
+  "title": "for Loops and Iteration",
+  "description": "The for loop syntax. Iterating over iterables. The loop variable. Loop body execution.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Write for loops over iterables",
+    "Understand loop variable assignment each iteration",
+    "Use loop variable in body",
+    "Know loop variable persists after loop"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_function_composition"
+  ],
+  "related_skills": [
+    "iteration",
+    "loop_control"
+  ],
+  "lesson_refs": [
+    "lesson_day11_for_loops"
+  ],
+  "practice_refs": [
+    "ex_day11_basic_for",
+    "ex_day11_iterate_string"
+  ],
+  "assessment_refs": [
+    "quiz_day11_loops"
+  ],
+  "mastery_criteria": [
+    "Writes correct for loop syntax",
+    "Explains loop variable behavior",
+    "Iterates over various iterables"
+  ],
+  "revision_criteria": [
+    "Confuses for loop with while loop",
+    "Off-by-one in range usage"
+  ]
+}

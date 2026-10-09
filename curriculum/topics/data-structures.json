@@ -1,0 +1,30 @@
+{
+  "id": "data-structures",
+  "name": "Core Data Structures",
+  "description": "Lists, tuples, dictionaries, sets and their operations",
+  "phase": "phase-a",
+  "order": 4,
+  "subtopics": [
+    "Lists & List Methods",
+    "List Slicing & Comprehension",
+    "Tuples & Unpacking",
+    "Sets & Set Operations",
+    "Dictionaries & Dict Methods",
+    "Dict Comprehension",
+    "Nested Structures"
+  ],
+  "key_concepts": [
+    "Mutability",
+    "Sequence vs mapping",
+    "Set theory operations",
+    "Key-value lookup"
+  ],
+  "estimated_hours": 9,
+  "prerequisites": [
+    "control-flow"
+  ],
+  "resources": [
+    "Python docs: Data Structures",
+    "Real Python: Lists, Tuples, Dicts, Sets"
+  ]
+}

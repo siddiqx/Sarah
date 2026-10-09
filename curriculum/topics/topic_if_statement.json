@@ -1,0 +1,36 @@
+{
+  "id": "topic_if_statement",
+  "title": "Simple if Statements",
+  "description": "Single-branch conditionals. Syntax, indentation, and boolean context.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Write if statements with proper indentation",
+    "Understand any expression can be a condition",
+    "Recognize truthy and falsy values"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_logical_operators"
+  ],
+  "related_skills": [
+    "conditional_logic",
+    "indentation"
+  ],
+  "lesson_refs": [
+    "lesson_day5_conditionals_basics"
+  ],
+  "practice_refs": [
+    "ex_day5_simple_if"
+  ],
+  "assessment_refs": [
+    "quiz_day5_conditionals"
+  ],
+  "mastery_criteria": [
+    "Writes correctly indented if blocks",
+    "Uses expressions directly as conditions",
+    "Identifies truthy/falsy values"
+  ],
+  "revision_criteria": [
+    "Indentation errors in if blocks",
+    "Confused by truthiness"
+  ]
+}

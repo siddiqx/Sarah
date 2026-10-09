@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://sarah.dev/schemas/question.json",
+  "title": "Assessment Question",
+  "type": "object",
+  "required": [
+    "id",
+    "question_text",
+    "question_type",
+    "correct_answer",
+    "points"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^q_[a-z0-9_]+"
+    },
+    "question_text": {
+      "type": "string"
+    },
+    "question_type": {
+      "type": "string",
+      "enum": [
+        "multiple_choice_single",
+        "multiple_choice_multiple",
+        "true_false",
+        "code_completion",
+        "code_prediction",
+        "debugging",
+        "short_answer",
+        "matching",
+        "ordering"
+      ]
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 8
+    },
+    "correct_answer": {},
+    "explanation": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "default": "medium"
+    },
+    "points": {
+      "type": "integer",
+      "default": 1,
+      "minimum": 1,
+      "maximum": 10
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "starter_code": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string",
+      "default": "python"
+    },
+    "time_limit_seconds": {
+      "type": "integer",
+      "default": 60
+    }
+  }
+}

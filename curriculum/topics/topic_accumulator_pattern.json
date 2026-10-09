@@ -1,0 +1,40 @@
+{
+  "id": "topic_accumulator_pattern",
+  "title": "The Accumulator Pattern",
+  "description": "General pattern: initialize, loop to update, return result. Applies to sum, count, product, min, max, concatenation.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Identify problems needing accumulation",
+    "Initialize accumulator correctly",
+    "Update accumulator in loop body",
+    "Return final accumulated value"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_loop_trace"
+  ],
+  "related_skills": [
+    "pattern_recognition",
+    "algorithm_design"
+  ],
+  "lesson_refs": [
+    "lesson_day12_accumulators"
+  ],
+  "practice_refs": [
+    "ex_day12_counting",
+    "ex_day12_summing",
+    "ex_day12_product",
+    "ex_day12_accumulator_variations"
+  ],
+  "assessment_refs": [
+    "quiz_day12_accumulators"
+  ],
+  "mastery_criteria": [
+    "Applies pattern to new problems",
+    "Chooses correct initial value",
+    "Explains why pattern works"
+  ],
+  "revision_criteria": [
+    "Wrong initial value (e.g., 0 for product)",
+    "Forgets to update accumulator"
+  ]
+}

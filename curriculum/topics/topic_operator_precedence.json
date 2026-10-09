@@ -1,0 +1,40 @@
+{
+  "id": "topic_operator_precedence",
+  "title": "Operator Precedence and Associativity",
+  "description": "Order of operations in Python. Using parentheses to override default precedence.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Recall precedence: ** > *,/,//,% > +,- > comparisons > not > and > or",
+    "Use parentheses to clarify and control evaluation",
+    "Understand left-to-right associativity for most operators"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_arithmetic_operators",
+    "topic_comparison_operators",
+    "topic_logical_operators"
+  ],
+  "related_skills": [
+    "expression_evaluation",
+    "parentheses_usage"
+  ],
+  "lesson_refs": [
+    "lesson_day3_arithmetic",
+    "lesson_day3_comparison_logical"
+  ],
+  "practice_refs": [
+    "ex_day3_precedence",
+    "ex_day3_mixed_expressions"
+  ],
+  "assessment_refs": [
+    "quiz_day3_operators"
+  ],
+  "mastery_criteria": [
+    "Evaluates complex expressions correctly",
+    "Adds parentheses for clarity, not just necessity",
+    "Explains why 2 + 3 * 4 == 14"
+  ],
+  "revision_criteria": [
+    "Mis-evaluates expressions without parentheses",
+    "Cannot explain precedence order"
+  ]
+}

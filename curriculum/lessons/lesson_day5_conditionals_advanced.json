@@ -1,0 +1,184 @@
+{
+  "id": "lesson_day5_conditionals_advanced",
+  "day_number": 5,
+  "title": "Nested Conditionals and Guard Clauses",
+  "phase_id": "a",
+  "estimated_minutes": 45,
+  "difficulty": "intermediate",
+  "objectives": [
+    "Write nested conditionals correctly",
+    "Trace execution through nested branches",
+    "Refactor deep nesting with guard clauses",
+    "Use early returns to flatten logic"
+  ],
+  "prerequisites": ["lesson_day5_conditionals_basics"],
+  "blocks": [
+    {
+      "type": "concept_explanation",
+      "order": 1,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Nested Conditionals",
+        "explanation": "Conditionals can be placed inside other conditionals. This allows complex decision trees but can lead to deep indentation (arrow code).",
+        "key_points": [
+          "if condition1:\n    if condition2:\n        ...",
+          "Each level adds indentation",
+          "Hard to read beyond 2-3 levels",
+          "Consider refactoring"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 2,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Nested Conditional Example",
+        "code": "age = 25\nhas_license = True\nhas_car = False\n\nif age >= 18:\n    if has_license:\n        if has_car:\n            print("Can drive own car")\n        else:\n            print("Can drive, needs car")\n    else:\n        print("Adult but no license")\nelse:\n    print("Minor")",
+        "language": "python",
+        "explanation": "Three levels of nesting. Hard to follow the logic flow."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 3,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Guard Clauses and Early Returns",
+        "explanation": "Guard clauses check preconditions and return early. This flattens nested code by handling edge cases first, then proceeding with main logic at the top level.",
+        "key_points": [
+          "Check invalid cases first, return/continue",
+          "Main logic stays at left margin",
+          "Reduces cognitive load",
+          "Also called 'bouncer pattern'"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 4,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Refactored with Guard Clauses",
+        "code": "def can_drive(age, has_license, has_car):\n    if age < 18:\n        return "Minor"\n    if not has_license:\n        return "Adult but no license"\n    if not has_car:\n        return "Can drive, needs car"\n    return "Can drive own car"\n\nprint(can_drive(25, True, False))  # Can drive, needs car",
+        "language": "python",
+        "explanation": "Each check handles one failure case. Main success path at bottom. Much easier to read."
+      }
+    },
+    {
+      "type": "step_by_step_trace",
+      "order": 5,
+      "estimated_minutes": 10,
+      "content": {
+        "title": "Trace Nested vs Flat",
+        "code": "# Nested\nif a:\n    if b:\n        print(1)\n    else:\n        print(2)\nelse:\n    print(3)\n\n# Flat\ndef check(a, b):\n    if not a: return 3\n    if not b: return 2\n    return 1",
+        "trace_table": [
+          {"a": True, "b": True, "nested": "1", "flat": "1"},
+          {"a": True, "b": False, "nested": "2", "flat": "2"},
+          {"a": False, "b": True, "nested": "3", "flat": "3"}
+        ],
+        "explanation": "Both produce same results. Flat version is easier to trace and modify."
+      }
+    },
+    {
+      "type": "fill_in_code",
+      "order": 6,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Add Guard Clauses",
+        "code": "def process_user(user):\n    # Add guard clauses for:\n    # - user is None\n    # - user not active\n    # - user has no permissions\n    _____\n    # Main processing here\n    return "Processed"",
+        "blanks": [
+          {"placeholder": "_____", "answer": "if user is None:\n        return "No user"\n    if not user.active:\n        return "Inactive"\n    if not user.permissions:\n        return "No permissions"", "hint": "Check failure cases first, return early"}
+        ],
+        "solution": "if user is None:\n    return "No user"\nif not user.active:\n    return "Inactive"\nif not user.permissions:\n    return "No permissions""
+      }
+    },
+    {
+      "type": "knowledge_check",
+      "order": 7,
+      "estimated_minutes": 3,
+      "content": {
+        "questions": [
+          {
+            "question": "What is a guard clause?",
+            "type": "multiple_choice",
+            "options": [
+              "A clause that guards a variable",
+              "Early return for invalid input",
+              "A type of loop",
+              "A comment"
+            ],
+            "correct_answer": "Early return for invalid input"
+          },
+          {
+            "question": "What is the main benefit of guard clauses?",
+            "type": "multiple_choice",
+            "options": [
+              "Faster execution",
+              "Less memory usage",
+              "Reduced nesting and clearer logic",
+              "More features"
+            ],
+            "correct_answer": "Reduced nesting and clearer logic"
+          }
+        ]
+      }
+    },
+    {
+      "type": "summary",
+      "order": 8,
+      "estimated_minutes": 2,
+      "content": {
+        "title": "Key Takeaways",
+        "points": [
+          "Nested conditionals work but hurt readability",
+          "Guard clauses: check failures first, return early",
+          "Main logic stays unindented",
+          "Easier to test and maintain"
+        ]
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_day5_nested_conditionals",
+      "title": "Refactor Nested Code",
+      "description": "Refactor this nested code using guard clauses:\nif user:\n    if user.active:\n        if user.permissions:\n            return "OK"\n        else:\n            return "No perms"\n    else:\n        return "Inactive"\nelse:\n    return "No user"",
+      "starter_code": "def check(user):\n    # Refactor with guard clauses\n",
+      "solution": "def check(user):\n    if user is None:\n        return "No user"\n    if not user.active:\n        return "Inactive"\n    if not user.permissions:\n        return "No perms"\n    return "OK"",
+      "tests": [
+        "assert check(None) == "No user"",
+        "assert check(type('u',(),{'active':False,'permissions':True})()) == "Inactive""
+      ],
+      "hints": ["Invert conditions and return early"],
+      "difficulty": "medium",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day5_grade_calculator",
+      "title": "Grade Calculator Function",
+      "description": "Write a function that takes a score and returns letter grade using elif chain. Handle invalid scores (<0 or >100).",
+      "starter_code": "def letter_grade(score):\n    # Your code\n",
+      "solution": "def letter_grade(score):\n    if score < 0 or score > 100:\n        return "Invalid"\n    if score >= 90:\n        return "A"\n    elif score >= 80:\n        return "B"\n    elif score >= 70:\n        return "C"\n    elif score >= 60:\n        return "D"\n    else:\n        return "F"",
+      "tests": [
+        "assert letter_grade(95) == "A"",
+        "assert letter_grade(85) == "B"",
+        "assert letter_grade(-5) == "Invalid""
+      ],
+      "hints": ["Guard clause for invalid input first"],
+      "difficulty": "medium",
+      "time_limit_seconds": 30
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the maximum recommended nesting level for conditionals?",
+      "type": "multiple_choice",
+      "options": ["1", "2-3", "5", "No limit"],
+      "correct_answer": "2-3",
+      "explanation": "Beyond 2-3 levels, code becomes hard to read. Use guard clauses to flatten.",
+      "difficulty": "easy"
+    }
+  ]
+}
+

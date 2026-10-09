@@ -1,0 +1,30 @@
+{
+  "id": "day-005",
+  "phase": "phase-a",
+  "day_number": 5,
+  "title": "Control Flow: Loops",
+  "topics": [
+    "control-flow"
+  ],
+  "duration_hours": 3,
+  "objectives": [
+    "Write for loops with range()",
+    "Use while loops with conditions",
+    "Apply break, continue, else clauses",
+    "Iterate over sequences"
+  ],
+  "activities": [
+    "Multiplication table generator",
+    "Fibonacci sequence",
+    "Input validation loop",
+    "Nested loop patterns"
+  ],
+  "deliverables": [
+    "loop_exercises.py",
+    "fibonacci.py"
+  ],
+  "resources": [
+    "Python docs: For/While Loops",
+    "Real Python: Loops"
+  ]
+}

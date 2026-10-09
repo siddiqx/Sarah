@@ -1,0 +1,32 @@
+{
+  "number": 18,
+  "phase": 1,
+  "title": "Day 18 Topic",
+  "summary": "Summary for day 18.",
+  "learning_objectives": [
+    "Objective 1",
+    "Objective 2"
+  ],
+  "prerequisites": [],
+  "topics": [
+    {
+      "topic_id": "day-018-topic",
+      "title": "Day 18 Topic",
+      "description": "Description for day 18 topic.",
+      "difficulty": "beginner",
+      "learning_objectives": [
+        "Learn concept"
+      ],
+      "prerequisite_topic_ids": [],
+      "lessons": [
+        "day-018-lesson"
+      ],
+      "exercises": [
+        "day-018-exercise"
+      ],
+      "assessments": []
+    }
+  ],
+  "estimated_study_time_minutes": 60,
+  "completion_criteria": "Complete lesson and exercise."
+}

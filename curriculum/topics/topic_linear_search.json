@@ -1,0 +1,40 @@
+{
+  "id": "topic_linear_search",
+  "title": "Linear Search Algorithm",
+  "description": "Sequential search through a collection. Return index or -1. Best/worst/average case. Early exit with break.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Implement linear search returning index",
+    "Return -1 when not found",
+    "Use break for early exit",
+    "Analyze O(n) complexity"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_for_loop",
+    "topic_if_statement"
+  ],
+  "related_skills": [
+    "search_algorithms",
+    "early_exit",
+    "complexity"
+  ],
+  "lesson_refs": [
+    "lesson_day13_search_filter"
+  ],
+  "practice_refs": [
+    "ex_day13_linear_search",
+    "ex_day13_first_occurrence"
+  ],
+  "assessment_refs": [
+    "quiz_day13_search_filter"
+  ],
+  "mastery_criteria": [
+    "Implements linear search correctly",
+    "Handles empty collection",
+    "Explains time complexity"
+  ],
+  "revision_criteria": [
+    "Returns None instead of -1",
+    "Does not break on found"
+  ]
+}

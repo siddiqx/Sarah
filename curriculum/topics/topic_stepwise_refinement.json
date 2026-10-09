@@ -1,0 +1,39 @@
+{
+  "id": "topic_stepwise_refinement",
+  "title": "Stepwise Refinement",
+  "description": "Incremental development: start with stubs, implement one function at a time, test each piece.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Implement solutions incrementally",
+    "Use stub functions for structure",
+    "Test each function in isolation",
+    "Integrate gradually"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_pseudocode"
+  ],
+  "related_skills": [
+    "incremental_development",
+    "testing",
+    "integration"
+  ],
+  "lesson_refs": [
+    "lesson_day9_decomposition"
+  ],
+  "practice_refs": [
+    "ex_day9_refine_solution"
+  ],
+  "assessment_refs": [
+    "quiz_day9_decomposition",
+    "assessment_week1"
+  ],
+  "mastery_criteria": [
+    "Builds working solution incrementally",
+    "Tests each piece before integrating",
+    "Uses stubs effectively"
+  ],
+  "revision_criteria": [
+    "Writes all code before testing",
+    "Integration failures late in process"
+  ]
+}

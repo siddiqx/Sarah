@@ -1,0 +1,56 @@
+{
+  "number": 1,
+  "phase": 1,
+  "title": "Introduction to Python",
+  "summary": "Learn what Python is, how to run it, and write your first program.",
+  "learning_objectives": [
+    "Understand what Python is and why it's used in Data Engineering",
+    "Run Python code in the REPL and from files",
+    "Write and execute a 'Hello, World' program"
+  ],
+  "prerequisites": [],
+  "topics": [
+    {
+      "topic_id": "python-intro",
+      "title": "What is Python?",
+      "description": "Overview of Python and its role in Data Engineering.",
+      "difficulty": "beginner",
+      "learning_objectives": [
+        "Explain what Python is",
+        "Identify Python use cases in DE"
+      ],
+      "prerequisite_topic_ids": [],
+      "lessons": [
+        "python-intro-lesson"
+      ],
+      "exercises": [
+        "python-intro-exercise"
+      ],
+      "assessments": [
+        "phase-1-quiz"
+      ]
+    },
+    {
+      "topic_id": "running-python",
+      "title": "Running Python Code",
+      "description": "REPL vs scripts, running files.",
+      "difficulty": "beginner",
+      "learning_objectives": [
+        "Use the Python REPL",
+        "Run a .py file"
+      ],
+      "prerequisite_topic_ids": [
+        "python-intro"
+      ],
+      "lessons": [
+        "running-python-lesson"
+      ],
+      "exercises": [
+        "running-python-exercise"
+      ],
+      "assessments": []
+    }
+  ],
+  "estimated_study_time_minutes": 45,
+  "completion_criteria": "Complete both lessons and pass the intro quiz."
+}

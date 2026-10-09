@@ -1,0 +1,184 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Project Schema",
+  "type": "object",
+  "required": [
+    "project_id",
+    "title",
+    "description",
+    "phase",
+    "day_range",
+    "difficulty",
+    "estimated_hours",
+    "learning_objectives",
+    "prerequisites",
+    "milestones",
+    "deliverables",
+    "rubric",
+    "starter_template",
+    "solution_repo"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+\\$",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "phase": {
+      "type": "string",
+      "pattern": "^[A-J]\\$"
+    },
+    "day_range": {
+      "type": "object",
+      "required": [
+        "start",
+        "end"
+      ],
+      "properties": {
+        "start": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 250
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 250
+        }
+      },
+      "additionalProperties": false
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    "estimated_hours": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 40
+    },
+    "learning_objectives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "milestones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "description",
+          "day",
+          "deliverable"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "day": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 250
+          },
+          "deliverable": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "deliverables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "rubric": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "criterion",
+          "weight",
+          "levels"
+        ],
+        "properties": {
+          "criterion": {
+            "type": "string"
+          },
+          "weight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "levels": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "score",
+                "description"
+              ],
+              "properties": {
+                "score": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "minItems": 5,
+            "maxItems": 5
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "starter_template": {
+      "type": "string"
+    },
+    "solution_repo": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "additionalProperties": false
+}

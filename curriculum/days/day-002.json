@@ -1,0 +1,84 @@
+{
+  "number": 2,
+  "phase": 1,
+  "title": "Variables and Data Types",
+  "summary": "Understand variables, basic types, and type conversion.",
+  "learning_objectives": [
+    "Create and assign variables",
+    "Identify basic data types: int, float, str, bool",
+    "Convert between types"
+  ],
+  "prerequisites": [
+    "python-intro"
+  ],
+  "topics": [
+    {
+      "topic_id": "variables",
+      "title": "Variables",
+      "description": "Naming, assignment, and reassignment.",
+      "difficulty": "beginner",
+      "learning_objectives": [
+        "Create valid variable names",
+        "Reassign variables"
+      ],
+      "prerequisite_topic_ids": [
+        "running-python"
+      ],
+      "lessons": [
+        "variables-lesson"
+      ],
+      "exercises": [
+        "variables-exercise"
+      ],
+      "assessments": [
+        "quiz-1"
+      ]
+    },
+    {
+      "topic_id": "data-types",
+      "title": "Basic Data Types",
+      "description": "int, float, str, bool and type().",
+      "difficulty": "beginner",
+      "learning_objectives": [
+        "Identify types with type()",
+        "Understand type differences"
+      ],
+      "prerequisite_topic_ids": [
+        "variables"
+      ],
+      "lessons": [
+        "data-types-lesson"
+      ],
+      "exercises": [
+        "data-types-exercise"
+      ],
+      "assessments": [
+        "quiz-1"
+      ]
+    },
+    {
+      "topic_id": "type-conversion",
+      "title": "Type Conversion",
+      "description": "Explicit and implicit conversion.",
+      "difficulty": "beginner",
+      "learning_objectives": [
+        "Convert between types",
+        "Handle conversion errors"
+      ],
+      "prerequisite_topic_ids": [
+        "data-types"
+      ],
+      "lessons": [
+        "type-conversion-lesson"
+      ],
+      "exercises": [
+        "type-conversion-exercise"
+      ],
+      "assessments": [
+        "quiz-1"
+      ]
+    }
+  ],
+  "estimated_study_time_minutes": 60,
+  "completion_criteria": "Complete all three lessons and pass quiz with 70%+"
+}

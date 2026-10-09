@@ -1,0 +1,38 @@
+{
+  "id": "topic_break_continue",
+  "title": "Loop Control: break and continue",
+  "description": "break exits loop immediately. continue skips to next iteration. Use cases and alternatives. Nested loop implications.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Use break to exit loop early",
+    "Use continue to skip iteration",
+    "Understand effect in nested loops",
+    "Refactor to avoid when possible"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_for_loop",
+    "topic_while_loop"
+  ],
+  "related_skills": [
+    "loop_control",
+    "flow_control"
+  ],
+  "lesson_refs": [
+    "lesson_day13_search_filter"
+  ],
+  "practice_refs": [
+    "ex_day13_break_continue"
+  ],
+  "assessment_refs": [
+    "quiz_day13_search_filter"
+  ],
+  "mastery_criteria": [
+    "Uses break/continue appropriately",
+    "Explains nested loop behavior",
+    "Knows alternatives (flags, functions)"
+  ],
+  "revision_criteria": [
+    "Overuses break/continue",
+    "Confused by nested loop break"
+  ]
+}

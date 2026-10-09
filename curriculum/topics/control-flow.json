@@ -1,0 +1,29 @@
+{
+  "id": "control-flow",
+  "name": "Control Flow",
+  "description": "Conditional statements, loops, and flow control mechanisms",
+  "phase": "phase-a",
+  "order": 3,
+  "subtopics": [
+    "If/Elif/Else",
+    "Comparison Operators",
+    "Logical Operators",
+    "For Loops",
+    "While Loops",
+    "Break/Continue/Else"
+  ],
+  "key_concepts": [
+    "Truthy/falsy values",
+    "Short-circuit evaluation",
+    "Loop else clause",
+    "Nested structures"
+  ],
+  "estimated_hours": 6,
+  "prerequisites": [
+    "variables-data-types"
+  ],
+  "resources": [
+    "Python docs: Control Flow",
+    "Real Python: Conditionals & Loops"
+  ]
+}

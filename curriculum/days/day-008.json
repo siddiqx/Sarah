@@ -1,0 +1,30 @@
+{
+  "id": "day-008",
+  "phase": "phase-a",
+  "day_number": 8,
+  "title": "Dictionaries & Dictionary Operations",
+  "topics": [
+    "data-structures"
+  ],
+  "duration_hours": 3,
+  "objectives": [
+    "Create and access dictionary data",
+    "Use dict methods (get, keys, values, items)",
+    "Apply dictionary comprehension",
+    "Handle missing keys safely"
+  ],
+  "activities": [
+    "Contact manager",
+    "Word frequency counter",
+    "Config/settings parser",
+    "Nested dictionary navigation"
+  ],
+  "deliverables": [
+    "contact_manager.py",
+    "word_counter.py"
+  ],
+  "resources": [
+    "Python docs: Dict Methods",
+    "Real Python: Dictionaries"
+  ]
+}

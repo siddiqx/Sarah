@@ -1,0 +1,36 @@
+{
+  "id": "topic_function_definition",
+  "title": "Function Definition and Basics",
+  "description": "Defining functions with def. Function as reusable code blocks. The difference between definition and call.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Define functions using def keyword",
+    "Distinguish function definition from call",
+    "Understand functions as first-class objects"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_nested_conditionals"
+  ],
+  "related_skills": [
+    "abstraction",
+    "code_reuse"
+  ],
+  "lesson_refs": [
+    "lesson_day6_function_basics"
+  ],
+  "practice_refs": [
+    "ex_day6_define_function"
+  ],
+  "assessment_refs": [
+    "quiz_day6_functions"
+  ],
+  "mastery_criteria": [
+    "Writes correct function syntax",
+    "Explains when function body executes",
+    "Calls function after definition"
+  ],
+  "revision_criteria": [
+    "Forgets to call defined function",
+    "Confuses definition with call"
+  ]
+}

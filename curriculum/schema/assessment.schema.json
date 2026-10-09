@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Assessment Schema",
+  "type": "object",
+  "required": [
+    "assessment_id",
+    "title",
+    "description",
+    "type",
+    "phase",
+    "day_range",
+    "questions",
+    "passing_score",
+    "time_limit_minutes"
+  ],
+  "properties": {
+    "assessment_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+\\$",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "formative",
+        "summative",
+        "diagnostic",
+        "project_based"
+      ]
+    },
+    "phase": {
+      "type": "string",
+      "pattern": "^[A-J]\\$"
+    },
+    "day_range": {
+      "type": "object",
+      "required": [
+        "start",
+        "end"
+      ],
+      "properties": {
+        "start": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 250
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 250
+        }
+      },
+      "additionalProperties": false
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "question",
+          "correct_answer",
+          "points"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "multiple_choice",
+              "true_false",
+              "short_answer",
+              "code_output",
+              "coding",
+              "essay"
+            ]
+          },
+          "question": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "correct_answer": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "object"
+            ]
+          },
+          "explanation": {
+            "type": "string"
+          },
+          "points": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "passing_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "time_limit_minutes": {
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 240
+    }
+  },
+  "additionalProperties": false
+}

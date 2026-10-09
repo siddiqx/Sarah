@@ -1,0 +1,297 @@
+#!/usr/bin/env python3
+"""
+Curriculum seed script.
+Seeds curriculum data from JSON files into PostgreSQL database.
+Run with: python -m database.seeds.seed_curriculum
+"""
+
+import asyncio
+import json
+import os
+import sys
+from pathlib import Path
+from typing import Any
+
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import update
+
+# Add project root to path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent / "apps" / "api"))
+
+from sqlalchemy.orm import DeclarativeBase
+
+class Base(DeclarativeBase):
+    pass
+from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
+from sqlalchemy.orm import sessionmaker
+from app.models.curriculum import (
+    CurriculumPhase,
+    CurriculumDay,
+    CurriculumTopic,
+    CurriculumLesson,
+    LessonBlock,
+)
+from app.models.assessments import Assessment, Question
+
+
+async def load_json_files(directory: Path, pattern: str = "*.json") -> dict[str, Any]:
+    """Load all JSON files from a directory."""
+    result = {}
+    for file_path in directory.glob(pattern):
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                result[file_path.stem] = data
+        except json.JSONDecodeError as e:
+            print(f"ERROR: Invalid JSON in {file_path}: {e}")
+            raise
+        except Exception as e:
+            print(f"ERROR: Error reading {file_path}: {e}")
+            raise
+    return result
+
+
+async def seed_phases(session: AsyncSession, phases_dir: Path) -> dict[int, int]:
+    """Seed phases and return mapping of phase number -> phase id."""
+    phases_data = await load_json_files(phases_dir)
+    phase_map = {}
+
+    print(f"Seeding {len(phases_data)} phases...")
+
+    for name, data in phases_data.items():
+        phase = CurriculumPhase(
+            number=data["number"],
+            title=data["title"],
+            description=data.get("description", ""),
+            order=data["number"],
+        )
+        session.add(phase)
+        await session.flush()
+        phase_map[data["number"]] = phase.id
+        print(f"  Created phase {data['number']}: {data['title']} (id={phase.id})")
+
+    await session.commit()
+    return phase_map
+
+
+async def seed_days(session: AsyncSession, days_dir: Path, phase_map: dict[int, int]) -> dict[int, int]:
+    """Seed days and return mapping of day number -> day id."""
+    days_data = await load_json_files(days_dir)
+    day_map = {}
+
+    print(f"Seeding {len(days_data)} days...")
+
+    for name, data in days_data.items():
+        phase_num = data["phase"]
+        if phase_num not in phase_map:
+            print(f"WARNING: Day {data['number']} references unknown phase {phase_num}, skipping")
+            continue
+
+        day = CurriculumDay(
+            number=data["number"],
+            phase_id=phase_map[phase_num],
+            title=data["title"],
+            summary=data.get("summary", ""),
+            learning_objectives=data.get("learning_objectives", []),
+            prerequisites=data.get("prerequisites", []),
+            estimated_study_time_minutes=data.get("estimated_study_time_minutes", 60),
+            completion_criteria=data.get("completion_criteria", ""),
+        )
+        session.add(day)
+        await session.flush()
+        day_map[data["number"]] = day.id
+        print(f"  Created day {data['number']}: {data['title']} (id={day.id})")
+
+    await session.commit()
+    return day_map
+
+
+async def build_lesson_to_topic_map(topics_dir: Path) -> dict[str, str]:
+    """Build mapping from lesson_id to topic_id by reading topic files."""
+    topics_data = await load_json_files(topics_dir)
+    lesson_to_topic = {}
+
+    for name, data in topics_data.items():
+        topic_id = data["id"]
+        for lesson_ref in data.get("lesson_refs", []):
+            lesson_to_topic[lesson_ref] = topic_id
+
+    return lesson_to_topic
+
+
+async def seed_topics(session: AsyncSession, topics_dir: Path, lesson_to_topic: dict[str, str]) -> dict[str, int]:
+    """Seed topics and return mapping of topic_id -> topic db id."""
+    topics_data = await load_json_files(topics_dir)
+    topic_map = {}
+
+    print(f"Seeding {len(topics_data)} topics...")
+
+    for name, data in topics_data.items():
+        topic = CurriculumTopic(
+            topic_id=data["id"],
+            day_number=1,  # Will be updated from day data
+            title=data["title"],
+            description=data.get("description", ""),
+            difficulty=data.get("difficulty", "beginner"),
+            learning_objectives=data.get("learning_objectives", []),
+            prerequisite_topic_ids=data.get("prerequisite_topic_ids", []),
+            related_skills=data.get("related_skills", []),
+            mastery_criteria="\\n".join(data.get("mastery_criteria", [])) if isinstance(data.get("mastery_criteria"), list) else data.get("mastery_criteria", ""),
+            revision_criteria="\\n".join(data.get("revision_criteria", [])) if isinstance(data.get("revision_criteria"), list) else data.get("revision_criteria", ""),
+        )
+        session.add(topic)
+        await session.flush()
+        topic_map[data["id"]] = topic.id
+        print(f"  Created topic {data['id']}: {data['title']} (id={topic.id})")
+
+    await session.commit()
+    return topic_map
+
+
+async def update_topic_day_numbers(session: AsyncSession, days_dir: Path, topic_map: dict[str, int]):
+    """Update topic day_numbers from day files."""
+    days_data = await load_json_files(days_dir)
+
+    print("Updating topic day_numbers...")
+
+    for name, data in days_data.items():
+        day_num = data["number"]
+        for topic_data in data.get("topics", []):
+            topic_id = topic_data.get("topic_id")
+            if topic_id in topic_map:
+                stmt = (
+                    update(CurriculumTopic)
+                    .where(CurriculumTopic.topic_id == topic_id)
+                    .values(day_number=day_num)
+                )
+                await session.execute(stmt)
+                print(f"  Updated topic {topic_id} -> day {day_num}")
+
+    await session.commit()
+
+
+async def seed_lessons(session: AsyncSession, lessons_dir: Path, topic_map: dict[str, int], lesson_to_topic: dict[str, str]):
+    """Seed lessons and their blocks."""
+    lessons_data = await load_json_files(lessons_dir)
+
+    print(f"Seeding {len(lessons_data)} lessons...")
+
+    for name, data in lessons_data.items():
+        lesson_id = data["id"]
+        topic_id_str = lesson_to_topic.get(lesson_id)
+
+        if not topic_id_str or topic_id_str not in topic_map:
+            print(f"  WARNING: No topic mapping for lesson {lesson_id}, skipping")
+            continue
+
+        topic_db_id = topic_map[topic_id_str]
+
+        lesson = CurriculumLesson(
+            lesson_id=lesson_id,
+            topic_id=topic_id_str,
+            title=data["title"],
+            description="",
+        )
+        session.add(lesson)
+        await session.flush()
+
+        # Add lesson blocks
+        for block_data in data.get("blocks", []):
+            block = LessonBlock(
+                lesson_id=lesson.id,
+                block_type=block_data["type"],
+                content=block_data["content"],
+                order=block_data.get("order", 0),
+            )
+            session.add(block)
+
+        print(f"  Created lesson {lesson_id}: {data['title']} (id={lesson.id}, topic={topic_id_str})")
+
+    await session.commit()
+
+
+async def seed_assessments(session: AsyncSession, assessments_dir: Path):
+    """Seed assessments and questions."""
+    assessments_data = await load_json_files(assessments_dir)
+
+    print(f"Seeding {len(assessments_data)} assessments...")
+
+    for name, data in assessments_data.items():
+        assessment = Assessment(
+            assessment_id=data["assessment_id"],
+            title=data["title"],
+            description=data.get("description", ""),
+            assessment_type=data.get("assessment_type", "micro"),
+            topic_ids=data.get("topic_ids", []),
+            time_limit_minutes=data.get("time_limit_minutes"),
+            passing_score=data.get("passing_score", 0.7),
+        )
+        session.add(assessment)
+        await session.flush()
+
+        for q_data in data.get("questions", []):
+            question = Question(
+                assessment_id=assessment.id,
+                question_id=q_data["question_id"],
+                question_type=q_data["question_type"],
+                prompt=q_data["question_data"].get("prompt", ""),
+                options=q_data["question_data"].get("options"),
+                correct_answer=q_data["correct_answer"],
+                explanation=q_data.get("explanation", ""),
+                topic_ids=q_data.get("topic_ids", []),
+                difficulty=q_data.get("difficulty", 1),
+                order=q_data.get("order", 0),
+                points=q_data.get("points", 1),
+            )
+            session.add(question)
+
+        print(f"  Created assessment {data['assessment_id']}: {data['title']} (id={assessment.id})")
+
+    await session.commit()
+
+
+async def main():
+    base_path = Path(__file__).parent.parent.parent / curriculum
+    phases_dir = base_path / \phases    days_dir = base_path / \days    topics_dir = base_path / 	opics    lessons_dir = base_path / \lessons    assessments_dir = base_path / ssessments
+    from app.core.config import get_settings
+    settings = get_settings()
+    database_url = settings.DATABASE_URL.replace(\postgresql+psycopg2\, \postgresql+asyncpg\)
+
+    print(f\Connecting
+to
+database...\)
+    print(f\Database
+URL:
+database_url[:50]
+...\)
+
+    engine = create_async_engine(database_url, echo=False)
+    async_session_maker = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
+
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+
+    async with async_session_maker() as session:
+        try:
+            phase_map = await seed_phases(session, phases_dir)
+            day_map = await seed_days(session, days_dir, phase_map)
+            lesson_to_topic = await build_lesson_to_topic_map(topics_dir)
+            topic_map = await seed_topics(session, topics_dir, lesson_to_topic)
+            await update_topic_day_numbers(session, days_dir, topic_map)
+            await seed_lessons(session, lessons_dir, topic_map, lesson_to_topic)
+            await seed_assessments(session, assessments_dir)
+
+            print(\
+Seeding
+completed
+successfully!\)
+        except Exception as e:
+            print(f\ERROR:
+e
+\)
+            await session.rollback()
+            raise
+        finally:
+            await session.close()
+
+    await engine.dispose()

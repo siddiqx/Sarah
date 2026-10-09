@@ -1,0 +1,30 @@
+{
+  "id": "object-oriented-programming",
+  "name": "Object-Oriented Programming",
+  "description": "Classes, objects, inheritance, polymorphism, and special methods",
+  "phase": "phase-a",
+  "order": 6,
+  "subtopics": [
+    "Classes & Instances",
+    "Instance Methods",
+    "Inheritance",
+    "Polymorphism",
+    "Special Methods (dunder)",
+    "Properties",
+    "Class/Static Methods"
+  ],
+  "key_concepts": [
+    "Encapsulation",
+    "Inheritance vs composition",
+    "Method resolution order",
+    "Operator overloading"
+  ],
+  "estimated_hours": 9,
+  "prerequisites": [
+    "functions"
+  ],
+  "resources": [
+    "Python docs: Classes",
+    "Real Python: OOP"
+  ]
+}

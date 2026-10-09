@@ -1,0 +1,40 @@
+{
+  "id": "topic_while_loop",
+  "title": "While Loops",
+  "description": "Condition-controlled iteration. Initialization, condition, update. Sentinel loops. Infinite loops and prevention.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Write while with init-condition-update",
+    "Use sentinel values for unknown counts",
+    "Identify and fix infinite loops",
+    "Choose for vs while appropriately"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_for_loop"
+  ],
+  "related_skills": [
+    "condition_controlled",
+    "sentinel_pattern",
+    "termination"
+  ],
+  "lesson_refs": [
+    "lesson_day14_while_loops"
+  ],
+  "practice_refs": [
+    "ex_day14_basic_while",
+    "ex_day14_sentinel_input",
+    "ex_day14_for_vs_while"
+  ],
+  "assessment_refs": [
+    "quiz_day14_while_loops"
+  ],
+  "mastery_criteria": [
+    "Writes correct while structure",
+    "Implements sentinel input loop",
+    "Ensures termination condition met"
+  ],
+  "revision_criteria": [
+    "Infinite loops (missing update)",
+    "Wrong loop type choice"
+  ]
+}

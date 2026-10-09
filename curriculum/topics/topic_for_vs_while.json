@@ -1,0 +1,38 @@
+{
+  "id": "topic_for_vs_while",
+  "title": "Choosing Between for and while",
+  "description": "Decision framework: known iteration count vs condition-controlled. Readability. Performance equivalence.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Choose for for known iterations",
+    "Choose while for condition-controlled",
+    "Refactor between forms when appropriate",
+    "Prioritize readability"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_for_loop",
+    "topic_while_loop"
+  ],
+  "related_skills": [
+    "loop_selection",
+    "code_style"
+  ],
+  "lesson_refs": [
+    "lesson_day14_while_loops"
+  ],
+  "practice_refs": [
+    "ex_day14_for_vs_while"
+  ],
+  "assessment_refs": [
+    "quiz_day14_while_loops"
+  ],
+  "mastery_criteria": [
+    "Chooses appropriate loop type",
+    "Explains reasoning for choice",
+    "Refactors when requirements change"
+  ],
+  "revision_criteria": [
+    "Uses while for simple counting",
+    "Uses for for sentinel input"
+  ]
+}

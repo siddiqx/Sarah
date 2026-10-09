@@ -1,0 +1,37 @@
+{
+  "id": "topic_number_reversal",
+  "title": "Number Reversal",
+  "description": "Building reversed number by extracting digits and accumulating: rev = rev * 10 + digit. Handling trailing zeros.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Reverse integer using accumulator",
+    "Handle trailing zeros (1200 -> 21)",
+    "Detect overflow (language dependent)",
+    "Apply to palindrome detection"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_digit_extraction"
+  ],
+  "related_skills": [
+    "accumulator_pattern",
+    "digit_manipulation"
+  ],
+  "lesson_refs": [
+    "lesson_day17_fibonacci_digits"
+  ],
+  "practice_refs": [
+    "ex_day17_reverse_number"
+  ],
+  "assessment_refs": [
+    "quiz_day17_fibonacci_digits"
+  ],
+  "mastery_criteria": [
+    "Reverses any positive integer",
+    "Handles trailing zeros correctly",
+    "Uses for palindrome check"
+  ],
+  "revision_criteria": [
+    "Keeps trailing zeros",
+    "Accumulator formula wrong"
+  ]
+}

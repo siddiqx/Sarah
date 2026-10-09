@@ -1,0 +1,39 @@
+{
+  "id": "topic_2d_patterns",
+  "title": "2D Pattern Generation",
+  "description": "Printing triangles, rectangles, diamonds, multiplication tables. Row/column logic. Conditional printing within inner loop.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Generate row-based patterns",
+    "Use inner loop for columns",
+    "Condition on row/col for shapes",
+    "Align output with formatting"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_nested_loops"
+  ],
+  "related_skills": [
+    "pattern_logic",
+    "visual_output",
+    "formatting"
+  ],
+  "lesson_refs": [
+    "lesson_day15_nested_loops"
+  ],
+  "practice_refs": [
+    "ex_day15_triangle_pattern",
+    "ex_day15_multiplication_table"
+  ],
+  "assessment_refs": [
+    "quiz_day15_nested_loops"
+  ],
+  "mastery_criteria": [
+    "Prints various 2D patterns",
+    "Controls inner loop bounds by row",
+    "Formats aligned output"
+  ],
+  "revision_criteria": [
+    "Misaligned columns",
+    "Wrong pattern shape"
+  ]
+}

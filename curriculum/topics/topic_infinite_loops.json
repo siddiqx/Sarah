@@ -1,0 +1,36 @@
+{
+  "id": "topic_infinite_loops",
+  "title": "Infinite Loops and Prevention",
+  "description": "Common causes of infinite loops. Missing update, wrong condition, logic errors. Debugging strategies. Timeout guards.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Identify common infinite loop causes",
+    "Debug by adding print tracing",
+    "Add safety counters as guards",
+    "Fix condition/update logic"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_while_loop"
+  ],
+  "related_skills": [
+    "debugging",
+    "defensive_programming",
+    "termination_analysis"
+  ],
+  "lesson_refs": [
+    "lesson_day14_while_loops"
+  ],
+  "practice_refs": [],
+  "assessment_refs": [
+    "quiz_day14_while_loops"
+  ],
+  "mastery_criteria": [
+    "Spots infinite loop patterns",
+    "Adds tracing to diagnose",
+    "Implements safety guards"
+  ],
+  "revision_criteria": [
+    "Repeatedly writes infinite loops",
+    "Cannot diagnose hang"
+  ]
+}

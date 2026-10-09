@@ -1,0 +1,35 @@
+{
+  "id": "topic_programming_basics",
+  "title": "Programming Fundamentals",
+  "description": "Understanding what programming is, how computers execute instructions, and the edit-run-debug cycle.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Explain the concept of a programming language",
+    "Describe how Python code is executed",
+    "Identify the steps in the edit-run-debug cycle"
+  ],
+  "prerequisite_topic_ids": [],
+  "related_skills": [
+    "computational_thinking",
+    "debugging"
+  ],
+  "lesson_refs": [
+    "lesson_day1_intro"
+  ],
+  "practice_refs": [
+    "ex_day1_hello_world",
+    "ex_day1_print_practice"
+  ],
+  "assessment_refs": [
+    "quiz_day1_basics"
+  ],
+  "mastery_criteria": [
+    "Can explain what a program is in their own words",
+    "Can run a Python script from the command line",
+    "Can identify and fix a syntax error"
+  ],
+  "revision_criteria": [
+    "Struggles to explain the edit-run-debug cycle",
+    "Cannot run a script independently"
+  ]
+}

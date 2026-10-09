@@ -1,0 +1,39 @@
+{
+  "id": "topic_input_validation",
+  "title": "Input Validation and Sanitization",
+  "description": "Defensive input validation. Loops for re-prompting. Custom validation logic. Sanitizing dangerous input.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Validate input meets requirements",
+    "Re-prompt on invalid input with loop",
+    "Sanitize input (strip, lower, escape)",
+    "Provide helpful error messages"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_specific_exceptions",
+    "topic_while_loop"
+  ],
+  "related_skills": [
+    "validation",
+    "user_experience",
+    "security_awareness"
+  ],
+  "lesson_refs": [
+    "lesson_day8_io_exceptions"
+  ],
+  "practice_refs": [
+    "ex_day8_input_validation"
+  ],
+  "assessment_refs": [
+    "quiz_day8_io_exceptions"
+  ],
+  "mastery_criteria": [
+    "Implements robust input validation loop",
+    "Gives clear error feedback",
+    "Sanitizes appropriately"
+  ],
+  "revision_criteria": [
+    "Accepts invalid input silently",
+    "Crashes on unexpected input"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "topic_loop_invariants",
+  "title": "Loop Invariants",
+  "description": "Properties that hold before and after each iteration. Using invariants to prove correctness. Designing loops with invariants.",
+  "difficulty": "advanced",
+  "learning_objectives": [
+    "State loop invariant for given loop",
+    "Verify invariant holds initially",
+    "Show invariant preserved by body",
+    "Use invariant to prove correctness"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_while_loop"
+  ],
+  "related_skills": [
+    "formal_reasoning",
+    "correctness_proofs",
+    "loop_design"
+  ],
+  "lesson_refs": [
+    "lesson_day14_while_loops"
+  ],
+  "practice_refs": [
+    "ex_day14_loop_invariant"
+  ],
+  "assessment_refs": [
+    "quiz_day14_while_loops"
+  ],
+  "mastery_criteria": [
+    "Identifies invariant for simple loops",
+    "Explains initialization/maintenance",
+    "Uses invariant for debugging"
+  ],
+  "revision_criteria": [
+    "Cannot state invariant",
+    "Invariant false after first iteration"
+  ]
+}

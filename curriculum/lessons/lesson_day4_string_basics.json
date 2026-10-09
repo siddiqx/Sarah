@@ -1,0 +1,237 @@
+{
+  "id": "lesson_day4_string_basics",
+  "day_number": 4,
+  "title": "String Fundamentals: Creation, Formatting, and Indexing",
+  "phase_id": "a",
+  "estimated_minutes": 45,
+  "difficulty": "beginner",
+  "objectives": [
+    "Create strings with single, double, triple quotes",
+    "Format strings using f-strings with expressions",
+    "Access characters via indexing and slicing",
+    "Understand string immutability"
+  ],
+  "prerequisites": ["lesson_day3_comparison_logical"],
+  "blocks": [
+    {
+      "type": "concept_explanation",
+      "order": 1,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "String Creation and Quotes",
+        "explanation": "Strings can be created with single, double, or triple quotes. Use different quotes to avoid escaping. Triple quotes allow multi-line strings.",
+        "key_points": [
+          "Single: 'hello'",
+          "Double: "hello"",
+          "Triple: """multi\nline""" or '''multi\nline'''",
+          "Escape with backslash: "He said \\"Hi\\"""
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 2,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "String Creation Examples",
+        "code": "s1 = 'single quotes'\ns2 = "double quotes"\ns3 = """triple\ndouble\nquotes"""\ns4 = '''triple\nsingle\nquotes'''\ns5 = 'It\\'s working'\ns6 = "He said \\"Hi\\""\nprint(s1, s2, s3, s4, s5, s6)",
+        "language": "python",
+        "explanation": "Choose quote style to minimize escaping. Triple quotes preserve newlines."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 3,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "f-String Formatting",
+        "explanation": "f-strings (formatted string literals) are the modern way to embed expressions in strings. Prefix with f or F, use {} for expressions.",
+        "key_points": [
+          "f"Hello {name}" - variable interpolation",
+          "f"{2+3}" - any expression",
+          "f"{value:.2f}" - format specifier (2 decimal places)",
+          "f"{var=}" - debugging (shows var=value)"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 4,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "f-String Examples",
+        "code": "name = "Alice"\nage = 30\nprice = 19.999\n\nprint(f"Hello {name}")           # Hello Alice\nprint(f"Age: {age}")             # Age: 30\nprint(f"Price: {price:.2f}")     # Price: 20.00\nprint(f"{name=}, {age=}")        # name='Alice', age=30\nprint(f"{2**10}")                # 1024",
+        "language": "python",
+        "explanation": "Expressions inside {} are evaluated and formatted. Format specifiers after : control output format."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 5,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Indexing and Slicing",
+        "explanation": "Strings are sequences of characters. Access individual characters with square brackets. Use slices [start:stop:step] for substrings. Indices start at 0. Negative indices count from end.",
+        "key_points": [
+          "s[0] - first character",
+          "s[-1] - last character",
+          "s[1:4] - characters at index 1,2,3 (stop excluded)",
+          "s[::2] - every 2nd character",
+          "s[::-1] - reversed string"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 6,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Indexing and Slicing Examples",
+        "code": "text = "PYTHON"\nprint(text[0])      # P\nprint(text[-1])     # N\nprint(text[1:4])    # YTH\nprint(text[:3])     # PYT\nprint(text[3:])     # HON\nprint(text[::2])    # PTO\nprint(text[::-1])   # NOHTYP",
+        "language": "python",
+        "explanation": "Slice bounds are clamped - no IndexError for out-of-range slices."
+      }
+    },
+    {
+      "type": "output_prediction",
+      "order": 7,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Predict Slice Results",
+        "code": "s = "ABCDEF"\nprint(s[1:4])\nprint(s[-3:-1])\nprint(s[::2])\nprint(s[10:20])",
+        "question": "What are the outputs?",
+        "options": [
+          "BCD, DE, ACE, (empty)",
+          "BCD, CD, ACE, Error",
+          "BCD, CD, ACE, (empty)",
+          "ABC, DE, ACE, (empty)"
+        ],
+        "correct_answer": "BCD, CD, ACE, (empty)",
+        "explanation": "s[1:4]='BCD', s[-3:-1]='CD' (indices 3,4), s[::2]='ACE', out-of-range slice returns empty string."
+      }
+    },
+    {
+      "type": "debugging_exercise",
+      "order": 8,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Fix the String Error",
+        "buggy_code": "name = input("Name: ")\nprint(f"Hello {name}!")\nprint(name[10])",
+        "error_message": "IndexError: string index out of range",
+        "task": "Fix the code to safely access the 10th character",
+        "hint": "Check string length before indexing, or use slicing",
+        "solution": "name = input("Name: ")\nprint(f"Hello {name}!")\nif len(name) > 10:\n    print(name[10])\nelse:\n    print("Name too short")"
+      }
+    },
+    {
+      "type": "knowledge_check",
+      "order": 9,
+      "estimated_minutes": 3,
+      "content": {
+        "questions": [
+          {
+            "question": "What does f"{2+3}" produce?",
+            "type": "multiple_choice",
+            "options": ["{2+3}", "5", "2+3", "Error"],
+            "correct_answer": "5"
+          },
+          {
+            "question": "What is s[::-1] for s = "hello"?",
+            "type": "multiple_choice",
+            "options": ["hello", "olleh", "Error", "h"],
+            "correct_answer": "olleh"
+          },
+          {
+            "question": "Strings in Python are:",
+            "type": "multiple_choice",
+            "options": ["Mutable", "Immutable", "Both", "Neither"],
+            "correct_answer": "Immutable"
+          }
+        ]
+      }
+    },
+    {
+      "type": "summary",
+      "order": 10,
+      "estimated_minutes": 2,
+      "content": {
+        "title": "Key Takeaways",
+        "points": [
+          "Three quote styles for flexibility",
+          "f-strings for clean formatting",
+          "Index from 0, negative from end",
+          "Slices: [start:stop:step], clamped bounds",
+          "Strings are immutable"
+        ]
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_day4_string_creation",
+      "title": "Multi-line String",
+      "description": "Create a multi-line string with your name, address, and phone number using triple quotes. Print it.",
+      "starter_code": "# Create multi-line string\n",
+      "solution": "info = """John Doe\n123 Main St\nSpringfield, IL 62704\nPhone: 555-1234"""\nprint(info)",
+      "tests": [
+        "assert chr(10) in output",
+        "assert "John" in output"
+      ],
+      "hints": ["Use triple quotes for multi-line"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day4_fstring_formatting",
+      "title": "Formatted Output",
+      "description": "Given price = 1234.567, quantity = 3, print: 'Total: $3703.70' (2 decimal places).",
+      "starter_code": "price = 1234.567\nquantity = 3\n# Calculate and print total\n",
+      "solution": "price = 1234.567\nquantity = 3\ntotal = price * quantity\nprint(f"Total: ${total:.2f}")",
+      "tests": [
+        "assert "3703.70" in output"
+      ],
+      "hints": ["Use :.2f format specifier for 2 decimals"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day4_indexing_slicing",
+      "title": "Slice Practice",
+      "description": "Given s = "PROGRAMMING", extract: first 3 chars, last 4 chars, every 2nd char, reversed.",
+      "starter_code": "s = "PROGRAMMING"\n# Extract using slicing\n",
+      "solution": "s = "PROGRAMMING"\nprint(s[:3])      # PRO\nprint(s[-4:])     # MING\nprint(s[::2])     # PORMIG\nprint(s[::-1])    # GNIMMARGORP",
+      "tests": [
+        "assert "PRO" in output",
+        "assert "MING" in output",
+        "assert "GNIMMARGORP" in output"
+      ],
+      "hints": ["Negative indices for end, ::2 for every 2nd, ::-1 for reverse"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the output of: s = "HELLO"; print(s[1:4])?",
+      "type": "multiple_choice",
+      "options": ["HEL", "ELL", "ELLO", "EL"],
+      "correct_answer": "ELL",
+      "explanation": "Slice [1:4] includes indices 1, 2, 3 (E, L, L). Stop index 4 is excluded.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which f-string formats 3.14159 to 2 decimal places?",
+      "type": "multiple_choice",
+      "options": [
+        "f"{3.14159:.2f}"",
+        "f"{3.14159:2f}"",
+        "f"{3.14159:.2}"",
+        "f"{3.14159:2}""
+      ],
+      "correct_answer": "f"{3.14159:.2f}"",
+      "explanation": "Format specifier .2f means fixed-point with 2 decimal places.",
+      "difficulty": "easy"
+    }
+  ]
+}
+

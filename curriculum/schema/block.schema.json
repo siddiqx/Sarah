@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Lesson Block Schema",
+  "type": "object",
+  "required": [
+    "block_type",
+    "content",
+    "order"
+  ],
+  "properties": {
+    "block_type": {
+      "type": "string",
+      "enum": [
+        "concept_explanation",
+        "worked_example",
+        "code_example",
+        "output_prediction",
+        "step_by_step_trace",
+        "fill_in_code",
+        "ordering_exercise",
+        "matching_exercise",
+        "interactive_comparison",
+        "debugging_exercise",
+        "small_simulation",
+        "knowledge_check",
+        "practical_application",
+        "summary",
+        "revision_checkpoint"
+      ]
+    },
+    "content": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "additionalProperties": false
+}

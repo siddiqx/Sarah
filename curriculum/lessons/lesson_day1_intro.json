@@ -1,0 +1,224 @@
+{
+  "id": "lesson_day1_intro",
+  "day_number": 1,
+  "title": "Welcome to Python: Your First Program",
+  "phase_id": "a",
+  "estimated_minutes": 30,
+  "difficulty": "beginner",
+  "objectives": [
+    "Explain what a programming language is",
+    "Write and run a Python script",
+    "Use print() to display output",
+    "Identify and fix syntax errors"
+  ],
+  "prerequisites": [],
+  "blocks": [
+    {
+      "type": "concept_explanation",
+      "order": 1,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "What is Programming?",
+        "explanation": "A program is a set of instructions that tells a computer what to do. Python is a high-level programming language that reads like English. When you run a Python program, the Python interpreter reads your code line by line and executes each instruction.",
+        "key_points": [
+          "Code is written in plain text files with .py extension",
+          "The Python interpreter executes instructions sequentially",
+          "Programming is about solving problems by breaking them into steps"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 2,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Your First Program",
+        "code": "print("Hello, World!")\nprint("Welcome to Sarah!")",
+        "language": "python",
+        "explanation": "The print() function displays text to the screen. Text must be in quotes (single or double). Each statement goes on its own line."
+      }
+    },
+    {
+      "type": "worked_example",
+      "order": 3,
+      "estimated_minutes": 10,
+      "content": {
+        "title": "Running a Python Program",
+        "steps": [
+          "Create a file named hello.py",
+          "Write: print("Hello, World!")",
+          "Open terminal/command prompt",
+          "Run: python hello.py",
+          "See output: Hello, World!"
+        ],
+        "explanation": "The python command starts the interpreter, which reads and executes your file."
+      }
+    },
+    {
+      "type": "output_prediction",
+      "order": 4,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Predict the Output",
+        "code": "print("Line 1")\nprint("Line 2")\nprint("Line 3")",
+        "question": "What will this program display?",
+        "options": [
+          "Line 1 Line 2 Line 3",
+          "Line 1\nLine 2\nLine 3",
+          "Line 1, Line 2, Line 3",
+          "Error"
+        ],
+        "correct_answer": "Line 1\nLine 2\nLine 3",
+        "explanation": "Each print() call outputs on a new line by default."
+      }
+    },
+    {
+      "type": "debugging_exercise",
+      "order": 5,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Fix the Syntax Error",
+        "buggy_code": "print("Hello, World!)\nprint("Welcome")",
+        "error_message": "SyntaxError: unterminated string literal",
+        "task": "Find and fix the syntax error",
+        "hint": "Count the quotation marks on line 1",
+        "solution": "print("Hello, World!")\nprint("Welcome")"
+      }
+    },
+    {
+      "type": "knowledge_check",
+      "order": 6,
+      "estimated_minutes": 3,
+      "content": {
+        "questions": [
+          {
+            "question": "What file extension do Python files use?",
+            "type": "multiple_choice",
+            "options": [".py", ".python", ".txt", ".p"],
+            "correct_answer": ".py"
+          },
+          {
+            "question": "What does the Python interpreter do?",
+            "type": "multiple_choice",
+            "options": [
+              "Compiles code to machine language",
+              "Reads and executes code line by line",
+              "Checks spelling",
+              "Formats code"
+            ],
+            "correct_answer": "Reads and executes code line by line"
+          }
+        ]
+      }
+    },
+    {
+      "type": "summary",
+      "order": 7,
+      "estimated_minutes": 2,
+      "content": {
+        "title": "Key Takeaways",
+        "points": [
+          "Python programs are text files with .py extension",
+          "print() displays output to the screen",
+          "Strings must be enclosed in matching quotes",
+          "Syntax errors prevent the program from running"
+        ]
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_day1_hello_world",
+      "title": "Hello World Variations",
+      "description": "Write a program that prints your name, favorite color, and a fun fact about yourself, each on a separate line.",
+      "starter_code": "# Write your code here\n",
+      "solution": "print("Your Name")\nprint("Your Favorite Color")\nprint("Your Fun Fact")",
+      "tests": [
+        "assert len(output.strip().split(chr(10))) == 3",
+        "assert "Your Name" in output"
+      ],
+      "hints": [
+        "Use three separate print() statements",
+        "Each print() automatically adds a newline"
+      ],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day1_print_practice",
+      "title": "Print with Special Characters",
+      "description": "Print a message that includes quotation marks and a backslash.",
+      "starter_code": "# Print: She said "Hello" and smiled\n",
+      "solution": "print('She said "Hello" and smiled')\nprint("Path: C:\\\\Users\\\\Name")",
+      "tests": [
+        "assert '"Hello"' in output",
+        "assert '\\\\' in output"
+      ],
+      "hints": [
+        "Use single quotes outside to include double quotes inside",
+        "Escape backslash with another backslash"
+      ],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day1_comments",
+      "title": "Adding Comments",
+      "description": "Add comments to explain what each line of code does.",
+      "starter_code": "print("Start")\nprint("Middle")\nprint("End")\n",
+      "solution": "# Program starts here\nprint("Start")  # Print first line\nprint("Middle")  # Print second line\nprint("End")  # Print third line\n# Program ends here",
+      "tests": [
+        "assert output.count(chr(10)) >= 2",
+        "assert "#" in code"
+      ],
+      "hints": [
+        "Comments start with # and continue to end of line",
+        "Inline comments go after code on same line"
+      ],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the correct way to print Hello World in Python?",
+      "type": "multiple_choice",
+      "options": [
+        "print Hello World",
+        "print("Hello World")",
+        "echo "Hello World"",
+        "console.log("Hello World")"
+      ],
+      "correct_answer": "print("Hello World")",
+      "explanation": "Python uses print() function with parentheses and quotes for strings.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What happens if you forget a closing quote on a string?",
+      "type": "multiple_choice",
+      "options": [
+        "The program runs but prints nothing",
+        "SyntaxError: unterminated string literal",
+        "The program prints the quote",
+        "Nothing, it is optional"
+      ],
+      "correct_answer": "SyntaxError: unterminated string literal",
+      "explanation": "Python requires matching opening and closing quotes for strings.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How do you run a Python file named hello.py from the command line?",
+      "type": "multiple_choice",
+      "options": [
+        "run hello.py",
+        "execute hello.py",
+        "python hello.py",
+        "start hello.py"
+      ],
+      "correct_answer": "python hello.py",
+      "explanation": "The python command starts the interpreter to run your file.",
+      "difficulty": "easy"
+    }
+  ]
+}
+

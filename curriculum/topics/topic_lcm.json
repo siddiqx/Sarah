@@ -1,0 +1,37 @@
+{
+  "id": "topic_lcm",
+  "title": "Least Common Multiple",
+  "description": "LCM definition. Relationship LCM(a,b) = |a*b|/GCD(a,b). Computing LCM for multiple numbers.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Define LCM mathematically",
+    "Compute using GCD relationship",
+    "Extend to multiple numbers",
+    "Handle overflow considerations"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_euclidean_gcd"
+  ],
+  "related_skills": [
+    "number_theory",
+    "gcd_application"
+  ],
+  "lesson_refs": [
+    "lesson_day16_number_theory"
+  ],
+  "practice_refs": [
+    "ex_day16_lcm"
+  ],
+  "assessment_refs": [
+    "quiz_day16_number_theory"
+  ],
+  "mastery_criteria": [
+    "Computes LCM via GCD",
+    "Handles multiple numbers",
+    "Avoids overflow with large numbers"
+  ],
+  "revision_criteria": [
+    "Uses naive multiple-checking",
+    "Integer overflow on large products"
+  ]
+}

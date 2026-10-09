@@ -1,0 +1,38 @@
+{
+  "id": "topic_elif_chains",
+  "title": "elif Chains for Multiple Conditions",
+  "description": "Multi-branch conditionals with elif. Order matters. The final else as catch-all.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Chain multiple conditions with elif",
+    "Understand evaluation stops at first true condition",
+    "Use final else as default/catch-all",
+    "Order conditions from most to least specific"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_if_else"
+  ],
+  "related_skills": [
+    "multiway_branching",
+    "condition_ordering"
+  ],
+  "lesson_refs": [
+    "lesson_day5_conditionals_advanced"
+  ],
+  "practice_refs": [
+    "ex_day5_elif_chain",
+    "ex_day5_grade_calculator"
+  ],
+  "assessment_refs": [
+    "quiz_day5_conditionals"
+  ],
+  "mastery_criteria": [
+    "Writes clean elif chains for 3+ cases",
+    "Orders conditions correctly",
+    "Includes sensible else clause"
+  ],
+  "revision_criteria": [
+    "Wrong condition order causes bugs",
+    "Missing else for unexpected input"
+  ]
+}

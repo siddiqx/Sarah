@@ -1,0 +1,42 @@
+{
+  "id": "topic_digit_extraction",
+  "title": "Digit Extraction and Manipulation",
+  "description": "Extracting digits with % 10 and // 10. Reversing numbers. Sum of digits. Palindrome checking. Processing digits right-to-left.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Extract last digit with n % 10",
+    "Remove last digit with n // 10",
+    "Reverse a number digit by digit",
+    "Compute sum of digits",
+    "Check if number is palindrome"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_arithmetic_operators",
+    "topic_while_loop"
+  ],
+  "related_skills": [
+    "digit_manipulation",
+    "modulo_division",
+    "number_properties"
+  ],
+  "lesson_refs": [
+    "lesson_day17_fibonacci_digits"
+  ],
+  "practice_refs": [
+    "ex_day17_digit_sum",
+    "ex_day17_reverse_number",
+    "ex_day17_palindrome"
+  ],
+  "assessment_refs": [
+    "quiz_day17_fibonacci_digits"
+  ],
+  "mastery_criteria": [
+    "Extracts and processes all digits",
+    "Reverses numbers correctly",
+    "Implements palindrome check"
+  ],
+  "revision_criteria": [
+    "Infinite loop on 0",
+    "Wrong digit order"
+  ]
+}

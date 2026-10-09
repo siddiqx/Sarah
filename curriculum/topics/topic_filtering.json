@@ -1,0 +1,38 @@
+{
+  "id": "topic_filtering",
+  "title": "Filtering Collections",
+  "description": "Selecting elements matching a predicate. Building result list. List comprehension preview. Built-in filter().",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Filter elements with condition",
+    "Build result list in loop",
+    "Understand filter() built-in",
+    "Preview list comprehensions"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_if_statement",
+    "topic_for_loop"
+  ],
+  "related_skills": [
+    "predicate_functions",
+    "collection_transformation"
+  ],
+  "lesson_refs": [
+    "lesson_day13_search_filter"
+  ],
+  "practice_refs": [
+    "ex_day13_filter_even"
+  ],
+  "assessment_refs": [
+    "quiz_day13_search_filter"
+  ],
+  "mastery_criteria": [
+    "Filters correctly with loop",
+    "Uses filter() with lambda",
+    "Previews comprehension syntax"
+  ],
+  "revision_criteria": [
+    "Modifies original list while iterating",
+    "Cannot express condition as predicate"
+  ]
+}

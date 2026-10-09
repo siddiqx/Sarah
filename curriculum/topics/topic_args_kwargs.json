@@ -1,0 +1,40 @@
+{
+  "id": "topic_args_kwargs",
+  "title": "Variable Arguments: *args and **kwargs",
+  "description": "Accepting variable positional and keyword arguments. Unpacking with * and **.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Use *args to collect positional arguments",
+    "Use **kwargs to collect keyword arguments",
+    "Unpack sequences with * in calls",
+    "Unpack dicts with ** in calls",
+    "Understand parameter order: params, *args, **kwargs"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_default_arguments"
+  ],
+  "related_skills": [
+    "variadic_functions",
+    "unpacking",
+    "flexible_apis"
+  ],
+  "lesson_refs": [
+    "lesson_day7_advanced_functions"
+  ],
+  "practice_refs": [
+    "ex_day7_args",
+    "ex_day7_kwargs"
+  ],
+  "assessment_refs": [
+    "quiz_day7_advanced_functions"
+  ],
+  "mastery_criteria": [
+    "Writes functions accepting variable args",
+    "Unpacks correctly in calls",
+    "Orders parameters correctly"
+  ],
+  "revision_criteria": [
+    "Wrong parameter order causes errors",
+    "Cannot unpack in function calls"
+  ]
+}

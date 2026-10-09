@@ -1,0 +1,39 @@
+{
+  "id": "topic_primality_test",
+  "title": "Primality Testing",
+  "description": "Trial division up to sqrt(n). Optimizations: check 2, then odd numbers. Early exit on divisor found. Complexity O(sqrt(n)).",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Implement trial division primality test",
+    "Optimize: check 2, then odds up to sqrt",
+    "Use early exit on divisor found",
+    "Analyze O(sqrt(n)) complexity"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_while_loop",
+    "topic_arithmetic_operators"
+  ],
+  "related_skills": [
+    "number_theory",
+    "optimization",
+    "early_exit"
+  ],
+  "lesson_refs": [
+    "lesson_day16_number_theory"
+  ],
+  "practice_refs": [
+    "ex_day16_is_prime"
+  ],
+  "assessment_refs": [
+    "quiz_day16_number_theory"
+  ],
+  "mastery_criteria": [
+    "Implements optimized trial division",
+    "Explains sqrt(n) bound",
+    "Handles edge cases (0,1,2,negatives)"
+  ],
+  "revision_criteria": [
+    "Checks up to n instead of sqrt(n)",
+    "Missing edge case handling"
+  ]
+}

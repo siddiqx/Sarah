@@ -1,0 +1,39 @@
+{
+  "id": "topic_anagram_detection",
+  "title": "Anagram Detection",
+  "description": "Checking if two strings are anagrams. Normalizing (lowercase, remove spaces). Comparing sorted characters or frequency dictionaries.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Normalize strings for comparison",
+    "Compare sorted character lists",
+    "Compare frequency dictionaries",
+    "Handle unicode considerations"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_frequency_analysis",
+    "topic_string_methods"
+  ],
+  "related_skills": [
+    "string_normalization",
+    "comparison_strategies",
+    "dictionary_equality"
+  ],
+  "lesson_refs": [
+    "lesson_day18_string_algorithms"
+  ],
+  "practice_refs": [
+    "ex_day18_anagram_check"
+  ],
+  "assessment_refs": [
+    "quiz_day18_string_algorithms"
+  ],
+  "mastery_criteria": [
+    "Detects anagrams correctly",
+    "Normalizes case and whitespace",
+    "Chooses efficient comparison"
+  ],
+  "revision_criteria": [
+    "Case sensitivity issues",
+    "Space/punctuation not handled"
+  ]
+}

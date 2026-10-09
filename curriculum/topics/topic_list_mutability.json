@@ -1,0 +1,39 @@
+{
+  "id": "topic_list_mutability",
+  "title": "List Mutability and References",
+  "description": "Lists are mutable. Assignment creates reference, not copy. Aliasing. Shallow vs deep copy. Identity vs equality.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Explain mutability vs immutability",
+    "Distinguish reference from copy",
+    "Use .copy() and list() for shallow copy",
+    "Understand aliasing effects"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_list_slicing"
+  ],
+  "related_skills": [
+    "reference_semantics",
+    "copying",
+    "aliasing"
+  ],
+  "lesson_refs": [
+    "lesson_day19_lists_basics"
+  ],
+  "practice_refs": [
+    "ex_day19_mutability",
+    "ex_day19_copy_pitfall"
+  ],
+  "assessment_refs": [
+    "quiz_day19_lists"
+  ],
+  "mastery_criteria": [
+    "Explains reference vs copy",
+    "Uses .copy() appropriately",
+    "Predicts aliasing behavior"
+  ],
+  "revision_criteria": [
+    "Unexpected shared mutations",
+    "Confuses is and =="
+  ]
+}

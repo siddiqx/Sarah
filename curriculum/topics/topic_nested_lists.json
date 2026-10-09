@@ -1,0 +1,38 @@
+{
+  "id": "topic_nested_lists",
+  "title": "Nested Lists (Matrices)",
+  "description": "Lists of lists as 2D structures. Row-major access. Iterating rows and columns. Matrix operations preview.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Create and access nested lists",
+    "Iterate rows then columns",
+    "Compute row/column sums",
+    "Understand reference sharing in [[0]*3]*3"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_nested_loops"
+  ],
+  "related_skills": [
+    "matrix_representation",
+    "2d_data",
+    "reference_pitfalls"
+  ],
+  "lesson_refs": [
+    "lesson_day15_nested_loops"
+  ],
+  "practice_refs": [
+    "ex_day15_nested_list_sum"
+  ],
+  "assessment_refs": [
+    "quiz_day15_nested_loops"
+  ],
+  "mastery_criteria": [
+    "Creates proper 2D lists",
+    "Accesses matrix[r][c] correctly",
+    "Avoids reference sharing bug"
+  ],
+  "revision_criteria": [
+    "Uses [[0]*n]*m incorrectly",
+    "Confuses row/column order"
+  ]
+}

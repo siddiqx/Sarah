@@ -1,0 +1,40 @@
+{
+  "id": "topic_loop_trace",
+  "title": "Manual Loop Tracing",
+  "description": "Trace tables for loops. Tracking variable changes per iteration. Predicting final values.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Create trace tables for loops",
+    "Track multiple variables per iteration",
+    "Predict final values before running",
+    "Debug by comparing trace to actual"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_range_function"
+  ],
+  "related_skills": [
+    "debugging",
+    "mental_simulation",
+    "trace_tables"
+  ],
+  "lesson_refs": [
+    "lesson_day11_for_loops",
+    "lesson_day11_range"
+  ],
+  "practice_refs": [
+    "ex_day11_trace_practice"
+  ],
+  "assessment_refs": [
+    "quiz_day11_loops",
+    "quiz_day12_accumulators"
+  ],
+  "mastery_criteria": [
+    "Completes trace table for any loop",
+    "Predicts output without running",
+    "Identifies bugs via tracing"
+  ],
+  "revision_criteria": [
+    "Cannot trace nested loops",
+    "Predictions frequently wrong"
+  ]
+}

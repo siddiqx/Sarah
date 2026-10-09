@@ -1,0 +1,32 @@
+{
+  "number": 15,
+  "phase": 1,
+  "title": "Day 15 Topic",
+  "summary": "Summary for day 15.",
+  "learning_objectives": [
+    "Objective 1",
+    "Objective 2"
+  ],
+  "prerequisites": [],
+  "topics": [
+    {
+      "topic_id": "day-015-topic",
+      "title": "Day 15 Topic",
+      "description": "Description for day 15 topic.",
+      "difficulty": "beginner",
+      "learning_objectives": [
+        "Learn concept"
+      ],
+      "prerequisite_topic_ids": [],
+      "lessons": [
+        "day-015-lesson"
+      ],
+      "exercises": [
+        "day-015-exercise"
+      ],
+      "assessments": []
+    }
+  ],
+  "estimated_study_time_minutes": 60,
+  "completion_criteria": "Complete lesson and exercise."
+}

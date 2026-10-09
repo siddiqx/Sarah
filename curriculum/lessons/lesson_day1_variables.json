@@ -1,0 +1,158 @@
+{
+  "id": "lesson_day1_variables",
+  "day_number": 1,
+  "title": "Variables: Storing and Using Data",
+  "phase_id": "a",
+  "estimated_minutes": 30,
+  "difficulty": "beginner",
+  "objectives": [
+    "Create variables with meaningful names",
+    "Assign values to variables",
+    "Use variables in print statements",
+    "Understand variables as named storage"
+  ],
+  "prerequisites": ["lesson_day1_intro"],
+  "blocks": [
+    {
+      "type": "concept_explanation",
+      "order": 1,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "What are Variables?",
+        "explanation": "A variable is a named storage location in memory. Think of it as a labeled box where you can put a value. The name (identifier) lets you find and use the value later. In Python, you create a variable by assigning a value to a name using the = operator.",
+        "key_points": [
+          "Variable names must start with letter or underscore",
+          "Can contain letters, numbers, underscores",
+          "Case-sensitive: name != Name",
+          "Use snake_case for variable names (e.g., user_name)"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 2,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Creating and Using Variables",
+        "code": "name = "Alice"\nage = 25\nheight = 5.7\nis_student = True\n\nprint(name)\nprint(age)\nprint(height)\nprint(is_student)",
+        "language": "python",
+        "explanation": "Variables store values of different types. The = operator assigns the value on the right to the name on the left."
+      }
+    },
+    {
+      "type": "interactive_comparison",
+      "order": 3,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Valid vs Invalid Variable Names",
+        "valid": [
+          "user_name",
+          "_private",
+          "count2",
+          "MAX_SIZE"
+        ],
+        "invalid": [
+          "2count",
+          "user-name",
+          "class",
+          "my variable"
+        ],
+        "explanation": "Names cannot start with numbers, contain hyphens, spaces, or be Python keywords."
+      }
+    },
+    {
+      "type": "fill_in_code",
+      "order": 4,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Complete the Variable Assignments",
+        "code": "city = _____\npopulation = _____\nis_capital = _____\n\nprint(city, population, is_capital)",
+        "blanks": [
+          {"placeholder": "_____", "answer": ""Tokyo"", "hint": "String in quotes"},
+          {"placeholder": "_____", "answer": "37000000", "hint": "Number without quotes"},
+          {"placeholder": "_____", "answer": "True", "hint": "Boolean: True or False"}
+        ],
+        "solution": "city = "Tokyo"\npopulation = 37000000\nis_capital = True"
+      }
+    },
+    {
+      "type": "knowledge_check",
+      "order": 5,
+      "estimated_minutes": 3,
+      "content": {
+        "questions": [
+          {
+            "question": "Which is a valid Python variable name?",
+            "type": "multiple_choice",
+            "options": ["user_name", "user-name", "2user", "user name"],
+            "correct_answer": "user_name"
+          },
+          {
+            "question": "What does the = operator do in Python?",
+            "type": "multiple_choice",
+            "options": [
+              "Tests equality",
+              "Assigns a value to a variable",
+              "Compares two values",
+              "Adds two numbers"
+            ],
+            "correct_answer": "Assigns a value to a variable"
+          }
+        ]
+      }
+    },
+    {
+      "type": "summary",
+      "order": 6,
+      "estimated_minutes": 2,
+      "content": {
+        "title": "Key Takeaways",
+        "points": [
+          "Variables store values with names",
+          "Use = for assignment (not equality test)",
+          "Follow snake_case naming convention",
+          "Variable names are case-sensitive"
+        ]
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_day1_hello_world",
+      "title": "Personal Greeting",
+      "description": "Create variables for your first name, last name, and age. Print a greeting using these variables.",
+      "starter_code": "first_name = ""\nlast_name = ""\nage = 0\n\n# Print greeting using variables\n",
+      "solution": "first_name = "Alex"\nlast_name = "Smith"\nage = 28\n\nprint(f"Hello, {first_name} {last_name}!")\nprint(f"You are {age} years old.")",
+      "tests": [
+        "assert "Hello" in output",
+        "assert "Alex" in output",
+        "assert "28" in output"
+      ],
+      "hints": [
+        "Use f-strings to include variables in strings",
+        "Assign string values with quotes, numbers without"
+      ],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What will this code print? name = "Bob"; print(name)",
+      "type": "multiple_choice",
+      "options": ["name", "Bob", ""Bob"", "Error"],
+      "correct_answer": "Bob",
+      "explanation": "The variable name holds the value "Bob", so print(name) outputs Bob.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which variable name follows Python conventions?",
+      "type": "multiple_choice",
+      "options": ["userName", "user_name", "UserName", "user-name"],
+      "correct_answer": "user_name",
+      "explanation": "Python uses snake_case for variable names (lowercase with underscores).",
+      "difficulty": "easy"
+    }
+  ]
+}
+

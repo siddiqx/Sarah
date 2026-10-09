@@ -1,0 +1,38 @@
+{
+  "id": "topic_prime_factorization",
+  "title": "Prime Factorization",
+  "description": "Decomposing a number into prime factors. Trial division with factor extraction. Building factor list. Uniqueness of prime factorization.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Extract prime factors iteratively",
+    "Divide out factors completely",
+    "Build list of prime factors",
+    "Verify by multiplication"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_primality_test"
+  ],
+  "related_skills": [
+    "factorization",
+    "number_theory",
+    "divisibility"
+  ],
+  "lesson_refs": [
+    "lesson_day16_number_theory"
+  ],
+  "practice_refs": [
+    "ex_day16_prime_factors"
+  ],
+  "assessment_refs": [
+    "quiz_day16_number_theory"
+  ],
+  "mastery_criteria": [
+    "Factorizes any positive integer",
+    "Handles repeated factors",
+    "Produces correct factor list"
+  ],
+  "revision_criteria": [
+    "Infinite loop on prime input",
+    "Misses repeated factors"
+  ]
+}

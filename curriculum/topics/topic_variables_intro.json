@@ -1,0 +1,36 @@
+{
+  "id": "topic_variables_intro",
+  "title": "Introduction to Variables",
+  "description": "Variables as named storage locations. Assignment, naming rules, and the concept of references.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Create variables with valid identifiers",
+    "Understand assignment as binding a name to an object",
+    "Follow Python naming conventions (snake_case)"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_python_syntax"
+  ],
+  "related_skills": [
+    "variable_naming",
+    "mental_model"
+  ],
+  "lesson_refs": [
+    "lesson_day1_variables"
+  ],
+  "practice_refs": [
+    "ex_day1_hello_world"
+  ],
+  "assessment_refs": [
+    "quiz_day1_basics"
+  ],
+  "mastery_criteria": [
+    "Creates valid variable names consistently",
+    "Explains what assignment does",
+    "Uses descriptive variable names"
+  ],
+  "revision_criteria": [
+    "Uses invalid variable names",
+    "Confuses variable name with value"
+  ]
+}

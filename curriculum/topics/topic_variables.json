@@ -1,0 +1,37 @@
+{
+  "id": "topic_variables",
+  "title": "Variables and Assignment",
+  "description": "Deep dive into variable assignment, reassignment, multiple assignment, and variable naming best practices.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Assign and reassign variables",
+    "Use multiple assignment (a, b = 1, 2)",
+    "Apply snake_case naming convention",
+    "Understand variables as references to objects"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_variables_intro"
+  ],
+  "related_skills": [
+    "assignment",
+    "naming_conventions"
+  ],
+  "lesson_refs": [
+    "lesson_day2_variables"
+  ],
+  "practice_refs": [
+    "ex_day2_variable_assignment"
+  ],
+  "assessment_refs": [
+    "quiz_day2_types"
+  ],
+  "mastery_criteria": [
+    "Performs multiple assignment correctly",
+    "Explains reassignment vs mutation",
+    "Follows naming conventions consistently"
+  ],
+  "revision_criteria": [
+    "Confused by multiple assignment",
+    "Inconsistent naming style"
+  ]
+}

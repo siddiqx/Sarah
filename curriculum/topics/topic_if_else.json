@@ -1,0 +1,36 @@
+{
+  "id": "topic_if_else",
+  "title": "if-else Binary Branching",
+  "description": "Two-branch conditionals. Ensuring exactly one branch executes. The else clause.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Write if-else for mutually exclusive cases",
+    "Understand exactly one branch executes",
+    "Handle both true and false conditions"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_if_statement"
+  ],
+  "related_skills": [
+    "binary_decisions",
+    "exhaustive_branching"
+  ],
+  "lesson_refs": [
+    "lesson_day5_conditionals_basics"
+  ],
+  "practice_refs": [
+    "ex_day5_if_else"
+  ],
+  "assessment_refs": [
+    "quiz_day5_conditionals"
+  ],
+  "mastery_criteria": [
+    "Handles both branches correctly",
+    "No logical gaps between branches",
+    "Uses else for the default case"
+  ],
+  "revision_criteria": [
+    "Missing else for default case",
+    "Both branches execute (logic error)"
+  ]
+}

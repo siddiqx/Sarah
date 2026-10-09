@@ -1,0 +1,39 @@
+{
+  "id": "topic_binary_search",
+  "title": "Binary Search",
+  "description": "Binary search on sorted lists. Divide and conquer. O(log n) complexity. Iterative implementation. Precondition: list must be sorted.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Implement iterative binary search",
+    "Maintain low/high bounds",
+    "Handle not-found case",
+    "Verify list is sorted precondition"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_linear_search_list",
+    "topic_while_loop"
+  ],
+  "related_skills": [
+    "divide_conquer",
+    "logarithmic_complexity",
+    "preconditions"
+  ],
+  "lesson_refs": [
+    "lesson_day20_list_algorithms"
+  ],
+  "practice_refs": [
+    "ex_day20_binary_search"
+  ],
+  "assessment_refs": [
+    "quiz_day20_list_algorithms"
+  ],
+  "mastery_criteria": [
+    "Implements binary search correctly",
+    "Explains O(log n) vs O(n)",
+    "Checks sorted precondition"
+  ],
+  "revision_criteria": [
+    "Infinite loop on bounds update",
+    "Wrong mid calculation"
+  ]
+}

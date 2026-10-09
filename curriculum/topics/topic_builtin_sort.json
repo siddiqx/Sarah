@@ -1,0 +1,39 @@
+{
+  "id": "topic_builtin_sort",
+  "title": "Built-in Sorting: sorted() and list.sort()",
+  "description": "Using Python's Timsort. sorted() returns new list, list.sort() in-place. key parameter for custom sorting. reverse parameter. Stability.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Use sorted() vs list.sort()",
+    "Sort with key function (lambda)",
+    "Sort in reverse order",
+    "Understand stable sort"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_bubble_sort"
+  ],
+  "related_skills": [
+    "key_functions",
+    "lambda",
+    "stable_sort",
+    "practical_sorting"
+  ],
+  "lesson_refs": [
+    "lesson_day20_list_algorithms"
+  ],
+  "practice_refs": [
+    "ex_day20_custom_sort"
+  ],
+  "assessment_refs": [
+    "quiz_day20_list_algorithms"
+  ],
+  "mastery_criteria": [
+    "Sorts lists of dicts by key",
+    "Chooses sorted() vs sort()",
+    "Uses lambda for key extraction"
+  ],
+  "revision_criteria": [
+    "Cannot sort list of dicts",
+    "Confuses sorted() and sort()"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "number": 20,
+  "phase": 1,
+  "title": "Day 20 Topic",
+  "summary": "Summary for day 20.",
+  "learning_objectives": [
+    "Objective 1",
+    "Objective 2"
+  ],
+  "prerequisites": [],
+  "topics": [
+    {
+      "topic_id": "day-020-topic",
+      "title": "Day 20 Topic",
+      "description": "Description for day 20 topic.",
+      "difficulty": "beginner",
+      "learning_objectives": [
+        "Learn concept"
+      ],
+      "prerequisite_topic_ids": [],
+      "lessons": [
+        "day-020-lesson"
+      ],
+      "exercises": [
+        "day-020-exercise"
+      ],
+      "assessments": []
+    }
+  ],
+  "estimated_study_time_minutes": 60,
+  "completion_criteria": "Complete lesson and exercise."
+}

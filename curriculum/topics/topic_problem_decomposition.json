@@ -1,0 +1,40 @@
+{
+  "id": "topic_problem_decomposition",
+  "title": "Problem Decomposition",
+  "description": "Breaking complex problems into smaller, manageable sub-problems. Identifying functions and data flow.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Identify sub-problems in a larger problem",
+    "Design function interfaces between components",
+    "Minimize coupling between functions",
+    "Apply single responsibility principle"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_scope"
+  ],
+  "related_skills": [
+    "system_design",
+    "modularity",
+    "abstraction"
+  ],
+  "lesson_refs": [
+    "lesson_day9_decomposition"
+  ],
+  "practice_refs": [
+    "ex_day9_decompose_calculator",
+    "ex_day9_compose_functions"
+  ],
+  "assessment_refs": [
+    "quiz_day9_decomposition",
+    "assessment_week1"
+  ],
+  "mastery_criteria": [
+    "Decomposes problems into 3+ functions",
+    "Designs clean function interfaces",
+    "Minimizes shared state"
+  ],
+  "revision_criteria": [
+    "Monolithic functions doing too much",
+    "Tight coupling between components"
+  ]
+}

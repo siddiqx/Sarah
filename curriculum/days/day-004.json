@@ -1,0 +1,30 @@
+{
+  "id": "day-004",
+  "phase": "phase-a",
+  "day_number": 4,
+  "title": "Control Flow: Conditionals",
+  "topics": [
+    "control-flow"
+  ],
+  "duration_hours": 3,
+  "objectives": [
+    "Write if/elif/else statements",
+    "Use comparison and logical operators",
+    "Understand truthy/falsy values",
+    "Apply short-circuit evaluation"
+  ],
+  "activities": [
+    "Grade calculator program",
+    "Number guessing game logic",
+    "Input validation patterns",
+    "Nested conditional practice"
+  ],
+  "deliverables": [
+    "grade_calculator.py",
+    "conditional_exercises.py"
+  ],
+  "resources": [
+    "Python docs: Comparison Operators",
+    "Real Python: Conditional Statements"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "topic_input_function",
+  "title": "Reading User Input",
+  "description": "Using input() to read from stdin. Converting string input to other types. Prompt design.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Read input with input(prompt)",
+    "Convert input to int, float, bool",
+    "Design clear prompts for users"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_type_conversion"
+  ],
+  "related_skills": [
+    "user_interaction",
+    "input_conversion"
+  ],
+  "lesson_refs": [
+    "lesson_day8_io_exceptions"
+  ],
+  "practice_refs": [
+    "ex_day8_basic_input",
+    "ex_day8_type_conversion_input"
+  ],
+  "assessment_refs": [
+    "quiz_day8_io_exceptions"
+  ],
+  "mastery_criteria": [
+    "Reads and converts input correctly",
+    "Handles empty input gracefully",
+    "Writes clear prompts"
+  ],
+  "revision_criteria": [
+    "Forgets to convert input type",
+    "Crashes on invalid input"
+  ]
+}

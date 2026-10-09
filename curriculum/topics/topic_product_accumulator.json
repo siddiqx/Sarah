@@ -1,0 +1,39 @@
+{
+  "id": "topic_product_accumulator",
+  "title": "Product Accumulator and Factorial",
+  "description": "Multiplying values in a loop. Initial value 1. Factorial computation. Handling 0! = 1.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Compute product of sequence",
+    "Initialize product accumulator to 1",
+    "Implement factorial iteratively",
+    "Handle edge case 0! = 1"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_accumulator_pattern"
+  ],
+  "related_skills": [
+    "factorial",
+    "combinatorics",
+    "edge_cases"
+  ],
+  "lesson_refs": [
+    "lesson_day12_accumulators"
+  ],
+  "practice_refs": [
+    "ex_day12_product",
+    "ex_day12_factorial"
+  ],
+  "assessment_refs": [
+    "quiz_day12_accumulators"
+  ],
+  "mastery_criteria": [
+    "Computes product correctly",
+    "Implements factorial(n) for n>=0",
+    "Handles 0! = 1 correctly"
+  ],
+  "revision_criteria": [
+    "Initializes product to 0",
+    "Infinite loop or wrong result for 0!"
+  ]
+}

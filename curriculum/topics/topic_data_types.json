@@ -1,0 +1,36 @@
+{
+  "id": "topic_data_types",
+  "title": "Core Data Types: int, float, str, bool",
+  "description": "Python's four fundamental data types. Characteristics, literals, and type identification.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Identify int, float, str, bool literals",
+    "Use type() to check a variable's type",
+    "Understand type determines operations allowed"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_variables"
+  ],
+  "related_skills": [
+    "type_awareness",
+    "literal_recognition"
+  ],
+  "lesson_refs": [
+    "lesson_day2_types"
+  ],
+  "practice_refs": [
+    "ex_day2_type_identification"
+  ],
+  "assessment_refs": [
+    "quiz_day2_types"
+  ],
+  "mastery_criteria": [
+    "Correctly identifies type of any literal",
+    "Explains difference between 5 and 5.0",
+    "Understands bool is a subtype of int"
+  ],
+  "revision_criteria": [
+    "Confuses int and float",
+    "Cannot identify type of a value"
+  ]
+}

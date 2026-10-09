@@ -1,0 +1,39 @@
+{
+  "id": "topic_list_slicing",
+  "title": "List Slicing",
+  "description": "Slice syntax [start:stop:step]. Extracting sublists. Slice assignment for replacement/insertion/deletion. Shallow copy with [:].",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Extract sublists with slices",
+    "Use slice assignment to modify",
+    "Copy lists with [:]",
+    "Understand slice bounds clamping"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_list_indexing"
+  ],
+  "related_skills": [
+    "slicing",
+    "slice_assignment",
+    "shallow_copy"
+  ],
+  "lesson_refs": [
+    "lesson_day19_lists_basics"
+  ],
+  "practice_refs": [
+    "ex_day19_indexing_slicing",
+    "ex_day19_copy_pitfall"
+  ],
+  "assessment_refs": [
+    "quiz_day19_lists"
+  ],
+  "mastery_criteria": [
+    "Uses slices for sublist extraction",
+    "Replaces/inserts/deletes with slice assignment",
+    "Copies correctly with [:]"
+  ],
+  "revision_criteria": [
+    "Slice assignment length mismatch",
+    "Mutates original when copying"
+  ]
+}

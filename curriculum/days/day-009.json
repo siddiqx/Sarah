@@ -1,0 +1,30 @@
+{
+  "id": "day-009",
+  "phase": "phase-a",
+  "day_number": 9,
+  "title": "Functions: Definition & Parameters",
+  "topics": [
+    "functions"
+  ],
+  "duration_hours": 3,
+  "objectives": [
+    "Define functions with def",
+    "Use positional and keyword arguments",
+    "Apply default parameter values",
+    "Understand return statements"
+  ],
+  "activities": [
+    "Calculator function library",
+    "Parameter passing demo",
+    "Default argument gotchas",
+    "Docstring writing practice"
+  ],
+  "deliverables": [
+    "calculator.py",
+    "function_examples.py"
+  ],
+  "resources": [
+    "Python docs: Defining Functions",
+    "Real Python: Function Arguments"
+  ]
+}

@@ -1,0 +1,1 @@
+import pathlib; scripts_dir = pathlib.Path('D:/02_Projects/Sarah/scripts'); scripts_dir.mkdir(parents=True, exist_ok=True); seeds_dir = pathlib.Path('D:/02_Projects/Sarah/database/seeds'); seeds_dir.mkdir(parents=True, exist_ok=True); print('dirs created')

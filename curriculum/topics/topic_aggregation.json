@@ -1,0 +1,40 @@
+{
+  "id": "topic_aggregation",
+  "title": "List Aggregation and Reduction",
+  "description": "Aggregating list data: sum, min, max, any, all. Custom reduction loops. Built-in functions vs manual loops. Statistics: mean, median, mode.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Use sum(), min(), max(), any(), all()",
+    "Implement custom reduction loop",
+    "Compute mean, median manually",
+    "Handle empty list edge cases"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_list_methods",
+    "topic_accumulator_pattern"
+  ],
+  "related_skills": [
+    "aggregation",
+    "reduction",
+    "statistics",
+    "edge_cases"
+  ],
+  "lesson_refs": [
+    "lesson_day20_list_algorithms"
+  ],
+  "practice_refs": [
+    "ex_day20_aggregation"
+  ],
+  "assessment_refs": [
+    "quiz_day20_list_algorithms"
+  ],
+  "mastery_criteria": [
+    "Uses built-in aggregations",
+    "Implements custom reduction",
+    "Computes basic statistics"
+  ],
+  "revision_criteria": [
+    "Reimplements sum() manually",
+    "Crashes on empty list"
+  ]
+}

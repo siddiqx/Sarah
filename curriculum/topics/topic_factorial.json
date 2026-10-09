@@ -1,0 +1,41 @@
+{
+  "id": "topic_factorial",
+  "title": "Factorial Computation",
+  "description": "Factorial definition and computation. Iterative and recursive approaches. Applications in permutations and combinations.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Define factorial mathematically",
+    "Compute iteratively with loop",
+    "Understand recursive definition",
+    "Apply to counting problems"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_product_accumulator"
+  ],
+  "related_skills": [
+    "combinatorics",
+    "recursion",
+    "mathematical_functions"
+  ],
+  "lesson_refs": [
+    "lesson_day12_accumulators",
+    "lesson_day17_fibonacci_digits"
+  ],
+  "practice_refs": [
+    "ex_day12_factorial",
+    "ex_day17_fibonacci_recursive"
+  ],
+  "assessment_refs": [
+    "quiz_day12_accumulators",
+    "quiz_day17_fibonacci_digits"
+  ],
+  "mastery_criteria": [
+    "Computes factorial iteratively",
+    "Traces recursive factorial",
+    "Applies to permutation counting"
+  ],
+  "revision_criteria": [
+    "Stack overflow on large n (recursive)",
+    "Incorrect base case"
+  ]
+}

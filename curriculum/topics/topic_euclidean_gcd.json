@@ -1,0 +1,39 @@
+{
+  "id": "topic_euclidean_gcd",
+  "title": "Euclidean Algorithm for GCD",
+  "description": "Greatest Common Divisor. Euclidean algorithm: gcd(a,b) = gcd(b, a%b). Iterative and recursive implementations.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Understand GCD definition",
+    "Implement Euclidean algorithm iteratively",
+    "Trace algorithm steps",
+    "Handle negative inputs"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_while_loop",
+    "topic_arithmetic_operators"
+  ],
+  "related_skills": [
+    "number_theory",
+    "algorithm_implementation",
+    "modulo_arithmetic"
+  ],
+  "lesson_refs": [
+    "lesson_day16_number_theory"
+  ],
+  "practice_refs": [
+    "ex_day16_gcd"
+  ],
+  "assessment_refs": [
+    "quiz_day16_number_theory"
+  ],
+  "mastery_criteria": [
+    "Implements iterative Euclidean GCD",
+    "Traces steps for given inputs",
+    "Handles edge cases (0, negatives)"
+  ],
+  "revision_criteria": [
+    "Infinite loop on certain inputs",
+    "Wrong result for gcd(a,0)"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "topic_exception_handling",
+  "title": "Exception Handling with try/except",
+  "description": "Catching and handling exceptions. try/except/else/finally structure. The exception hierarchy.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Wrap risky code in try/except",
+    "Catch specific exception types",
+    "Use else for no-exception case",
+    "Use finally for cleanup",
+    "Understand exception propagation"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_input_function"
+  ],
+  "related_skills": [
+    "error_handling",
+    "robustness",
+    "resource_management"
+  ],
+  "lesson_refs": [
+    "lesson_day8_io_exceptions"
+  ],
+  "practice_refs": [
+    "ex_day8_try_except",
+    "ex_day8_multiple_exceptions"
+  ],
+  "assessment_refs": [
+    "quiz_day8_io_exceptions"
+  ],
+  "mastery_criteria": [
+    "Handles expected exceptions specifically",
+    "Uses else/finally appropriately",
+    "Does not use bare except:"
+  ],
+  "revision_criteria": [
+    "Uses bare except: catching everything",
+    "Missing finally for cleanup"
+  ]
+}

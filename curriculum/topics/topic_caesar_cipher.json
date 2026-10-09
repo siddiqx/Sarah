@@ -1,0 +1,39 @@
+{
+  "id": "topic_caesar_cipher",
+  "title": "Caesar Cipher",
+  "description": "Shift cipher encryption/decryption. Modular arithmetic on character codes. Handling wrap-around. Preserving case and non-letters.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Encrypt with shift using modular arithmetic",
+    "Decrypt with negative shift",
+    "Preserve case and non-alphabetic chars",
+    "Handle wrap-around (z -> a)"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_arithmetic_operators",
+    "topic_string_indexing_slicing"
+  ],
+  "related_skills": [
+    "modular_arithmetic",
+    "character_codes",
+    "encryption_basics"
+  ],
+  "lesson_refs": [
+    "lesson_day18_string_algorithms"
+  ],
+  "practice_refs": [
+    "ex_day18_caesar_cipher"
+  ],
+  "assessment_refs": [
+    "quiz_day18_string_algorithms"
+  ],
+  "mastery_criteria": [
+    "Encrypts/decrypts correctly",
+    "Preserves case and punctuation",
+    "Handles any shift value"
+  ],
+  "revision_criteria": [
+    "Wrap-around broken",
+    "Case not preserved"
+  ]
+}

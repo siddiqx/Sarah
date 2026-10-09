@@ -1,0 +1,38 @@
+{
+  "id": "topic_list_indexing",
+  "title": "List Indexing and Access",
+  "description": "Accessing elements by index. Positive and negative indices. IndexError on out of bounds. Mutable element assignment.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Access elements with positive/negative index",
+    "Handle IndexError gracefully",
+    "Modify elements by assignment",
+    "Understand list mutability"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_list_creation"
+  ],
+  "related_skills": [
+    "indexing",
+    "mutation",
+    "bounds_checking"
+  ],
+  "lesson_refs": [
+    "lesson_day19_lists_basics"
+  ],
+  "practice_refs": [
+    "ex_day19_indexing_slicing"
+  ],
+  "assessment_refs": [
+    "quiz_day19_lists"
+  ],
+  "mastery_criteria": [
+    "Accesses any element correctly",
+    "Modifies elements in place",
+    "Uses negative indices naturally"
+  ],
+  "revision_criteria": [
+    "Frequent IndexError",
+    "Confuses indexing with slicing"
+  ]
+}

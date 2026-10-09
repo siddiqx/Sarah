@@ -1,0 +1,38 @@
+{
+  "id": "topic_list_creation",
+  "title": "List Creation",
+  "description": "Creating lists: literals, list(), range(), comprehensions (preview). Empty lists. List of repeated values.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Create lists with various methods",
+    "Use list() on iterables",
+    "Create lists of repeated values",
+    "Preview list comprehensions"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_data_types"
+  ],
+  "related_skills": [
+    "list_literals",
+    "conversion",
+    "initialization"
+  ],
+  "lesson_refs": [
+    "lesson_day19_lists_basics"
+  ],
+  "practice_refs": [
+    "ex_day19_create_lists"
+  ],
+  "assessment_refs": [
+    "quiz_day19_lists"
+  ],
+  "mastery_criteria": [
+    "Creates lists appropriately",
+    "Converts iterables to lists",
+    "Avoids reference bug with *"
+  ],
+  "revision_criteria": [
+    "Uses [[0]*n]*m incorrectly",
+    "Cannot create from range"
+  ]
+}

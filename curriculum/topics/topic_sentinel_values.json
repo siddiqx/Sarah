@@ -1,0 +1,39 @@
+{
+  "id": "topic_sentinel_values",
+  "title": "Sentinel-Controlled Loops",
+  "description": "Using special values to signal loop termination. Input validation loops. Menu-driven programs.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Design sentinel-controlled loops",
+    "Choose appropriate sentinel values",
+    "Validate sentinel is not valid data",
+    "Apply to menu systems"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_while_loop"
+  ],
+  "related_skills": [
+    "sentinel_pattern",
+    "menu_systems",
+    "input_loops"
+  ],
+  "lesson_refs": [
+    "lesson_day14_while_loops"
+  ],
+  "practice_refs": [
+    "ex_day14_sentinel_input",
+    "ex_day14_guessing_game"
+  ],
+  "assessment_refs": [
+    "quiz_day14_while_loops"
+  ],
+  "mastery_criteria": [
+    "Implements robust sentinel loop",
+    "Handles invalid input within loop",
+    "Designs clean menu systems"
+  ],
+  "revision_criteria": [
+    "Sentinel conflicts with valid data",
+    "Loop logic inverted"
+  ]
+}

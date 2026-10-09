@@ -1,0 +1,30 @@
+{
+  "id": "day-006",
+  "phase": "phase-a",
+  "day_number": 6,
+  "title": "Lists & List Operations",
+  "topics": [
+    "data-structures"
+  ],
+  "duration_hours": 3,
+  "objectives": [
+    "Create and access list elements",
+    "Use list methods (append, extend, pop, remove)",
+    "Apply list slicing and comprehension",
+    "Understand mutability and references"
+  ],
+  "activities": [
+    "Shopping list manager",
+    "List comprehension challenges",
+    "Sorting and filtering data",
+    "Reference vs copy pitfalls"
+  ],
+  "deliverables": [
+    "list_operations.py",
+    "comprehension_examples.py"
+  ],
+  "resources": [
+    "Python docs: List Methods",
+    "Real Python: List Comprehensions"
+  ]
+}

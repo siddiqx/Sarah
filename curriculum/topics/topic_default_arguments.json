@@ -1,0 +1,39 @@
+{
+  "id": "topic_default_arguments",
+  "title": "Default Parameter Values",
+  "description": "Default argument values in function definition. Evaluation at definition time. Mutable default argument pitfall.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Define functions with default parameters",
+    "Understand defaults evaluated at definition time",
+    "Avoid mutable default argument bug",
+    "Use None as sentinel for mutable defaults"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_parameters_arguments"
+  ],
+  "related_skills": [
+    "default_args",
+    "mutable_defaults",
+    "sentinel_values"
+  ],
+  "lesson_refs": [
+    "lesson_day7_advanced_functions"
+  ],
+  "practice_refs": [
+    "ex_day7_default_args",
+    "ex_day7_mutable_default_bug"
+  ],
+  "assessment_refs": [
+    "quiz_day7_advanced_functions"
+  ],
+  "mastery_criteria": [
+    "Sets appropriate defaults",
+    "Explains mutable default bug",
+    "Uses None sentinel pattern correctly"
+  ],
+  "revision_criteria": [
+    "Uses mutable list/dict as default",
+    "Surprised by shared default state"
+  ]
+}

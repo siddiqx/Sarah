@@ -1,0 +1,37 @@
+{
+  "id": "topic_range_function",
+  "title": "The range() Function",
+  "description": "range(stop), range(start, stop), range(start, stop, step). Lazy evaluation. Converting to list.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Use range with 1, 2, and 3 arguments",
+    "Generate ascending and descending sequences",
+    "Understand range is lazy (memory efficient)",
+    "Convert to list when needed"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_for_loop"
+  ],
+  "related_skills": [
+    "sequence_generation",
+    "memory_awareness"
+  ],
+  "lesson_refs": [
+    "lesson_day11_range"
+  ],
+  "practice_refs": [
+    "ex_day11_range_variants"
+  ],
+  "assessment_refs": [
+    "quiz_day11_loops"
+  ],
+  "mastery_criteria": [
+    "Generates any arithmetic sequence",
+    "Explains lazy vs eager evaluation",
+    "Uses negative step for countdown"
+  ],
+  "revision_criteria": [
+    "Off-by-one errors with range bounds",
+    "Confused by range laziness"
+  ]
+}

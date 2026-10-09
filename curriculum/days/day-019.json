@@ -1,0 +1,32 @@
+{
+  "number": 19,
+  "phase": 1,
+  "title": "Day 19 Topic",
+  "summary": "Summary for day 19.",
+  "learning_objectives": [
+    "Objective 1",
+    "Objective 2"
+  ],
+  "prerequisites": [],
+  "topics": [
+    {
+      "topic_id": "day-019-topic",
+      "title": "Day 19 Topic",
+      "description": "Description for day 19 topic.",
+      "difficulty": "beginner",
+      "learning_objectives": [
+        "Learn concept"
+      ],
+      "prerequisite_topic_ids": [],
+      "lessons": [
+        "day-019-lesson"
+      ],
+      "exercises": [
+        "day-019-exercise"
+      ],
+      "assessments": []
+    }
+  ],
+  "estimated_study_time_minutes": 60,
+  "completion_criteria": "Complete lesson and exercise."
+}

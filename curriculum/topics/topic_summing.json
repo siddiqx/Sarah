@@ -1,0 +1,37 @@
+{
+  "id": "topic_summing",
+  "title": "Summing with Accumulators",
+  "description": "Summing values. Running total. Sum of sequence vs conditional sum. Relationship to built-in sum().",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Sum all values in iterable",
+    "Sum values matching condition",
+    "Initialize accumulator to 0",
+    "Compare manual sum to built-in sum()"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_accumulator_pattern"
+  ],
+  "related_skills": [
+    "aggregation",
+    "conditional_sum"
+  ],
+  "lesson_refs": [
+    "lesson_day12_accumulators"
+  ],
+  "practice_refs": [
+    "ex_day12_summing"
+  ],
+  "assessment_refs": [
+    "quiz_day12_accumulators"
+  ],
+  "mastery_criteria": [
+    "Computes sums correctly",
+    "Applies conditional summing",
+    "Knows when to use built-in sum()"
+  ],
+  "revision_criteria": [
+    "Wrong initial value",
+    "Forgets to add in loop"
+  ]
+}

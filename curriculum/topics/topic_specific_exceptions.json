@@ -1,0 +1,37 @@
+{
+  "id": "topic_specific_exceptions",
+  "title": "Common Exception Types",
+  "description": "ValueError, TypeError, ZeroDivisionError, IndexError, KeyError, FileNotFoundError. When each is raised.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Identify common built-in exceptions",
+    "Match exception to error cause",
+    "Catch multiple exception types",
+    "Raise exceptions with raise"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_exception_handling"
+  ],
+  "related_skills": [
+    "exception_identification",
+    "defensive_coding"
+  ],
+  "lesson_refs": [
+    "lesson_day8_io_exceptions"
+  ],
+  "practice_refs": [
+    "ex_day8_multiple_exceptions"
+  ],
+  "assessment_refs": [
+    "quiz_day8_io_exceptions"
+  ],
+  "mastery_criteria": [
+    "Names the exception for common errors",
+    "Catches multiple types in one except",
+    "Raises appropriate exceptions"
+  ],
+  "revision_criteria": [
+    "Cannot identify exception type",
+    "Catches Exception too broadly"
+  ]
+}

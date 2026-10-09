@@ -1,0 +1,37 @@
+{
+  "assessment_id": "phase-1",
+  "title": "Phase 1 Assessment",
+  "description": "Comprehensive assessment covering all Phase 1 topics.",
+  "assessment_type": "phase",
+  "phase_id": 1,
+  "topic_ids": ["variables", "data-types", "type-conversion", "strings", "conditions", "functions"],
+  "time_limit_minutes": 60,
+  "passing_score": 70.0,
+  "questions": [
+    {
+      "question_id": "p1-q1",
+      "question_type": "multiple_choice",
+      "question_data": {
+        "prompt": "What does len("hello") return?",
+        "options": ["4", "5", "6", "Error"]
+      },
+      "correct_answer": {"answer": 1},
+      "explanation": "len() returns the number of characters in a string.",
+      "points": 2,
+      "order": 0
+    },
+    {
+      "question_id": "p1-q2",
+      "question_type": "code_completion",
+      "question_data": {
+        "prompt": "Complete the function to return the maximum of two numbers:",
+        "starter": "def max_of_two(a, b):\n    # Your code here\n    pass"
+      },
+      "correct_answer": {"code": "return a if a > b else b"},
+      "explanation": "Use conditional expression to return the larger value.",
+      "points": 3,
+      "order": 1
+    }
+  ]
+}
+

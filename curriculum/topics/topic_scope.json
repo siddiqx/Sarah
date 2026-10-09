@@ -1,0 +1,39 @@
+{
+  "id": "topic_scope",
+  "title": "Variable Scope and LEGB Rule",
+  "description": "Local, Enclosing, Global, Built-in scope. Variable lookup order. Global and nonlocal keywords.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Identify variable scope: local, enclosing, global, built-in",
+    "Apply LEGB lookup order",
+    "Use global to modify global variables",
+    "Use nonlocal for enclosing scope",
+    "Prefer parameters over global state"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_return_values"
+  ],
+  "related_skills": [
+    "scope_management",
+    "variable_lookup",
+    "encapsulation"
+  ],
+  "lesson_refs": [
+    "lesson_day6_parameters_return"
+  ],
+  "practice_refs": [
+    "ex_day6_scope"
+  ],
+  "assessment_refs": [
+    "quiz_day6_functions"
+  ],
+  "mastery_criteria": [
+    "Predicts variable lookup correctly",
+    "Uses global/nonlocal sparingly and correctly",
+    "Explains shadowing"
+  ],
+  "revision_criteria": [
+    "Unintended global modification",
+    "Confused by LEGB order"
+  ]
+}

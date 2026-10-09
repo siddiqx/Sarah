@@ -1,0 +1,38 @@
+{
+  "id": "topic_word_counting",
+  "title": "Word and Text Counting",
+  "description": "Counting words, sentences, characters, lines. Splitting on whitespace. Handling punctuation. Using split() and len().",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Count words with split()",
+    "Count characters with len()",
+    "Count lines with splitlines()",
+    "Handle multiple spaces correctly"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_string_methods"
+  ],
+  "related_skills": [
+    "text_processing",
+    "split_usage",
+    "statistics"
+  ],
+  "lesson_refs": [
+    "lesson_day18_string_algorithms"
+  ],
+  "practice_refs": [
+    "ex_day18_word_count"
+  ],
+  "assessment_refs": [
+    "quiz_day18_string_algorithms"
+  ],
+  "mastery_criteria": [
+    "Counts words/lines/chars accurately",
+    "Handles edge cases (empty, whitespace)",
+    "Uses appropriate split method"
+  ],
+  "revision_criteria": [
+    "Off-by-one on empty strings",
+    "Punctuation affects word count"
+  ]
+}

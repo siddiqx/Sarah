@@ -1,0 +1,29 @@
+{
+  "id": "file-operations",
+  "name": "File Operations",
+  "description": "Reading/writing files, context managers, and structured data formats",
+  "phase": "phase-a",
+  "order": 8,
+  "subtopics": [
+    "Open/Close Files",
+    "Context Managers",
+    "Text File I/O",
+    "CSV Processing",
+    "JSON Serialization",
+    "File Paths (pathlib)"
+  ],
+  "key_concepts": [
+    "Resource management",
+    "Encoding",
+    "Structured data",
+    "Path manipulation"
+  ],
+  "estimated_hours": 3,
+  "prerequisites": [
+    "error-handling"
+  ],
+  "resources": [
+    "Python docs: File I/O",
+    "Real Python: Reading/Writing Files"
+  ]
+}

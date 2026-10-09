@@ -1,0 +1,36 @@
+{
+  "id": "topic_python_syntax",
+  "title": "Python Syntax Fundamentals",
+  "description": "Core syntax rules: statements, expressions, indentation, comments, and basic program structure.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Distinguish between statements and expressions",
+    "Apply Python indentation rules correctly",
+    "Write single-line and multi-line comments"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_programming_basics"
+  ],
+  "related_skills": [
+    "code_reading",
+    "syntax_awareness"
+  ],
+  "lesson_refs": [
+    "lesson_day1_intro"
+  ],
+  "practice_refs": [
+    "ex_day1_syntax_fix"
+  ],
+  "assessment_refs": [
+    "quiz_day1_basics"
+  ],
+  "mastery_criteria": [
+    "Writes properly indented code blocks",
+    "Uses comments to explain code purpose",
+    "Identifies syntax errors in sample code"
+  ],
+  "revision_criteria": [
+    "Inconsistent indentation",
+    "Missing or unclear comments"
+  ]
+}

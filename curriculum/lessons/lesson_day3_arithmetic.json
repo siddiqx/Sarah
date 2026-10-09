@@ -1,0 +1,170 @@
+{
+  "id": "lesson_day3_arithmetic",
+  "day_number": 3,
+  "title": "Arithmetic Operators",
+  "phase_id": "a",
+  "estimated_minutes": 35,
+  "difficulty": "beginner",
+  "objectives": [
+    "Use all seven arithmetic operators",
+    "Distinguish true division (/) from floor division (//)",
+    "Use modulo (%) for remainders and cyclic patterns",
+    "Use exponentiation (**) for powers"
+  ],
+  "prerequisites": ["lesson_day2_types"],
+  "blocks": [
+    {
+      "type": "concept_explanation",
+      "order": 1,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Seven Arithmetic Operators",
+        "explanation": "Python provides seven arithmetic operators for mathematical computations. Each has a specific purpose and behavior.",
+        "key_points": [
+          "+ : addition",
+          "- : subtraction",
+          "* : multiplication",
+          "/ : true division (always returns float)",
+          "// : floor division (rounds down to nearest integer)",
+          "% : modulo (remainder after division)",
+          "** : exponentiation (power)"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 2,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Arithmetic Examples",
+        "code": "a = 17\nb = 5\n\nprint(a + b)   # 22\nprint(a - b)   # 12\nprint(a * b)   # 85\nprint(a / b)   # 3.4 (float)\nprint(a // b)  # 3 (integer)\nprint(a % b)   # 2 (remainder)\nprint(a ** b)  # 1419857 (17^5)",
+        "language": "python",
+        "explanation": "Notice how / always returns float, while // returns integer. Modulo gives the remainder."
+      }
+    },
+    {
+      "type": "output_prediction",
+      "order": 3,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Division vs Floor Division",
+        "code": "print(10 / 3)\nprint(10 // 3)\nprint(-10 // 3)\nprint(10 % 3)\nprint(-10 % 3)",
+        "question": "What are the outputs?",
+        "options": [
+          "3.33, 3, -3, 1, 2",
+          "3.33, 3, -4, 1, 2",
+          "3.33, 3, -3, 1, -2",
+          "3, 3, -3, 1, 2"
+        ],
+        "correct_answer": "3.33, 3, -4, 1, 2",
+        "explanation": "Floor division rounds DOWN (toward negative infinity). -10//3 = -4. Modulo always returns non-negative when divisor is positive."
+      }
+    },
+    {
+      "type": "worked_example",
+      "order": 4,
+      "estimated_minutes": 10,
+      "content": {
+        "title": "Practical Modulo: Cyclic Patterns",
+        "problem": "Determine if a number is even/odd. Cycle through days of week. Wrap array indices.",
+        "steps": [
+          "Even check: n % 2 == 0",
+          "Day of week: (day + offset) % 7",
+          "Circular buffer: index % length"
+        ],
+        "code": "def is_even(n):\n    return n % 2 == 0\n\ndays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]\ntoday = 2  # Wednesday\nprint(days[(today + 3) % 7])  # Saturday",
+        "explanation": "Modulo is essential for cyclic/wrapping behavior."
+      }
+    },
+    {
+      "type": "fill_in_code",
+      "order": 5,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Complete the Calculations",
+        "code": "# Calculate 2 to the power of 10\npower = _____\n\n# Get remainder of 100 divided by 7\nremainder = _____\n\n# Floor division of 100 by 7\nquotient = _____",
+        "blanks": [
+          {"placeholder": "_____", "answer": "2 ** 10", "hint": "Use ** for exponentiation"},
+          {"placeholder": "_____", "answer": "100 % 7", "hint": "Modulo operator"},
+          {"placeholder": "_____", "answer": "100 // 7", "hint": "Floor division operator"}
+        ],
+        "solution": "power = 2 ** 10\nremainder = 100 % 7\nquotient = 100 // 7"
+      }
+    },
+    {
+      "type": "knowledge_check",
+      "order": 6,
+      "estimated_minutes": 3,
+      "content": {
+        "questions": [
+          {
+            "question": "What is 10 // 3?",
+            "type": "multiple_choice",
+            "options": ["3.33", "3", "3.0", "4"],
+            "correct_answer": "3"
+          },
+          {
+            "question": "What is 2 ** 8?",
+            "type": "multiple_choice",
+            "options": ["16", "64", "256", "512"],
+            "correct_answer": "256"
+          },
+          {
+            "question": "What does modulo (%) return?",
+            "type": "multiple_choice",
+            "options": ["Quotient", "Remainder", "Float result", "Rounded result"],
+            "correct_answer": "Remainder"
+          }
+        ]
+      }
+    },
+    {
+      "type": "summary",
+      "order": 7,
+      "estimated_minutes": 2,
+      "content": {
+        "title": "Key Takeaways",
+        "points": [
+          "Seven operators: +, -, *, /, //, %, **",
+          "/ always returns float, // returns int",
+          "% gives remainder, useful for cycles",
+          "** for powers (2**10 = 1024)"
+        ]
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_day3_arithmetic",
+      "title": "Arithmetic Calculator",
+      "description": "Write a program that takes two numbers and prints all seven arithmetic operations on them.",
+      "starter_code": "a = 15\nb = 4\n# Print all seven operations\n",
+      "solution": "a = 15\nb = 4\nprint(f"{a} + {b} = {a + b}")\nprint(f"{a} - {b} = {a - b}")\nprint(f"{a} * {b} = {a * b}")\nprint(f"{a} / {b} = {a / b}")\nprint(f"{a} // {b} = {a // b}")\nprint(f"{a} % {b} = {a % b}")\nprint(f"{a} ** {b} = {a ** b}")",
+      "tests": [
+        "assert "19" in output",
+        "assert "3.75" in output",
+        "assert "3" in output",
+        "assert "50625" in output"
+      ],
+      "hints": ["Use f-strings for formatted output"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the difference between / and //?",
+      "type": "multiple_choice",
+      "options": [
+        "No difference",
+        "/ returns float, // returns int (floor)",
+        "// is faster",
+        "/ is for integers only"
+      ],
+      "correct_answer": "/ returns float, // returns int (floor)",
+      "explanation": "True division (/) always returns float. Floor division (//) rounds down to integer.",
+      "difficulty": "easy"
+    }
+  ]
+}
+

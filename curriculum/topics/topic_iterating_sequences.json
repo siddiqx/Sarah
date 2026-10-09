@@ -1,0 +1,38 @@
+{
+  "id": "topic_iterating_sequences",
+  "title": "Iterating Over Sequences",
+  "description": "Direct iteration over strings, lists, tuples. enumerate() for index-value pairs. zip() for parallel iteration.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Iterate directly over sequence elements",
+    "Use enumerate() for index and value",
+    "Use zip() for parallel iteration",
+    "Understand iteration protocol"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_for_loop"
+  ],
+  "related_skills": [
+    "enumerate",
+    "zip",
+    "parallel_iteration"
+  ],
+  "lesson_refs": [
+    "lesson_day11_for_loops"
+  ],
+  "practice_refs": [
+    "ex_day11_iterate_string"
+  ],
+  "assessment_refs": [
+    "quiz_day11_loops"
+  ],
+  "mastery_criteria": [
+    "Chooses direct iteration over index",
+    "Uses enumerate when index needed",
+    "Zips multiple sequences correctly"
+  ],
+  "revision_criteria": [
+    "Uses range(len()) unnecessarily",
+    "Cannot iterate in parallel"
+  ]
+}

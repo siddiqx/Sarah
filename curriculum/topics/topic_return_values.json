@@ -1,0 +1,39 @@
+{
+  "id": "topic_return_values",
+  "title": "Return Values",
+  "description": "The return statement. Returning single values, multiple values as tuples, and implicit None return.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Return computed values from functions",
+    "Return multiple values via tuple unpacking",
+    "Understand implicit None return",
+    "Use return for early exit"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_parameters_arguments"
+  ],
+  "related_skills": [
+    "return_values",
+    "tuple_unpacking",
+    "early_return"
+  ],
+  "lesson_refs": [
+    "lesson_day6_parameters_return"
+  ],
+  "practice_refs": [
+    "ex_day6_return_values",
+    "ex_day6_multiple_returns"
+  ],
+  "assessment_refs": [
+    "quiz_day6_functions"
+  ],
+  "mastery_criteria": [
+    "Returns appropriate values for callers",
+    "Unpacks multiple return values",
+    "Uses return for control flow"
+  ],
+  "revision_criteria": [
+    "Forgets return, gets None",
+    "Cannot unpack multiple returns"
+  ]
+}

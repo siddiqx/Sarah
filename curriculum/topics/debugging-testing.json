@@ -1,0 +1,31 @@
+{
+  "id": "debugging-testing",
+  "name": "Debugging & Testing",
+  "description": "Debugging techniques, unit testing, and test-driven development basics",
+  "phase": "phase-a",
+  "order": 10,
+  "subtopics": [
+    "Print Debugging",
+    "VS Code Debugger",
+    "Unit Test Structure",
+    "Assertions",
+    "Test Discovery",
+    "TDD Basics",
+    "Coverage"
+  ],
+  "key_concepts": [
+    "Breakpoints & watch",
+    "Arrange-Act-Assert",
+    "Test isolation",
+    "Red-Green-Refactor"
+  ],
+  "estimated_hours": 4,
+  "prerequisites": [
+    "modules-packages"
+  ],
+  "resources": [
+    "Python docs: unittest",
+    "VS Code Debugging",
+    "Real Python: Testing"
+  ]
+}

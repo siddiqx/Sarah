@@ -1,0 +1,37 @@
+{
+  "id": "topic_string_formatting",
+  "title": "String Formatting with f-strings",
+  "description": "Modern string formatting using f-strings with expressions, format specifiers, and debugging syntax.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Write f-strings with variable interpolation",
+    "Embed expressions in f-strings",
+    "Use format specifiers: width, precision, alignment",
+    "Use = for debugging output"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_string_creation"
+  ],
+  "related_skills": [
+    "formatting",
+    "debugging_output"
+  ],
+  "lesson_refs": [
+    "lesson_day4_string_basics"
+  ],
+  "practice_refs": [
+    "ex_day4_fstring_formatting"
+  ],
+  "assessment_refs": [
+    "quiz_day4_strings"
+  ],
+  "mastery_criteria": [
+    "Formats output cleanly with f-strings",
+    "Controls decimal places and alignment",
+    "Uses f'{var=}' for debugging"
+  ],
+  "revision_criteria": [
+    "Uses old % or .format() syntax",
+    "Cannot control decimal precision"
+  ]
+}

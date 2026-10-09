@@ -1,0 +1,37 @@
+{
+  "id": "topic_logical_operators",
+  "title": "Logical Operators: and, or, not",
+  "description": "Boolean logic with short-circuit evaluation. Truth tables and practical combinations.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Combine conditions with and, or, not",
+    "Explain short-circuit evaluation",
+    "Apply De Morgan's laws mentally",
+    "Use not for negation"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_comparison_operators"
+  ],
+  "related_skills": [
+    "boolean_reasoning",
+    "condition_simplification"
+  ],
+  "lesson_refs": [
+    "lesson_day3_comparison_logical"
+  ],
+  "practice_refs": [
+    "ex_day3_logical"
+  ],
+  "assessment_refs": [
+    "quiz_day3_operators"
+  ],
+  "mastery_criteria": [
+    "Predicts short-circuit behavior",
+    "Simplifies complex boolean expressions",
+    "Uses not appropriately"
+  ],
+  "revision_criteria": [
+    "Confused by short-circuit results",
+    "Overuses parentheses unnecessarily"
+  ]
+}

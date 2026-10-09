@@ -1,0 +1,38 @@
+{
+  "id": "topic_string_indexing_slicing",
+  "title": "String Indexing and Slicing",
+  "description": "Accessing individual characters and substrings. Positive and negative indices. Slice syntax with start, stop, step.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Access characters with positive and negative indices",
+    "Extract substrings with slice notation [start:stop:step]",
+    "Understand slice bounds are clamped, not errors",
+    "Reverse strings with [::-1]"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_string_creation"
+  ],
+  "related_skills": [
+    "indexing",
+    "slicing",
+    "substring_extraction"
+  ],
+  "lesson_refs": [
+    "lesson_day4_string_basics"
+  ],
+  "practice_refs": [
+    "ex_day4_indexing_slicing"
+  ],
+  "assessment_refs": [
+    "quiz_day4_strings"
+  ],
+  "mastery_criteria": [
+    "Extracts any substring using slices",
+    "Uses negative indices confidently",
+    "Reverses strings with [::-1]"
+  ],
+  "revision_criteria": [
+    "Off-by-one errors in slices",
+    "Confused by negative indices"
+  ]
+}

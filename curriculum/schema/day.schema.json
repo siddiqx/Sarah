@@ -1,0 +1,114 @@
+{
+  "": "http://json-schema.org/draft-07/schema#",
+  "title": "Curriculum Day",
+  "type": "object",
+  "required": [
+    "number",
+    "phase",
+    "title",
+    "summary",
+    "learning_objectives",
+    "topics",
+    "estimated_study_time_minutes"
+  ],
+  "properties": {
+    "number": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 250
+    },
+    "phase": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string"
+    },
+    "learning_objectives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "topic_id",
+          "title",
+          "difficulty"
+        ],
+        "properties": {
+          "topic_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": [
+              "beginner",
+              "intermediate",
+              "advanced"
+            ]
+          },
+          "learning_objectives": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "prerequisite_topic_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "lessons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "exercises": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "assessments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "estimated_study_time_minutes": {
+      "type": "integer",
+      "minimum": 15,
+      "maximum": 240
+    },
+    "completion_criteria": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

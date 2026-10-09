@@ -1,0 +1,227 @@
+{
+  "id": "lesson_day3_comparison_logical",
+  "day_number": 3,
+  "title": "Comparison and Logical Operators",
+  "phase_id": "a",
+  "estimated_minutes": 40,
+  "difficulty": "beginner",
+  "objectives": [
+    "Use comparison operators: ==, !=, <, >, <=, >=",
+    "Chain comparisons: a < b < c",
+    "Combine conditions with and, or, not",
+    "Understand short-circuit evaluation"
+  ],
+  "prerequisites": ["lesson_day3_arithmetic"],
+  "blocks": [
+    {
+      "type": "concept_explanation",
+      "order": 1,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Comparison Operators",
+        "explanation": "Comparisons evaluate to True or False. They work on numbers, strings (lexicographic), and other comparable types.",
+        "key_points": [
+          "== : equal to",
+          "!= : not equal to",
+          "< : less than",
+          "> : greater than",
+          "<= : less than or equal",
+          ">= : greater than or equal",
+          "Chaining: 1 < x < 10 is valid and means 1 < x and x < 10"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 2,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Comparison Examples",
+        "code": "x = 10\ny = 20\n\nprint(x == y)   # False\nprint(x != y)   # True\nprint(x < y)    # True\nprint(x > y)    # False\nprint(x <= 10)  # True\nprint(x >= 10)  # True\n\n# Chaining\nprint(0 < x < 100)  # True\nprint(5 < x < 15)   # True",
+        "language": "python",
+        "explanation": "Chained comparisons are evaluated as a single expression with implicit 'and'."
+      }
+    },
+    {
+      "type": "concept_explanation",
+      "order": 3,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Logical Operators and Short-Circuit Evaluation",
+        "explanation": "and, or, not combine boolean expressions. Python uses short-circuit evaluation: it stops evaluating as soon as the result is determined.",
+        "key_points": [
+          "and: returns first falsy value, or last value if all truthy",
+          "or: returns first truthy value, or last value if all falsy",
+          "not: returns opposite boolean value",
+          "Short-circuit: x and y - if x is falsy, y is never evaluated"
+        ]
+      }
+    },
+    {
+      "type": "code_example",
+      "order": 4,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Logical Operator Examples",
+        "code": "a = 10\nb = 0\nc = 5\n\nprint(a and c)   # 5 (both truthy, returns last)\nprint(a and b)   # 0 (b is falsy, returns b)\nprint(a or c)    # 10 (a is truthy, returns a)\nprint(b or c)    # 5 (b falsy, returns c)\nprint(not a)     # False\nprint(not b)     # True",
+        "language": "python",
+        "explanation": "and/or return the actual operand value, not just True/False. This enables patterns like default = value or default_value."
+      }
+    },
+    {
+      "type": "output_prediction",
+      "order": 5,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "Short-Circuit Prediction",
+        "code": "x = 0\ny = 10\nprint(x and y / x)  # No ZeroDivisionError!\nprint(y or x / y)   # No ZeroDivisionError!",
+        "question": "Why no error?",
+        "options": [
+          "Python catches division by zero",
+          "Short-circuit: x is 0 (falsy), so y/x never evaluated",
+          "Division by zero returns infinity",
+          "It would error"
+        ],
+        "correct_answer": "Short-circuit: x is 0 (falsy), so y/x never evaluated",
+        "explanation": "For 'x and y/x', since x is 0 (falsy), Python returns 0 immediately without evaluating y/x."
+      }
+    },
+    {
+      "type": "interactive_comparison",
+      "order": 6,
+      "estimated_minutes": 5,
+      "content": {
+        "title": "and vs or Return Values",
+        "comparison": [
+          {"expression": "1 and 2", "result": "2", "reason": "Both truthy, returns last"},
+          {"expression": "0 and 2", "result": "0", "reason": "First falsy, returns first"},
+          {"expression": "1 or 2", "result": "1", "reason": "First truthy, returns first"},
+          {"expression": "0 or 2", "result": "2", "reason": "First falsy, returns last"}
+        ],
+        "explanation": "and/or return operand values, not just booleans. Useful for defaults: name = input() or "Anonymous"."
+      }
+    },
+    {
+      "type": "knowledge_check",
+      "order": 7,
+      "estimated_minutes": 3,
+      "content": {
+        "questions": [
+          {
+            "question": "What does 5 < 10 < 15 evaluate to?",
+            "type": "multiple_choice",
+            "options": ["True", "False", "Error", "10"],
+            "correct_answer": "True"
+          },
+          {
+            "question": "What is the result of 0 or "hello"?",
+            "type": "multiple_choice",
+            "options": ["True", "False", "0", ""hello""],
+            "correct_answer": ""hello""
+          },
+          {
+            "question": "What does not [] return?",
+            "type": "multiple_choice",
+            "options": ["True", "False", "[]", "Error"],
+            "correct_answer": "True"
+          }
+        ]
+      }
+    },
+    {
+      "type": "summary",
+      "order": 8,
+      "estimated_minutes": 2,
+      "content": {
+        "title": "Key Takeaways",
+        "points": [
+          "Six comparison operators returning bool",
+          "Chaining: a < b < c works naturally",
+          "and/or return operand values (short-circuit)",
+          "not returns boolean opposite"
+        ]
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_day3_comparison",
+      "title": "Comparison Practice",
+      "description": "Write comparisons to check: is x between 10 and 20 (inclusive)? Is y outside range 0-100? Are a and b equal?",
+      "starter_code": "x = 15\ny = 150\na = 42\nb = 42\n# Write comparisons\n",
+      "solution": "x = 15\ny = 150\na = 42\nb = 42\nprint(10 <= x <= 20)   # True\nprint(y < 0 or y > 100)  # True\nprint(a == b)            # True",
+      "tests": [
+        "assert "True" in output",
+        "assert output.count("True") >= 3"
+      ],
+      "hints": ["Use chained comparison for range check"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day3_logical",
+      "title": "Logical Combinations",
+      "description": "Given age = 25, has_license = True, write conditions: can drive (age >= 18 and has_license), is adult (age >= 18), is minor (not adult).",
+      "starter_code": "age = 25\nhas_license = True\n# Write conditions\n",
+      "solution": "age = 25\nhas_license = True\ncan_drive = age >= 18 and has_license\nis_adult = age >= 18\nis_minor = not is_adult\nprint(can_drive, is_adult, is_minor)",
+      "tests": [
+        "assert "True" in output",
+        "assert "False" in output"
+      ],
+      "hints": ["Combine with and, negate with not"],
+      "difficulty": "easy",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day3_precedence",
+      "title": "Operator Precedence",
+      "description": "Add parentheses to make each expression evaluate to True: 2 + 3 * 4 == 14, 2 + 3 * 4 == 20, not True or False == False.",
+      "starter_code": "# Add parentheses\nprint((2 + 3) * 4 == 20)\n# Fix the others\n",
+      "solution": "print(2 + 3 * 4 == 14)          # True (14 == 14)\nprint((2 + 3) * 4 == 20)       # True (20 == 20)\nprint(not (True or False) == False)  # True (not True == False)\nprint(not True or False == False)     # True (False or False == False)",
+      "tests": [
+        "assert output.count("True") >= 3"
+      ],
+      "hints": ["* before +, not before and before or, == before not"],
+      "difficulty": "medium",
+      "time_limit_seconds": 30
+    },
+    {
+      "id": "ex_day3_mixed_expressions",
+      "title": "Mixed Expression Evaluation",
+      "description": "Evaluate step by step: 10 > 5 and 3 < 7 or False, 2 ** 3 + 1 == 9, (5 + 3) * 2 // 4.",
+      "starter_code": "# Evaluate and print each\n",
+      "solution": "print(10 > 5 and 3 < 7 or False)  # True\nprint(2 ** 3 + 1 == 9)            # True\nprint((5 + 3) * 2 // 4)           # 4",
+      "tests": [
+        "assert "True" in output",
+        "assert "4" in output"
+      ],
+      "hints": ["Follow precedence: **, *,/,//,%, +,-, comparisons, not, and, or"],
+      "difficulty": "medium",
+      "time_limit_seconds": 30
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What does 'a < b < c' mean in Python?",
+      "type": "multiple_choice",
+      "options": [
+        "a < b and b < c",
+        "(a < b) < c",
+        "a < (b < c)",
+        "Syntax error"
+      ],
+      "correct_answer": "a < b and b < c",
+      "explanation": "Chained comparisons are equivalent to 'and' of pairwise comparisons.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the result of: True and False or True?",
+      "type": "multiple_choice",
+      "options": ["True", "False", "Error", "None"],
+      "correct_answer": "True",
+      "explanation": "and binds tighter than or. (True and False) or True = False or True = True.",
+      "difficulty": "medium"
+    }
+  ]
+}
+

@@ -1,0 +1,40 @@
+{
+  "id": "topic_nested_loops",
+  "title": "Nested Loops",
+  "description": "Loops inside loops. Outer and inner loop variables. Iteration order. Total iterations = outer * inner.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Write nested for loops",
+    "Track outer and inner variables",
+    "Predict total iterations",
+    "Use for 2D patterns and grids"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_for_loop"
+  ],
+  "related_skills": [
+    "2d_iteration",
+    "pattern_generation",
+    "matrix_processing"
+  ],
+  "lesson_refs": [
+    "lesson_day15_nested_loops"
+  ],
+  "practice_refs": [
+    "ex_day15_multiplication_table",
+    "ex_day15_triangle_pattern",
+    "ex_day15_coordinate_grid"
+  ],
+  "assessment_refs": [
+    "quiz_day15_nested_loops"
+  ],
+  "mastery_criteria": [
+    "Generates 2D patterns correctly",
+    "Calculates total iterations",
+    "Processes nested lists row by row"
+  ],
+  "revision_criteria": [
+    "Wrong loop order for pattern",
+    "Variable name conflicts"
+  ]
+}

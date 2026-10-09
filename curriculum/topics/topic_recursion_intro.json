@@ -1,0 +1,38 @@
+{
+  "id": "topic_recursion_intro",
+  "title": "Introduction to Recursion",
+  "description": "Function calling itself. Base case and recursive case. Call stack visualization. Recursive Fibonacci and its exponential complexity.",
+  "difficulty": "advanced",
+  "learning_objectives": [
+    "Identify base case and recursive case",
+    "Trace recursive calls on stack",
+    "Understand exponential Fibonacci",
+    "Compare iterative vs recursive"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_fibonacci_iterative"
+  ],
+  "related_skills": [
+    "recursion",
+    "call_stack",
+    "complexity_analysis"
+  ],
+  "lesson_refs": [
+    "lesson_day17_fibonacci_digits"
+  ],
+  "practice_refs": [
+    "ex_day17_fibonacci_recursive"
+  ],
+  "assessment_refs": [
+    "quiz_day17_fibonacci_digits"
+  ],
+  "mastery_criteria": [
+    "Writes correct base/recursive cases",
+    "Traces call stack for n=4",
+    "Explains O(2^n) complexity"
+  ],
+  "revision_criteria": [
+    "Missing base case (stack overflow)",
+    "Cannot trace recursion"
+  ]
+}

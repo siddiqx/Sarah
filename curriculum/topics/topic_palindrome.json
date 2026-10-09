@@ -1,0 +1,38 @@
+{
+  "id": "topic_palindrome",
+  "title": "Palindrome Detection",
+  "description": "Checking if a number or string reads the same forwards and backwards. String vs numeric approach. Case sensitivity for strings.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Check numeric palindrome via reversal",
+    "Check string palindrome via slicing",
+    "Handle case and whitespace for strings",
+    "Compare approaches"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_number_reversal",
+    "topic_string_indexing_slicing"
+  ],
+  "related_skills": [
+    "symmetry_check",
+    "string_vs_numeric"
+  ],
+  "lesson_refs": [
+    "lesson_day17_fibonacci_digits"
+  ],
+  "practice_refs": [
+    "ex_day17_palindrome"
+  ],
+  "assessment_refs": [
+    "quiz_day17_fibonacci_digits"
+  ],
+  "mastery_criteria": [
+    "Implements both numeric and string check",
+    "Handles string normalization",
+    "Chooses appropriate method"
+  ],
+  "revision_criteria": [
+    "Case sensitivity bugs",
+    "Numeric method fails on trailing zeros"
+  ]
+}

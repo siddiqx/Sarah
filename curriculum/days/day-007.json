@@ -1,0 +1,30 @@
+{
+  "id": "day-007",
+  "phase": "phase-a",
+  "day_number": 7,
+  "title": "Tuples & Sets",
+  "topics": [
+    "data-structures"
+  ],
+  "duration_hours": 3,
+  "objectives": [
+    "Create tuples and understand immutability",
+    "Use tuple unpacking",
+    "Work with set operations (union, intersection)",
+    "Remove duplicates with sets"
+  ],
+  "activities": [
+    "Coordinate system with tuples",
+    "Set operations visualizer",
+    "Deduplication utility",
+    "Frozen set examples"
+  ],
+  "deliverables": [
+    "tuple_set_demo.py",
+    "dedup_utility.py"
+  ],
+  "resources": [
+    "Python docs: Tuple/Set",
+    "Real Python: Sets"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "topic_string_methods",
+  "title": "Common String Methods",
+  "description": "Essential string methods: case conversion, whitespace handling, replacement, splitting, joining. Understanding immutability.",
+  "difficulty": "beginner",
+  "learning_objectives": [
+    "Use upper(), lower(), title(), capitalize()",
+    "Trim whitespace with strip(), lstrip(), rstrip()",
+    "Replace substrings with replace()",
+    "Split and join with split() and join()",
+    "Explain why strings are immutable"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_string_indexing_slicing"
+  ],
+  "related_skills": [
+    "string_transformation",
+    "method_chaining"
+  ],
+  "lesson_refs": [
+    "lesson_day4_string_methods"
+  ],
+  "practice_refs": [
+    "ex_day4_string_methods",
+    "ex_day4_immutability"
+  ],
+  "assessment_refs": [
+    "quiz_day4_strings"
+  ],
+  "mastery_criteria": [
+    "Chains methods for complex transformations",
+    "Explains immutability clearly",
+    "Chooses split/join appropriately"
+  ],
+  "revision_criteria": [
+    "Expects methods to mutate original string",
+    "Forgets to assign method results"
+  ]
+}

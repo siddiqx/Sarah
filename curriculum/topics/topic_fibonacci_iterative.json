@@ -1,0 +1,38 @@
+{
+  "id": "topic_fibonacci_iterative",
+  "title": "Iterative Fibonacci",
+  "description": "Fibonacci sequence definition. Iterative generation with two accumulators. O(n) time, O(1) space. Generating first N terms.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Define Fibonacci recurrence",
+    "Generate iteratively with two variables",
+    "Produce first N terms efficiently",
+    "Trace variable updates per iteration"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_accumulator_pattern"
+  ],
+  "related_skills": [
+    "sequences",
+    "two_variable_accumulator",
+    "recurrence_relations"
+  ],
+  "lesson_refs": [
+    "lesson_day17_fibonacci_digits"
+  ],
+  "practice_refs": [
+    "ex_day17_fibonacci_iterative"
+  ],
+  "assessment_refs": [
+    "quiz_day17_fibonacci_digits"
+  ],
+  "mastery_criteria": [
+    "Generates Fibonacci iteratively",
+    "Uses constant space",
+    "Traces a, b updates correctly"
+  ],
+  "revision_criteria": [
+    "Wrong initial values",
+    "Off-by-one in term count"
+  ]
+}

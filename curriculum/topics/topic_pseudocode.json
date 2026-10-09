@@ -1,0 +1,38 @@
+{
+  "id": "topic_pseudocode",
+  "title": "Pseudocode and Algorithm Design",
+  "description": "Writing pseudocode before implementation. Language-agnostic algorithm description. Stepwise refinement.",
+  "difficulty": "intermediate",
+  "learning_objectives": [
+    "Write clear pseudocode for algorithms",
+    "Use standard pseudocode constructs",
+    "Refine pseudocode stepwise to code",
+    "Communicate algorithms without syntax"
+  ],
+  "prerequisite_topic_ids": [
+    "topic_problem_decomposition"
+  ],
+  "related_skills": [
+    "algorithm_design",
+    "communication",
+    "planning"
+  ],
+  "lesson_refs": [
+    "lesson_day9_decomposition"
+  ],
+  "practice_refs": [
+    "ex_day9_pseudocode_practice"
+  ],
+  "assessment_refs": [
+    "quiz_day9_decomposition"
+  ],
+  "mastery_criteria": [
+    "Writes readable pseudocode",
+    "Translates pseudocode to Python",
+    "Refines iteratively"
+  ],
+  "revision_criteria": [
+    "Jumps to code without planning",
+    "Pseudocode too vague or too detailed"
+  ]
+}

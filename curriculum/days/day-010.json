@@ -1,0 +1,32 @@
+{
+  "number": 10,
+  "phase": 1,
+  "title": "Day 10 Topic",
+  "summary": "Summary for day 10.",
+  "learning_objectives": [
+    "Objective 1",
+    "Objective 2"
+  ],
+  "prerequisites": [],
+  "topics": [
+    {
+      "topic_id": "day-010-topic",
+      "title": "Day 10 Topic",
+      "description": "Description for day 10 topic.",
+      "difficulty": "beginner",
+      "learning_objectives": [
+        "Learn concept"
+      ],
+      "prerequisite_topic_ids": [],
+      "lessons": [
+        "day-010-lesson"
+      ],
+      "exercises": [
+        "day-010-exercise"
+      ],
+      "assessments": []
+    }
+  ],
+  "estimated_study_time_minutes": 60,
+  "completion_criteria": "Complete lesson and exercise."
+}

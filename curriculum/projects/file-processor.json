@@ -1,0 +1,90 @@
+{
+  "project_id": "file-processor",
+  "title": "File Processor",
+  "description": "Build a tool to read, validate, and transform CSV and JSON files.",
+  "phase": 2,
+  "prerequisites": [
+    "file-io",
+    "csv-processing",
+    "json-processing",
+    "error-handling"
+  ],
+  "dataset_references": [
+    "sample-data.csv",
+    "config.json"
+  ],
+  "milestones": [
+    {
+      "milestone_id": "setup",
+      "title": "Project Setup",
+      "description": "Initialize project and create file reader",
+      "tasks": [
+        "Create project structure",
+        "Implement file reader",
+        "Add CSV support"
+      ],
+      "validation": [
+        "Reads CSV",
+        "Handles missing files"
+      ]
+    },
+    {
+      "milestone_id": "validate",
+      "title": "Data Validation",
+      "description": "Add validation rules for data quality",
+      "tasks": [
+        "Define schema",
+        "Validate required columns",
+        "Check data types"
+      ],
+      "validation": [
+        "Invalid rows caught",
+        "Errors reported"
+      ]
+    },
+    {
+      "milestone_id": "transform",
+      "title": "Data Transformation",
+      "description": "Transform and output cleaned data",
+      "tasks": [
+        "Implement transformations",
+        "Add JSON output",
+        "Handle large files"
+      ],
+      "validation": [
+        "Output valid",
+        "Transformations correct"
+      ]
+    },
+    {
+      "milestone_id": "cli",
+      "title": "CLI Interface",
+      "description": "Build command-line interface",
+      "tasks": [
+        "Add CLI args",
+        "Support multiple files",
+        "Add progress bar"
+      ],
+      "validation": [
+        "CLI works",
+        "Multiple files processed"
+      ]
+    }
+  ],
+  "validation_rules": [
+    "All CSV rows validated",
+    "JSON output valid",
+    "No data loss"
+  ],
+  "evaluation_criteria": [
+    "Correctness",
+    "Performance",
+    "Error handling"
+  ],
+  "hints": [
+    "Use csv module",
+    "Stream large files",
+    "Validate early"
+  ],
+  "completion_criteria": "All milestones completed"
+}
